@@ -1,0 +1,9 @@
+source,rows,string_mismatches,pass
+XO K=50 (gate2 runner),500,0,True
+XO K=100 (gate2 runner),1000,0,True
+XO K=200 (gate2 runner),2000,0,True
+XO K=400 (gate2 runner),4000,0,True
+KC K=50 (gate1 runner),324,0,True
+KC K=100 (gate1 runner),699,0,True
+KC K=200 (gate1 runner),1445,0,True
+KC K=400 (gate1 runner),2876,0,True

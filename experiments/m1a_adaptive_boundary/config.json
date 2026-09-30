@@ -1,0 +1,34 @@
+{
+  "model": "M1A",
+  "base_model": "M0",
+  "model_version": "0.1.0",
+  "experiment": "M1A — adaptive sweep boundary (minimal state-dependent feedback)",
+  "adaptive_rule": {
+    "definition": "D_t(j) = cumulative_mass(bins 1..j) - j/K; j_t = argmax_j D_t(j); a_t = j_t/K; sweep active iff D_max(t) > stop_tolerance",
+    "status": "Model Assumption: minimal mathematical abstraction of the real observation that the operator looks at the current surface and then decides where to sweep. NOT a real-world stopping rule.",
+    "stop_tolerance": 1e-12,
+    "tolerance_note": "numerical implementation of the mathematical condition D_max <= 0 (no prefix holds cumulative near-side excess); frozen, never tuned"
+  },
+  "space": "x in [0,1], equal-area coordinate",
+  "a_fixed_for_M0_comparison": 0.5,
+  "K": 100,
+  "T_max": 100,
+  "N": 100000,
+  "baseline_alpha": 0.25,
+  "metric": {
+    "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (identical to docs/M0_MODEL.md)",
+    "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (sanity check only)"
+  },
+  "throw_distribution_baseline": "q_near(x) = 2(1-x) (DISTRIBUTIONS['near'])",
+  "controls": ["uniform", "far"],
+  "alpha_structural_check": {
+    "purpose": "test whether M0's alpha time-rescaling survives state-dependent feedback (falsifiable hypothesis)",
+    "alphas": [0.1, 0.25, 0.5, 1.0]
+  },
+  "mc_spotcheck": {
+    "purpose": "verify particle version fluctuates around deterministic M1A; record boundary noise sensitivity without smoothing",
+    "alpha": 0.25,
+    "seeds": [20260917, 20260918, 20260919, 20260920, 20260921]
+  },
+  "output_dir": "results"
+}

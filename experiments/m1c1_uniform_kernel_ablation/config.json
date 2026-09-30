@@ -1,0 +1,45 @@
+{
+  "model": "M1C.1",
+  "base_model": "M1C / M1B / M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1C.1 — fixed-uniform kernel ablation (A vs U vs B): isolating near-bias from deficit-unawareness",
+  "research_question": "If the M1 selection rule remains unchanged and redistribution remains fixed and deficit-unaware, does removing the near-bias eliminate or substantially weaken churn?",
+  "motivation": "M1C changed several properties of the redistribution law at once (fixed near-biased q -> adaptive target-aware oracle), so it cannot tell whether churn is driven by (1) the near-bias/target mismatch of the fixed law, (2) the law being fixed and deficit-unaware, or (3) both. Variant U is the missing middle control: still fixed, state-unaware and deficit-unaware, but the fixed law equals the uniform target.",
+  "variants": {
+    "A": "canonical M1A/M1B baseline, untouched: initial state q_near, removed mass resprayed with fixed q_near (redistribution='throw', redistribution_dist=None)",
+    "U": "selection identical; initial state identical (q_near); removed mass resprayed with the fixed uniform law q_uniform[i] = 1/K (redistribution='throw', redistribution_dist=uniform). Still fixed, state-unaware, deficit-unaware; only the near-bias is removed.",
+    "B": "existing M1C oracle control, unchanged: selection identical; removed mass redistributed by target-aware deficit filling (redistribution='deficit_fill')"
+  },
+  "controlled_variable_logic": {
+    "A_vs_U": "fixed + deficit-unaware + near-biased  vs  fixed + deficit-unaware + uniform  -> isolates near-bias / target mismatch",
+    "U_vs_B": "fixed uniform + deficit-unaware  vs  adaptive deficit-aware oracle  -> isolates state/deficit awareness",
+    "caveat": "this factor table is a device for mechanism interpretation; it does not prove the properties are independently manipulable in general"
+  },
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "primary_K": 100,
+  "T_max": 5000,
+  "alpha": 0.25,
+  "stop_tolerance_exact": 1e-12,
+  "epsilon_overlay": [0.005, 0.01, 0.02, 0.04],
+  "initial_state": "q_near bin probabilities (identical for A, U and B)",
+  "throw_distribution_A": "q_near(x) = 2(1-x); respray law of Variant A and the shared initial condition",
+  "redistribution_law_U": "q_uniform[i] = 1/K on the same K-bin grid, exact CDF differencing; fixed, state-unaware, deficit-unaware",
+  "invariants": [
+    "mass conservation: sum(p_next) == sum(p_current) within float tolerance",
+    "non-negativity: no bin mass below zero",
+    "exact uniform law: q_uniform[i] = 1/K within 1e-15 and sum = 1",
+    "selection invariance: same current state -> same cumulative excess, boundary, selected region and removed mass for A/U/B (trajectories may diverge only after divergent updates)",
+    "U update identity: the per-round added mass is exactly M_removed / K in every bin (constant vector)"
+  ],
+  "diagnostics": "same metrics and churn diagnostics as M1B.2/M1C: U_density, D_max, sweep boundary, moved mass, cumulative moved mass, L1 step, exact stopping time, epsilon first-passage, best-uniformity time/value, retention, late-stage behaviour, increasing-D_max / worsening-U step shares",
+  "late_stage_definition": "active rounds with D_max < 0.005 (M1B.2 convention), plus last-25%-of-active-rounds window",
+  "baseline_integrity_sources": {
+    "m1c_variant_summary": "experiments/m1c_kernel_ablation/results/variant_summary.csv",
+    "m1b2_annihilation_events": "experiments/m1b_2_micro_scaling/results/annihilation_events.csv"
+  },
+  "baseline_policy": "re-run A and B under the frozen configuration and string-compare key summary fields against the committed M1C results; stop before interpretation on any mismatch",
+  "no_post_hoc_tuning": "frozen kernel set {q_near, q_uniform, deficit-fill}; no interpolation, no alpha/K/epsilon changes, no mixed or adaptive laws; results accepted as-is",
+  "mc_path_scope": "deterministic expected-mass path only (as in M1C); all Stage-1 churn evidence lives on that path",
+  "output_dir": "results"
+}

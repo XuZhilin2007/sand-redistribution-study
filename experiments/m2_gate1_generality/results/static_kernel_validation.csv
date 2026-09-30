@@ -1,0 +1,174 @@
+kernel,K,check,detail,pass,required
+K-,100,G(0)=0,G(0)=0.000e+00,True,True
+K-,100,G(1)=1,G(1)=1.000e+00,True,True
+K-,100,G nondecreasing (bin edges),min diff=1.000e-04,True,True
+K-,100,G nondecreasing (dense grid),min diff=1.000e-08,True,True
+K-,100,q_j >= -tau_num (raw),min q=1.000e-04,True,True
+K-,100,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+K-,100,q_j >= -tau_num (used bins),min q=1.000e-04,True,True
+K-,100,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+K-,100,Delta_minus <= 0 everywhere,max Delta=0.000e+00,True,True
+KW,50,G(0)=0,G(0)=0.000e+00,True,True
+KW,50,G(1)=1,G(1)=1.000e+00,True,True
+KW,50,G nondecreasing (bin edges),min diff=1.510e-02,True,True
+KW,50,G nondecreasing (dense grid),min diff=7.500e-05,True,True
+KW,50,q_j >= -tau_num (raw),min q=1.510e-02,True,True
+KW,50,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KW,50,q_j >= -tau_num (used bins),min q=1.510e-02,True,True
+KW,50,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KW,50,Delta_W(j/K) == (1/4)(j/K)(1-j/K),max err=1.223e-16,True,True
+KW,100,G(0)=0,G(0)=0.000e+00,True,True
+KW,100,G(1)=1,G(1)=1.000e+00,True,True
+KW,100,G nondecreasing (bin edges),min diff=7.525e-03,True,True
+KW,100,G nondecreasing (dense grid),min diff=7.500e-05,True,True
+KW,100,q_j >= -tau_num (raw),min q=7.525e-03,True,True
+KW,100,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KW,100,q_j >= -tau_num (used bins),min q=7.525e-03,True,True
+KW,100,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KW,100,Delta_W(j/K) == (1/4)(j/K)(1-j/K),max err=1.223e-16,True,True
+KW,200,G(0)=0,G(0)=0.000e+00,True,True
+KW,200,G(1)=1,G(1)=1.000e+00,True,True
+KW,200,G nondecreasing (bin edges),min diff=3.756e-03,True,True
+KW,200,G nondecreasing (dense grid),min diff=7.500e-05,True,True
+KW,200,q_j >= -tau_num (raw),min q=3.756e-03,True,True
+KW,200,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KW,200,q_j >= -tau_num (used bins),min q=3.756e-03,True,True
+KW,200,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KW,200,Delta_W(j/K) == (1/4)(j/K)(1-j/K),max err=1.492e-16,True,True
+KW,400,G(0)=0,G(0)=0.000e+00,True,True
+KW,400,G(1)=1,G(1)=1.000e+00,True,True
+KW,400,G nondecreasing (bin edges),min diff=1.877e-03,True,True
+KW,400,G nondecreasing (dense grid),min diff=7.500e-05,True,True
+KW,400,q_j >= -tau_num (raw),min q=1.877e-03,True,True
+KW,400,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KW,400,q_j >= -tau_num (used bins),min q=1.877e-03,True,True
+KW,400,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KW,400,Delta_W(j/K) == (1/4)(j/K)(1-j/K),max err=1.492e-16,True,True
+KS,50,G(0)=0,G(0)=0.000e+00,True,True
+KS,50,G(1)=1,G(1)=1.000e+00,True,True
+KS,50,G nondecreasing (bin edges),min diff=5.000e-03,True,True
+KS,50,G nondecreasing (dense grid),min diff=2.500e-05,True,True
+KS,50,q_j >= -tau_num (raw),min q=5.000e-03,True,True
+KS,50,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KS,50,q_j >= -tau_num (used bins),min q=5.000e-03,True,True
+KS,50,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KS,50,Delta_S >= 0 everywhere,min Delta=0.000e+00,True,True
+KS,50,flat top sampled on grid,"grid points in [1/3, 2/3]: 17",True,True
+KS,50,max Delta_S == 1/4 on grid,max Delta=0.2500000000000001,True,True
+KS,50,G continuous at 1/3,|0.5833333333333333 - 0.5833333333333333| = 0.000e+00,True,True
+KS,50,Delta_S continuous at 1/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,50,G continuous at 2/3,|0.9166666666666666 - 0.9166666666666666| = 0.000e+00,True,True
+KS,50,Delta_S continuous at 2/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,100,G(0)=0,G(0)=0.000e+00,True,True
+KS,100,G(1)=1,G(1)=1.000e+00,True,True
+KS,100,G nondecreasing (bin edges),min diff=2.500e-03,True,True
+KS,100,G nondecreasing (dense grid),min diff=2.500e-05,True,True
+KS,100,q_j >= -tau_num (raw),min q=2.500e-03,True,True
+KS,100,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KS,100,q_j >= -tau_num (used bins),min q=2.500e-03,True,True
+KS,100,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KS,100,Delta_S >= 0 everywhere,min Delta=0.000e+00,True,True
+KS,100,flat top sampled on grid,"grid points in [1/3, 2/3]: 33",True,True
+KS,100,max Delta_S == 1/4 on grid,max Delta=0.2500000000000001,True,True
+KS,100,G continuous at 1/3,|0.5833333333333333 - 0.5833333333333333| = 0.000e+00,True,True
+KS,100,Delta_S continuous at 1/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,100,G continuous at 2/3,|0.9166666666666666 - 0.9166666666666666| = 0.000e+00,True,True
+KS,100,Delta_S continuous at 2/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,200,G(0)=0,G(0)=0.000e+00,True,True
+KS,200,G(1)=1,G(1)=1.000e+00,True,True
+KS,200,G nondecreasing (bin edges),min diff=1.250e-03,True,True
+KS,200,G nondecreasing (dense grid),min diff=2.500e-05,True,True
+KS,200,q_j >= -tau_num (raw),min q=1.250e-03,True,True
+KS,200,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KS,200,q_j >= -tau_num (used bins),min q=1.250e-03,True,True
+KS,200,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KS,200,Delta_S >= 0 everywhere,min Delta=0.000e+00,True,True
+KS,200,flat top sampled on grid,"grid points in [1/3, 2/3]: 67",True,True
+KS,200,max Delta_S == 1/4 on grid,max Delta=0.2500000000000001,True,True
+KS,200,G continuous at 1/3,|0.5833333333333333 - 0.5833333333333333| = 0.000e+00,True,True
+KS,200,Delta_S continuous at 1/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,200,G continuous at 2/3,|0.9166666666666666 - 0.9166666666666666| = 0.000e+00,True,True
+KS,200,Delta_S continuous at 2/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,400,G(0)=0,G(0)=0.000e+00,True,True
+KS,400,G(1)=1,G(1)=1.000e+00,True,True
+KS,400,G nondecreasing (bin edges),min diff=6.250e-04,True,True
+KS,400,G nondecreasing (dense grid),min diff=2.500e-05,True,True
+KS,400,q_j >= -tau_num (raw),min q=6.250e-04,True,True
+KS,400,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,True
+KS,400,q_j >= -tau_num (used bins),min q=6.250e-04,True,True
+KS,400,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,True
+KS,400,Delta_S >= 0 everywhere,min Delta=0.000e+00,True,True
+KS,400,flat top sampled on grid,"grid points in [1/3, 2/3]: 133",True,True
+KS,400,max Delta_S == 1/4 on grid,max Delta=0.2500000000000001,True,True
+KS,400,G continuous at 1/3,|0.5833333333333333 - 0.5833333333333333| = 0.000e+00,True,True
+KS,400,Delta_S continuous at 1/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+KS,400,G continuous at 2/3,|0.9166666666666666 - 0.9166666666666666| = 0.000e+00,True,True
+KS,400,Delta_S continuous at 2/3,|Delta_left - Delta_right| = 0.000e+00,True,True
+K0,50,G(0)=0,G(0)=0.000e+00,True,False
+K0,50,G(1)=1,G(1)=1.000e+00,True,False
+K0,50,G nondecreasing (bin edges),min diff=2.000e-02,True,False
+K0,50,G nondecreasing (dense grid),min diff=1.000e-04,True,False
+K0,50,q_j >= -tau_num (raw),min q=2.000e-02,True,False
+K0,50,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+K0,50,q_j >= -tau_num (used bins),min q=2.000e-02,True,False
+K0,50,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+K0,50,Delta0 == 0 everywhere,max|Delta|=0.000e+00,True,False
+K0,100,G(0)=0,G(0)=0.000e+00,True,False
+K0,100,G(1)=1,G(1)=1.000e+00,True,False
+K0,100,G nondecreasing (bin edges),min diff=1.000e-02,True,False
+K0,100,G nondecreasing (dense grid),min diff=1.000e-04,True,False
+K0,100,q_j >= -tau_num (raw),min q=1.000e-02,True,False
+K0,100,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+K0,100,q_j >= -tau_num (used bins),min q=1.000e-02,True,False
+K0,100,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+K0,100,Delta0 == 0 everywhere,max|Delta|=0.000e+00,True,False
+K0,200,G(0)=0,G(0)=0.000e+00,True,False
+K0,200,G(1)=1,G(1)=1.000e+00,True,False
+K0,200,G nondecreasing (bin edges),min diff=5.000e-03,True,False
+K0,200,G nondecreasing (dense grid),min diff=1.000e-04,True,False
+K0,200,q_j >= -tau_num (raw),min q=5.000e-03,True,False
+K0,200,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+K0,200,q_j >= -tau_num (used bins),min q=5.000e-03,True,False
+K0,200,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+K0,200,Delta0 == 0 everywhere,max|Delta|=0.000e+00,True,False
+K0,400,G(0)=0,G(0)=0.000e+00,True,False
+K0,400,G(1)=1,G(1)=1.000e+00,True,False
+K0,400,G nondecreasing (bin edges),min diff=2.500e-03,True,False
+K0,400,G nondecreasing (dense grid),min diff=1.000e-04,True,False
+K0,400,q_j >= -tau_num (raw),min q=2.500e-03,True,False
+K0,400,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+K0,400,q_j >= -tau_num (used bins),min q=2.500e-03,True,False
+K0,400,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+K0,400,Delta0 == 0 everywhere,max|Delta|=0.000e+00,True,False
+KC,50,G(0)=0,G(0)=0.000e+00,True,False
+KC,50,G(1)=1,G(1)=1.000e+00,True,False
+KC,50,G nondecreasing (bin edges),min diff=4.000e-04,True,False
+KC,50,G nondecreasing (dense grid),min diff=1.000e-08,True,False
+KC,50,q_j >= -tau_num (raw),min q=4.000e-04,True,False
+KC,50,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+KC,50,q_j >= -tau_num (used bins),min q=4.000e-04,True,False
+KC,50,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+KC,100,G(0)=0,G(0)=0.000e+00,True,False
+KC,100,G(1)=1,G(1)=1.000e+00,True,False
+KC,100,G nondecreasing (bin edges),min diff=1.000e-04,True,False
+KC,100,G nondecreasing (dense grid),min diff=1.000e-08,True,False
+KC,100,q_j >= -tau_num (raw),min q=1.000e-04,True,False
+KC,100,|sum(q)-1| <= tau_num (raw),sum=9.9999999999999989e-01,True,False
+KC,100,q_j >= -tau_num (used bins),min q=1.000e-04,True,False
+KC,100,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000002e+00,True,False
+KC,200,G(0)=0,G(0)=0.000e+00,True,False
+KC,200,G(1)=1,G(1)=1.000e+00,True,False
+KC,200,G nondecreasing (bin edges),min diff=2.500e-05,True,False
+KC,200,G nondecreasing (dense grid),min diff=1.000e-08,True,False
+KC,200,q_j >= -tau_num (raw),min q=2.500e-05,True,False
+KC,200,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+KC,200,q_j >= -tau_num (used bins),min q=2.500e-05,True,False
+KC,200,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False
+KC,400,G(0)=0,G(0)=0.000e+00,True,False
+KC,400,G(1)=1,G(1)=1.000e+00,True,False
+KC,400,G nondecreasing (bin edges),min diff=6.250e-06,True,False
+KC,400,G nondecreasing (dense grid),min diff=1.000e-08,True,False
+KC,400,q_j >= -tau_num (raw),min q=6.250e-06,True,False
+KC,400,|sum(q)-1| <= tau_num (raw),sum=1.0000000000000000e+00,True,False
+KC,400,q_j >= -tau_num (used bins),min q=6.250e-06,True,False
+KC,400,|sum(q)-1| <= tau_num (used bins),sum=1.0000000000000000e+00,True,False

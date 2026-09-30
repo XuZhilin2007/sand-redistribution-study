@@ -1,0 +1,8 @@
+quantity,late_median_K50,late_median_K100,late_median_K200,late_median_K400,CV_of_X,CV_of_KX,CV_of_K2X,loglog_slope_beta,interpretation
+moved_mass,0.235733,0.231158,0.237446,0.237702,0.0111,0.7211,1.1941,0.007,K-independent (no 1/K scaling)
+net_export_mass,0.000849,0.001478,0.000718,0.000655,0.3535,0.5214,1.0612,-0.216,K-independent (no 1/K scaling)
+L1_state_step,0.110566,0.106991,0.116972,0.115321,0.0350,0.7308,1.1947,0.031,K-independent (no 1/K scaling)
+D_max_band_median (K=50),2.208404e-03,,,,,,,,9 rounds with D_max<0.005
+D_max_band_median (K=100),3.346554e-03,,,,,,,,41 rounds with D_max<0.005
+D_max_band_median (K=200),3.251576e-03,,,,,,,,107 rounds with D_max<0.005
+D_max_band_median (K=400),3.094669e-03,,,,,,,,262 rounds with D_max<0.005

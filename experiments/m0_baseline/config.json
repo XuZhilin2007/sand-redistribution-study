@@ -1,0 +1,39 @@
+{
+  "model": "M0",
+  "model_version": "0.1.0",
+  "description": "Canonical M0 baseline: 1D selective near-zone recycle and respray with fixed throw distributions. Toy model; parameters are not real-world optima.",
+  "space": "x in [0,1], equal-area coordinate",
+  "a": 0.5,
+  "alpha": 0.25,
+  "K": 100,
+  "T": 30,
+  "N": 100000,
+  "metric": {
+    "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (histogram squared-L2 distance to the uniform bin vector; MSE reading is U/K)",
+    "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (total variation distance; sanity check only)"
+  },
+  "seeds": [
+    20260917, 20260918, 20260919, 20260920, 20260921,
+    20260922, 20260923, 20260924, 20260925, 20260926,
+    20260927, 20260928, 20260929, 20260930, 20260931,
+    20260932, 20260933, 20260934, 20260935, 20260936
+  ],
+  "experiments": [
+    {
+      "id": "EXP-M0-A",
+      "distribution": "near",
+      "question": "Does the near-biased initial state produce a finite-time interior minimum (t_best > 0) after which continued operation worsens uniformity?"
+    },
+    {
+      "id": "EXP-M0-B",
+      "distribution": "uniform",
+      "question": "Negative control: is t = 0 already optimal, and does continued selective recycling only degrade uniformity?"
+    },
+    {
+      "id": "EXP-M0-C",
+      "distribution": "far",
+      "question": "Boundary control: does the improvement pattern of EXP-M0-A vanish or change when the initial bias direction mismatches the recycle action?"
+    }
+  ],
+  "output_dir": "results"
+}

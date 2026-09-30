@@ -1,0 +1,10 @@
+p,alpha,rho_progression_factor,z_star_discrete,t_star_continuous,observed_best_round,observed_best_U,continuous_min_U_at_z_star,max_abs_U_minus_quadratic,note
+0.5,0.1,0.964645,0.815260,5.6743,6,6.424468264542e-04,6.408358018518e-04,9.541e-18,time-rescaling spot check
+0.5,0.5,0.823223,0.815260,1.0500,1,6.419669675272e-04,6.408358018518e-04,2.602e-18,time-rescaling spot check
+0.5,1.0,0.646447,0.815260,0.4682,1,1.149213735878e-03,6.408358018518e-04,3.469e-18,time-rescaling spot check
+2.0,0.1,0.987500,0.699953,28.3606,28,3.948825562572e-03,3.948370003004e-03,1.128e-17,time-rescaling spot check
+2.0,0.5,0.937500,0.699953,5.5276,6,3.968248165698e-03,3.948370003004e-03,5.204e-18,time-rescaling spot check
+2.0,1.0,0.875000,0.699953,2.6716,3,3.988948665263e-03,3.948370003004e-03,6.939e-18,time-rescaling spot check
+-0.25,0.1,0.940540,1.294513,,0,1.123176077871e-03,5.217459121853e-04,5.204e-18,boundary/counterexample: t=0 optimal for every alpha
+-0.25,0.5,0.702698,1.294513,,0,1.123176077871e-03,5.217459121853e-04,3.469e-18,boundary/counterexample: t=0 optimal for every alpha
+-0.25,1.0,0.405396,1.294513,,0,1.123176077871e-03,5.217459121853e-04,3.469e-18,boundary/counterexample: t=0 optimal for every alpha

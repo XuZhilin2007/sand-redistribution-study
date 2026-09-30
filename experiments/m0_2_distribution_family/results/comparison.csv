@@ -1,0 +1,7 @@
+p,role,predicted_interior_optimum,observed_improves_then_worsens,predicted_best_round,observed_best_round,predicted_z_star,observed_best_state_z,predicted_best_U,observed_best_U,observed_minus_predicted_best_U,max_abs_U_minus_quadratic,observed_U_t0,observed_U_T
+-0.25,far-biased counterexample,False,False,0,0,1.294513,1.000000,1.123176077871e-03,1.123176077871e-03,1.735e-18,3.469e-18,1.123176077871e-03,1.199807937399e-02
+0.0,uniform boundary control,False,False,0,0,1.000000,1.000000,-1.734723475977e-18,9.072333744279e-32,1.735e-18,9.541e-18,9.072333744279e-32,9.639172315517e-03
+0.25,near-boundary mild interior case,True,True,1,1,0.879239,0.894888,2.192355368564e-04,2.192355368564e-04,2.006e-18,3.740e-18,4.161057744942e-04,9.984998186460e-03
+0.5,mild near-bias,True,True,2,2,0.815260,0.831036,6.452753458854e-04,6.452753458854e-04,2.385e-18,6.939e-18,1.249660005663e-03,1.075540334039e-02
+1.0,"M0/M0.1 baseline (regression anchor, q_near)",True,True,4,4,0.749972,0.772476,1.679566822985e-03,1.679566822985e-03,4.987e-18,1.041e-17,3.333000000000e-03,1.144918288992e-02
+2.0,strong near-bias,True,True,11,11,0.699953,0.705227,3.949621283160e-03,3.949621283160e-03,-5.204e-18,5.204e-18,7.999000020000e-03,8.389103551641e-03

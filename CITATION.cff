@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the specific public snapshot used. This repository is a research record, not a peer-reviewed paper."
+type: software
+title: "Sand Redistribution Study: deterministic mass-feedback model and canonical XO boundary reduction"
+authors:
+  - name: "XuZhilin2007"
+repository-code: "https://github.com/XuZhilin2007/sand-redistribution-study"
+version: "0.1.0"
+keywords:
+  - mass redistribution
+  - deterministic feedback
+  - discrepancy
+  - boundary reduction

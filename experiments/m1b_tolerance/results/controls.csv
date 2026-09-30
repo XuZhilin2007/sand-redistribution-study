@@ -1,0 +1,3 @@
+distribution,K,epsilon,D_max_t0,stopped_at,sweeps_executed
+q_uniform,100,0.01,1.110223e-16,0,0
+q_far,100,0.01,0.000000e+00,0,0

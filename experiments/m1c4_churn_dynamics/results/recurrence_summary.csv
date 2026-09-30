@@ -1,0 +1,5 @@
+K,window_rounds,stride,sampled_points,nearest_return_min,nearest_return_median,example_t,example_t_prev,note
+50,301,1,301,0.018079,0.224814,313,223,standardized 4-dim summary; distances are upper bounds on full-density near-returns (stride sampling)
+100,676,1,676,0.007385,0.134220,596,368,standardized 4-dim summary; distances are upper bounds on full-density near-returns (stride sampling)
+200,1422,1,1422,0.002206,0.089342,1079,731,standardized 4-dim summary; distances are upper bounds on full-density near-returns (stride sampling)
+400,2853,3,951,0.004712,0.102568,2543,1007,standardized 4-dim summary; distances are upper bounds on full-density near-returns (stride sampling)

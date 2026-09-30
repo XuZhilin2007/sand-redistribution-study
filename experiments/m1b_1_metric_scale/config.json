@@ -1,0 +1,32 @@
+{
+  "model": "M1B",
+  "base_model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1B.1 — uniformity metric & observation-scale audit (diagnostics only)",
+  "diagnostic_only": "No controller, stopping rule, q, alpha or dynamics change. Observation scales are diagnostic instruments, never policy inputs.",
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "B_list": [5, 10, 25, 50],
+  "divisibility_note": "every B divides every K, so coarse aggregation is exact (no interpolation)",
+  "T_max": 5000,
+  "alpha": 0.25,
+  "stop_tolerance_exact": 1e-12,
+  "epsilons": [0.0, 0.005, 0.01, 0.02, 0.04],
+  "throw_distribution": "q_near(x) = 2(1-x)",
+  "metrics": {
+    "fine_grid": "U_K = K * sum_i (p_i - 1/K)^2  (simulation-scale; identical to all prior rounds)",
+    "observation_scale": "U_B = B * sum_b (P_b - 1/B)^2 with P_b = exact aggregate of K/B consecutive bins (B fixed => comparable across K)",
+    "stop_quality": {
+      "absolute_gap": "U_stop - U_best (same K, same B)",
+      "residual_regret": "(U_stop - U_best) / U_best  (small-denominator warning applies)",
+      "improvement_loss": "(U_stop - U_best) / (U_initial - U_best)",
+      "improvement_retention": "1 - improvement_loss"
+    }
+  },
+  "no_success_thresholds": "retention 90/95/99% lines are reading aids only; no near-optimal threshold is defined in advance",
+  "regression_anchors": [
+    "stopping times must match committed M1B epsilon_k_summary.csv",
+    "K=100 reference trajectory must match committed M1A.1 long-horizon trajectory"
+  ],
+  "output_dir": "results"
+}

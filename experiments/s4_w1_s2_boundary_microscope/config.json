@@ -1,0 +1,139 @@
+{
+  "model": "S4 Wave 1 / S2 — XO Boundary Switching Microscope",
+  "model_version": "1.0.0",
+  "experiment": "S2: test whether XO boundary dynamics admit an exact one-dimensional reduction to the boundary variable p_m (bin-m mass), and whether the lock/cycle regime dichotomy over a wider K census follows the pre-registered mod-6 prediction",
+  "nature": "FREEZE-ONLY pre-registration. Written and committed BEFORE any S2 execution. No S2 census, no S2 simulation, no reduced-orbit computation has run as of this freeze. Execution is a later round against this unchanged file.",
+  "pre_registration": "All items below (K set, arithmetic mode, horizon, classification rules, reduction checks, mod-6 prediction table, halt conditions, Step-0 gate, outputs) are frozen. No rule may be adjusted after seeing results; any follow-up requires a new freeze. The dry-run validation that informed the check semantics used ONLY committed S1 CSVs (analysis of existing artifacts), and its outcome is recorded in RESEARCH_LOG.",
+  "planning_sources": [
+    "docs/STAGE4_RESEARCH_MAP.md S2 (original proposal)",
+    "docs/S4_W1_S1_XO_PRECISION.md (S1 verdict: locked plateaus K=50/200, period-2 cycles K=100/400, boundary==tie 1:1)",
+    "S2 design review (2026-09-29, transition review round): reassessed K=3,4 as degenerate for the lock/cycle question (m = K for K <= 5, no tail structure); reframed S2 as the boundary microscope"
+  ],
+  "evidence_discipline": {
+    "existing_theorem": "[Theorem] (Pack v0.3/v0.4, Model-derived Mathematical Result): XO + canonical initial state, K >= 6: s_t <= m, D_{t,m} = b(1-b) for all t, tolerance stop never fires. S2 verifies instances and proves nothing.",
+    "s1_verified_computation": "S1 exact-tier results (committed experiments/s4_w1_s1_xo_precision/): Verified Numerical Analysis.",
+    "s2_hypotheses_under_test": [
+      "BOUNDARY REDUCTION (candidate mechanism, NOT proven, NOT assumed): for t >= t*, the post-descent dynamics reduce exactly to a one-dimensional map of p_m with the frozen branch equations below; all checks C2-C6 are verification, and any mismatch is a falsification event, not an error to fix.",
+      "MOD-6 RULE (hypothesis to test, NOT a discovered law): predicted LOCK iff K mod 6 in {0,1,2}; predicted CYCLE iff K mod 6 in {3,4,5}. The census is its falsification test; a single contradicting K refutes it as stated."
+    ],
+    "wording_rules": "POST_CLOSURE_MATHEMATICAL_REVIEW_NOTES.md §7 binding. Never write 'discovered law' for mod-6, never 'proven' for the reduction, never state-convergence or beyond-horizon claims (censoring discipline unchanged)."
+  },
+  "subject": {
+    "kernel": "XO (witness_opposed_distribution, frozen Gate 2 definition; G_O = x/2 | 3x/2 - 1/3 | 2x - 2/3 | 1 with breakpoints 1/3, 2/3, 5/6)",
+    "initial_state": "canonical q_near bin probabilities (CDF 2x - x^2 differenced on edges j/K)",
+    "alpha": "1/4 (exact)",
+    "stop_tolerance": "1/10^12 (exact rational in the exact tier)",
+    "dynamics_semantics": "frozen run_m1a_deterministic semantics: D_j = cumsum(p)_j - j/K; s_t = min argmax D_j; stop iff d_t <= tol; sweep p'_j = (1-alpha) p_j + alpha*F_s*q_j for j <= s, p'_j = p_j + alpha*F_s*q_j for j > s",
+    "invariant_anchor": "m = ceil(5K/6), b = m/K, anchor = b(1-b) [Theorem]"
+  },
+  "k_set": {
+    "census": "K = 6, 7, ..., 53 inclusive (48 values; includes K = 50)",
+    "anchors": [100, 200, 400],
+    "anchor_note": "anchors are re-simulated with the extended S2 instrumentation (p_m / F_m are not stored in the committed S1 CSVs); K = 50 is covered by the census",
+    "expansion_rule": "no K may be added, removed or re-ordered during the round; any extension requires a new freeze"
+  },
+  "arithmetic_mode": {
+    "primary_evidence": "exact rational arithmetic (fractions.Fraction), S1 engine conventions: exact rational bin probs with telescoping-sum == 1 assertion; exact tolerance 1/10^12; exact strict comparisons; tie = worst == 0 decidable",
+    "optional_comparison": "float64 / mpmath ladders may be run for cross-checks only",
+    "evidence_rule": "float or mp results can NEVER be final evidence; every registered conclusion rests on the exact tier"
+  },
+  "horizon": {
+    "H": "10*K active rounds (diagnostic cutoff, same convention as Gate 1/2 and S1)",
+    "censoring": "failure to stop within H is recorded as censored; no non-convergence interpretation, no extension"
+  },
+  "boundary_definitions_frozen": {
+    "p_m": "p_{t,m} = mass of bin m at round t (m = ceil(5K/6))",
+    "F_m": "F_{t,m} = sum of p_{t,1..m} (prefix mass through m)",
+    "q_K": "q_K := G_O(m/K) - G_O((m-1)/K)  (definitional; respray share of bin m)",
+    "closed_form_q": "q_K = (6 - (K mod 6)) / (3K) for all K >= 6 [derived; verified per K against the definition as check C7 — a check, not an assumption]",
+    "closed_form_F": "F_{t,m} = 2b - b^2 for all t [CDF-form restatement of the S1 invariant; verified per round as check C1]",
+    "candidate_branch_equations": {
+      "status": "S2 hypothesis under test (candidate mechanism); derived on paper in the design review; verification target, never an assumption",
+      "branch_A_s_eq_m": "p_{m,t+1} = (3/4) p_{m,t} + (1/4) F_m q_K      (bin m is swept and resprayed; F_m conserved)",
+      "branch_B_s_eq_m_minus_1": "p_{m,t+1} = p_{m,t} + (1/4) (F_m - p_{m,t}) q_K   (bin m untouched except the leak M*q_m; F_{t,m-1} = F_m - p_{m,t})",
+      "d_prediction": "d_t = b(1-b) + max(0, 1/K - p_{m,t})   for t >= t* (given the restriction holds at t)",
+      "selection_branch_consistency": "for t >= t*: s_t = m  iff  p_{m,t} > 1/K;  s_t = m-1  iff  p_{m,t} <= 1/K  (D_m - D_{m-1} = p_m - 1/K exactly; the tie p_m = 1/K belongs to branch B by the min-argmax rule)",
+      "round_class_predictions": "branch A round -> exact tie (p_{m,t+1} >= 1/K) or exact rebound (p_{m,t+1} < 1/K); branch B round -> strict contraction (p strictly rises)"
+    }
+  },
+  "classification_frozen": {
+    "t_star": "t* := min { t : s_t in {m-1, m} } (first boundary entry). Existence is NOT assumed; if no entry within H -> OTHER/never_enters. (Expected t* >= 1 for K >= 6 since s_0 = floor(K/2) < m-1, recorded as descent fact, not assumed.)",
+    "R_m": "R_m := length of the final consecutive run of rounds with s_t = m, over the full active itinerary t = 0..H-1 (equivalently within [t*, H-1]; no s_t = m occurs before t* by definition of t*). R_m = 0 if s_{H-1} != m.",
+    "LOCK": "R_m >= K   (scale-free tail rule)",
+    "CYCLE": "else, post-entry itinerary {s_t : t >= t*} is a subset of {m-1, m} AND both values occur",
+    "OTHER": "else, with frozen subtypes recorded: never_enters | interior_return (some s_t < m-1 at t >= t*) | m_minus_1_only (post-entry itinerary = {m-1} only) | short_tail_lock (post-entry itinerary = {m} only but R_m < K) | other",
+    "secondary_criterion": "tie-tail length := final consecutive run of exact-tie rounds (worst == 0); mechanism-lock := tie-tail >= K. Recorded alongside; primary/secondary disagreement is itself a reported diagnostic (selection-lock without tie-lock means d drifts while s = m).",
+    "deviation_registered": "the freeze prompt's suggested literal rule ('after descent: itinerary contains only m') would misclassify the S1 anchors K=50/200 as CYCLE, because their descent legitimately ends with m-1 rounds (K=50: s_2 = 41 = m-1). Per the working contract (repo reality wins, conflicts logged), the classification is the tail-based rule above, which reproduces the S1-registered classes LOCK/CYCLE/LOCK/CYCLE on the four anchors. The refinement is registered here and in RESEARCH_LOG — not silently applied.",
+    "no_adjustment": "these rules are frozen before execution and will not be adjusted after seeing results"
+  },
+  "reduction_checks_frozen": {
+    "semantics": "in-memory census checks are EXACT Fraction equalities. CSV-based Step-0 checks operate on 60-digit decimal storage and use the frozen tolerance 1e-50 absolute (dry-run measured storage-truncation residuals ~1e-63; structural scales are >= 1e-4).",
+    "C1_invariant": "F_{t,m} == 2b - b^2 (Fraction equality) at every state t = 0..H (H+1 states, including the final state). Violation contradicts [Theorem] -> HARD HALT (implementation bug or theorem misapplication; never 'interpreted').",
+    "C2_boundary_restriction": "for every t >= t*: argmax set of D_j over j = 1..K is a subset of {m-1, m}, checked explicitly as max_{j <= m-2} D_j < max(D_{t,m-1}, D_{t,m}) (given C1 the suffix j > m is frozen strictly below the anchor, so the interior prefix is the only possible violator). First violation round recorded (scientific event E2). Rounds with D_{t,m-1} == D_{t,m} (p_m = 1/K exact ties) are counted and listed.",
+    "C3_branch_update": "for every t >= t*: p_{m,t+1} computed by the FULL update equals the frozen branch equation for the observed branch s_t (Fraction equality). First mismatch -> scientific event E1 (candidate falsified at (K, t, branch)); the reduced-orbit comparison C6 is skipped for that K (recorded as not-applicable), the census continues.",
+    "C4_selection_branch_consistency": "for every t >= t*: s_t = m iff p_{m,t} > 1/K, s_t = m-1 iff p_{m,t} <= 1/K (Fraction). Mismatch -> scientific event (recorded under E1 scope).",
+    "C5_d_prediction": "for every t >= t* with C2 holding at t: d_t == b(1-b) + max(0, 1/K - p_{m,t}) (Fraction). Mismatch -> scientific event E1.",
+    "C6_reduced_orbit": "applicable iff C2 and C3 hold through the horizon: iterate the one-dimensional map (branch equations above, F_m = 2b - b^2, initial value p_{m,t*} taken from the full trajectory) for H - t* steps; require Fraction equality of the reduced and full p_m at every step, and equality of predicted vs observed round classes (tie/rebound/contraction) at every step.",
+    "C7_closed_forms": "q_K closed form vs definitional CDF evaluation (per K); descent facts recorded exactly (s_0, s_1, ..., s_{t*-1}, t*), including the regularities s_0 = floor(K/2), s_1/K, s_2/K as observed exact rational facts — recorded, no theory claimed in S2.",
+    "per_k_output": "every check logged per round (results/reduction_K{K}.csv) and summarized per K (results/per_k_census.csv)"
+  },
+  "mod6_prediction_table": {
+    "status": "S2 hypothesis to test — NOT an established law; frozen BEFORE execution",
+    "prediction": "LOCK predicted iff K mod 6 in {0, 1, 2}; CYCLE predicted iff K mod 6 in {3, 4, 5} (for every census K and anchor; K=6 -> LOCK)",
+    "origin_note": "candidate derivation: q_K = (6 - (K mod 6))/(3K) and LOCK iff F_m * q_K >= 1/K with 35/36 <= F_m = 2b - b^2 < 1",
+    "comparison": "per-K observed class vs prediction is a headline output; agreement over the census is evidence within tested K only and never a proof of generality"
+  },
+  "step0_committed_csv_gate": {
+    "purpose": "analysis-only pre-check on committed S1 exact CSVs, run BEFORE any S2 simulation; validates the freeze's own checks and the branch algebra against existing evidence; no trajectory is generated",
+    "inputs": "experiments/s4_w1_s1_xo_precision/results/xo_exact_K{50,100,200,400}.csv (columns t, s, d, e, moved, worst, R, boundary, tie_exact, invariant_exact_ok, s_bound_ok, rebound; 60-digit decimal storage)",
+    "checks": {
+      "S0a_anchor_classification": "apply the frozen classification to the CSV itineraries; must reproduce LOCK/CYCLE/LOCK/CYCLE for K=50/100/200/400 (else HARD HALT: repository evidence conflict)",
+      "S0b_Fm_conservation_signature": "on every round with s_t = m: |moved - F_m/4| <= 1e-50 with F_m = 2b - b^2",
+      "S0c_lock_signature": "K=50/200: e_t == 0 (parsed) on every s_t = m round with t >= 3",
+      "S0d_decomposition_identities": "at each anchor: #{t >= t*: s_t = m} == #{ties} + #{rebounds} and #{contractions} == #{t >= t*: s_t = m-1} + t* (exact integer identities on CSV columns; dry-run: all four anchors pass)",
+      "S0e_branch_B_recovery": "on every s_t = m-1 round with e_t > 0: p_t := 1/K - e_t; for consecutive-B pairs: |(p_{t+1} - p_t) - (1/4)(F_m - p_t) q_K| <= 1e-50; for B->A transitions: predicted p_{t+1} = p_t + (1/4)(F_m - p_t) q_K > 1/K (one-sided, exact rational on recovered values; dry-run: 4/4 pairs <= 1e-50 with residuals ~1e-63, crossings 1998/1998)"
+    },
+    "failure_handling": "any S0 failure is reported before the census starts; S0a/S0b/S0c failures are HARD HALTs; S0d/S0e failures are reported and halt pending review (they would indicate a freeze-level algebra error, not a dynamics discovery)"
+  },
+  "halt_conditions": {
+    "hard_halts": {
+      "H1": "exact-arithmetic inconsistency (telescoping sum != 1, negative bin mass, assertion failures in the engine)",
+      "H2": "anchor consistency failure: re-simulated anchors must string-match the committed S1 exact CSVs on all shared columns (t, s, d, e, moved, worst, R, boundary, tie_exact, invariant_exact_ok, s_bound_ok, rebound) and reproduce the S1-registered classes",
+      "H3": "C1 invariant violation (contradicts [Theorem])",
+      "H4": "repository evidence conflict (input file hash mismatch, missing frozen artifacts)"
+    },
+    "scientific_events": {
+      "E1": "branch equation / consistency / d-prediction mismatch (C3/C4/C5) — candidate mechanism falsified at the recorded (K, t, branch); census continues; C6 skipped for that K",
+      "E2": "boundary restriction violation (C2)",
+      "E3": "observed class != mod-6 prediction (per K)",
+      "E4": "OTHER classification with subtype"
+    },
+    "event_discipline": "scientific events are recorded, never repaired in-round, and lead the round report; hard halts stop everything and are reported before any further action; NO in-round scope expansion (no new K, no rule edits, no new diagnostics) — 'report the issue before expanding scope' is implemented as: expansion is impossible in-round, any follow-up is a new freeze"
+  },
+  "outputs_manifest": [
+    "results/step0_s1_csv_checks.csv",
+    "results/per_k_census.csv  (K, m, b, q_K, t*, descent itinerary, R_m, tie-tail, class_observed, class_predicted_mod6, agreement, C1..C7 summary, first-violation fields, wall_seconds)",
+    "results/reduction_K{K}.csv  (per round: t, s, branch, p_m, F_m, restriction_ok, branch_eq_ok, sel_branch_ok, dpred_ok, class_predicted, class_observed, tie_exact; 60-digit decimal storage, S1 conventions)",
+    "results/metadata.json  (config echo, git SHA, input hashes, per-K wall time, output hashes, scientific-event flags)",
+    "S2_REPORT.md + docs/S4_W1_S2_BOUNDARY_MICROSCOPE.md at execution (not in this freeze)"
+  ],
+  "tests_required_at_execution": [
+    "T1: reduction unit tests at K in {6, 7, 8, 9, 12}: branch equations and d-prediction vs direct full-update extraction on short exact slices (in-memory exact equality)",
+    "T2: q_K closed form == definitional CDF evaluation for all 51 K (exact)",
+    "T3: classification unit tests on synthetic mini-itineraries covering LOCK, CYCLE, and every OTHER subtype (incl. short_tail_lock)",
+    "T4: Step-0 checker reproduces the dry-run results on the committed S1 CSVs",
+    "T5: S1 regression: existing tests/test_s4_s1_precision.py unchanged and passing; total via tests/count_tests.py only"
+  ],
+  "environment": {
+    "python": "3.14 (.venv/Scripts/python.exe)",
+    "engine": "reuse experiments/s4_w1_s1_xo_precision/replay.py exact tier (six-layer verification inherited); extend with boundary-coordinate extraction",
+    "runtime_expectation": "census 6..53 ~ 11 s + anchors ~ 970 s (K=400 dominates); total ~ 17 min; deterministic, no timeout halt"
+  },
+  "out_of_scope": [
+    "no new kernels (XA / other laws stay out; mod-6 generalization is S3/S11 outlook)",
+    "no K=3,4 generic partition enumeration (degenerate for this question: m = K for K <= 5; if Owner+GPT still want the original map-S2 objective it requires a separate freeze)",
+    "no proof claims: census agreement within tested K never upgrades the reduction or the mod-6 rule to a theorem (that is S3, via a new freeze)",
+    "no asymptotic or beyond-horizon claims; no symbolic-dynamics formalization (S10 stays parked)",
+    "no float/mp evidence; no re-interpretation of committed S1/Gate records"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "model": "M1C",
+  "model_version": "0.1.0",
+  "experiment": "M1C — correction-kernel ablation (A vs B): single-mechanism test of the redistribution kernel",
+  "run_date_utc": "2026-09-19T05:19:49Z",
+  "config": {
+    "model": "M1C",
+    "base_model": "M1B / M1A",
+    "model_version": "0.1.0",
+    "experiment": "M1C — correction-kernel ablation (A vs B): single-mechanism test of the redistribution kernel",
+    "research_question": "Does churn persist when the M1 selection rule is held fixed but the fixed biased redistribution law is replaced by a target-aware corrective kernel?",
+    "working_hypothesis_under_test": "M1 late-stage persistent churn arises because the controller can locate where mass must be removed but the removed mass re-enters only through a fixed, exogenous, biased redistribution law q that cannot target the current deficit.",
+    "variants": {
+      "A": "canonical M1A/M1B baseline, untouched: removed mass resprayed with fixed q_near (redistribution='throw')",
+      "B": "selection identical (same cumulative-excess argmax, same alpha removal, same stopping rules); removed mass redistributed by target-aware deficit filling: deficit_i = max(1/K - p_minus_i, 0), add_i = M_removed * deficit_i / sum(deficit) (redistribution='deficit_fill')"
+    },
+    "single_change_declaration": "Variant B differs from Variant A ONLY in the redistribution kernel. cumulative-excess definition, sweep-boundary rule, alpha, initial condition, target, stopping rules, metrics, K values and horizon are shared and unchanged.",
+    "invariants": [
+      "mass conservation: sum(p_next) == sum(p_current) within float tolerance",
+      "non-negativity: no bin mass below zero",
+      "same selection: A and B use the identical canonical decision rule on the same current state",
+      "no local overfill: the corrective step never pushes a deficit bin above the uniform target (add_i <= deficit_i, guaranteed by total_deficit >= removed mass)",
+      "degenerate fallback: total deficit == 0 or removed > total deficit must raise, never silently fall back to q"
+    ],
+    "space": "x in [0,1], equal-area coordinate",
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "primary_K": 100,
+    "T_max": 5000,
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "epsilon_overlay": [
+      0.005,
+      0.01,
+      0.02,
+      0.04
+    ],
+    "throw_distribution": "q_near(x) = 2(1-x); used by Variant A and by the shared initial condition",
+    "redistribution_B_target": "u_i = 1/K (the uniform target already encoded by the selection rule and the U metric)",
+    "late_stage_definition": "active rounds with D_max < 0.005 (M1B.2 convention), plus last-25%-of-active-rounds window; reported for both variants",
+    "no_post_hoc_tuning": "single frozen mechanism per variant; results accepted as-is (falsification-oriented; no parameter, kernel or stopping adjustment after seeing trajectories)",
+    "mc_path_scope": "Variant B is implemented for the deterministic expected-mass path only; all Stage-1 churn evidence (M1A.1/M1B/M1B.2) lives on that path. The MC particle path is out of scope for this ablation.",
+    "baseline_reproduction_sources": {
+      "annihilation_events": "experiments/m1b_2_micro_scaling/results/annihilation_events.csv",
+      "cross_K_scaling": "experiments/m1b_2_micro_scaling/results/cross_K_scaling.csv",
+      "band_and_dip_statistics": "experiments/m1b_2_micro_scaling/results/band_and_dip_statistics.csv",
+      "epsilon_overlay": "experiments/m1b_2_micro_scaling/results/epsilon_overlay.csv",
+      "long_horizon_trajectory_K100": "experiments/m1a_1_long_horizon/results/long_horizon_trajectory_K100.csv"
+    },
+    "baseline_policy": "if any Variant A reproduction check fails, M1C interpretation stops before any A-vs-B comparison (baseline divergence must be resolved first)",
+    "output_dir": "results"
+  },
+  "headline": {
+    "baseline_reproduction_checks_passed": "112/112",
+    "variant_A_exact_stops": {
+      "50": 324,
+      "100": 699,
+      "200": 1445,
+      "400": 2876
+    },
+    "variant_B_exact_stops": {
+      "50": 3,
+      "100": 3,
+      "200": 3,
+      "400": 3
+    },
+    "variant_B_post_stop_U_density": {
+      "50": 3.611118645726067e-33,
+      "100": 1.8356519782440842e-31,
+      "200": 3.3101920919155616e-33,
+      "400": 1.5798644075051544e-33
+    },
+    "variant_B_invariants_held": {
+      "50": {
+        "mass_err": 1.1102230246251565e-16,
+        "min_bin": 0.013970901033973396,
+        "overfill": 0.009700000000000004,
+        "identity_err": 5.551115123125783e-17,
+        "fill_ratio": 0.9999999999999989
+      },
+      "100": {
+        "mass_err": 4.440892098500626e-16,
+        "min_bin": 0.006954057047909165,
+        "overfill": 0.004925000000000004,
+        "identity_err": 1.8041124150158794e-16,
+        "fill_ratio": 1.0000000000000062
+      },
+      "200": {
+        "mass_err": 2.220446049250313e-16,
+        "min_bin": 0.003469257263517428,
+        "overfill": 0.00248125,
+        "identity_err": 5.551115123125783e-17,
+        "fill_ratio": 0.9999999999999994
+      },
+      "400": {
+        "mass_err": 2.220446049250313e-16,
+        "min_bin": 0.0017326956277800489,
+        "overfill": 0.0012453125,
+        "identity_err": 5.551115123125783e-17,
+        "fill_ratio": 0.9999999999999997
+      }
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "751e63000febb1be57b54f9e66cfe306ad1ae9f4",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 1.44,
+  "command": "python experiments/m1c_kernel_ablation/run_experiment.py",
+  "outputs": {
+    "baseline_reproduction.csv": "a18170f281cd537f6b0fe3947da3ab27128b118fc41447ef2965af6cf990e150",
+    "epsilon_overlay.csv": "c678690a4662ff63d264833eaf3622b60d67bd3fa25f95820155251975872f8e",
+    "fig_A_vs_B_K100.png": "3b827d0c89d6340ab70533664ebf503764c86b4f951367798ed427a8c968b65b",
+    "fig_A_vs_B_summary.png": "33fe73a0b296f15045a631bec82bf5ced9b4339c2d461dad2fa6246d3eb0ed92",
+    "per_round_diagnostics.csv": "c944bf3851c5316816d66f817b7ba567f28e41be469ff4fa3aa1d7654571a4d1",
+    "variant_summary.csv": "d6449744ae8afb5ee025ac3503ccf47e7e10b1acb144579f30f7f3143f4e59a7"
+  }
+}

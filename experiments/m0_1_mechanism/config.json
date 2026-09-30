@@ -1,0 +1,19 @@
+{
+  "model": "M0",
+  "model_version": "0.1.0",
+  "experiment": "M0.1 — correction-strength time-scale analysis",
+  "description": "Mechanism experiment on the canonical M0-A configuration (q_near, a=0.50, K=100, T=30). Not a parameter optimization: alpha is varied over a pre-declared set to test whether correction strength only changes the time scale along one fixed deterministic state path.",
+  "space": "x in [0,1], equal-area coordinate",
+  "a": 0.5,
+  "K": 100,
+  "T": 30,
+  "N": 100000,
+  "metric": {
+    "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (histogram squared-L2 distance; identical to docs/M0_MODEL.md)",
+    "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (sanity check only)"
+  },
+  "alphas_deterministic": [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
+  "alphas_mc_spotcheck": [0.25, 0.75, 1.0],
+  "mc_seeds": [20260917, 20260918, 20260919, 20260920, 20260921],
+  "output_dir": "results"
+}

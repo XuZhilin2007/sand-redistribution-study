@@ -1,0 +1,27 @@
+{
+  "model": "M1B",
+  "base_model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1B.2 — late-stage action-size scaling diagnostics (hypothesis test: micro-correction regime)",
+  "diagnostic_only": "M1A dynamics, adaptive boundary policy, stopping rules, q, alpha, controller and metric definitions unchanged. This round only measures per-round action sizes and tests the micro-correction hypothesis.",
+  "hypothesis_under_test": "exact feedback enters a micro-correction regime where per-round action size becomes O(1/K), making the exact stopping time grow ~proportionally to K. Falsification attempts are required, not confirmation.",
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "T_max": 5000,
+  "alpha": 0.25,
+  "stop_tolerance_exact": 1e-12,
+  "throw_distribution": "q_near(x) = 2(1-x); Q_q(a) evaluated from the exact CDF",
+  "action_diagnostics": {
+    "sweep_mass": "total mass in the adaptive prefix before the update",
+    "moved_mass": "alpha * sweep_mass (mass actually resprayed)",
+    "net_export_mass": "moved_mass * (1 - Q_q(a_t)) — exact mass leaving the prefix under the canonical update (identity verified in tests)",
+    "L1_state_step": "||m_(t+1) - m_t||_1",
+    "delta_U_density": "U_density(t) - U_density(t+1), signed (positive = improvement)"
+  },
+  "phase_bins_relative": [0.0, 0.25, 0.5, 0.75, 0.9, 0.99, 1.0],
+  "D_max_bands": [[0.005, 1.0], [0.01, 0.02], [0.005, 0.01], [0.02, 0.05], [0.05, 1.01]],
+  "D_max_bands_note": "bands: <0.005, 0.005-0.01, 0.01-0.02, 0.02-0.05, >0.05 (upper bound exclusive of 1.01 cap for the open top band)",
+  "epsilon_overlay": [0.005, 0.01, 0.02, 0.04],
+  "tail_thresholds": [0.02, 0.01, 0.005],
+  "output_dir": "results"
+}

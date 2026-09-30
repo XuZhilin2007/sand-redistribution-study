@@ -1,0 +1,102 @@
+{
+  "model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1A — adaptive sweep boundary (minimal state-dependent feedback)",
+  "run_date_utc": "2026-09-18T10:24:24Z",
+  "config": {
+    "model": "M1A",
+    "base_model": "M0",
+    "model_version": "0.1.0",
+    "experiment": "M1A — adaptive sweep boundary (minimal state-dependent feedback)",
+    "adaptive_rule": {
+      "definition": "D_t(j) = cumulative_mass(bins 1..j) - j/K; j_t = argmax_j D_t(j); a_t = j_t/K; sweep active iff D_max(t) > stop_tolerance",
+      "status": "Model Assumption: minimal mathematical abstraction of the real observation that the operator looks at the current surface and then decides where to sweep. NOT a real-world stopping rule.",
+      "stop_tolerance": 1e-12,
+      "tolerance_note": "numerical implementation of the mathematical condition D_max <= 0 (no prefix holds cumulative near-side excess); frozen, never tuned"
+    },
+    "space": "x in [0,1], equal-area coordinate",
+    "a_fixed_for_M0_comparison": 0.5,
+    "K": 100,
+    "T_max": 100,
+    "N": 100000,
+    "baseline_alpha": 0.25,
+    "metric": {
+      "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (identical to docs/M0_MODEL.md)",
+      "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (sanity check only)"
+    },
+    "throw_distribution_baseline": "q_near(x) = 2(1-x) (DISTRIBUTIONS['near'])",
+    "controls": [
+      "uniform",
+      "far"
+    ],
+    "alpha_structural_check": {
+      "purpose": "test whether M0's alpha time-rescaling survives state-dependent feedback (falsifiable hypothesis)",
+      "alphas": [
+        0.1,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "mc_spotcheck": {
+      "purpose": "verify particle version fluctuates around deterministic M1A; record boundary noise sensitivity without smoothing",
+      "alpha": 0.25,
+      "seeds": [
+        20260917,
+        20260918,
+        20260919,
+        20260920,
+        20260921
+      ]
+    },
+    "output_dir": "results"
+  },
+  "baseline_summary": {
+    "M1A_q_near": {
+      "best_round": 98,
+      "best_U": 0.00014863342005408034,
+      "U_final": 0.00017039589298684178,
+      "U_initial": 0.0033330000000000013,
+      "sweeps_executed": 100
+    },
+    "M0_q_near_T100": {
+      "best_round": 4,
+      "best_U": 0.001679566822985422,
+      "U_final": 0.016601094575922726
+    },
+    "first_U_divergence_M1A_vs_M0": 1,
+    "alpha_first_state_divergence": {
+      "0.1": 1,
+      "0.5": 1,
+      "1.0": 1
+    },
+    "mc_boundary_flips_per_seed": {
+      "20260917": 93,
+      "20260918": 93,
+      "20260919": 93,
+      "20260920": 97,
+      "20260921": 99
+    },
+    "noise_floor": 9.9e-06
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "eda35a45c5b62b26414825416c274f3143b43bf9",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 1.03,
+  "command": "python experiments/m1a_adaptive_boundary/run_experiment.py",
+  "outputs": {
+    "alpha_structural_check.csv": "bb09cb3961dff1e997fae97bcbc1630788f3bf767a9d6d39ac2afaecda629dd8",
+    "fig_boundary_and_excess.png": "c86467d322b1c16b07c967b17f6883cdde295dcb7e807f3edff4ae27893923b2",
+    "fig_initial_cumulative_excess.png": "f0dd1e60331798dc322ca788bd6a508072dc450f1724c605f0c8a42ac6fadb70",
+    "fig_m0_vs_m1a_uniformity.png": "56c0ec01399ead6206dbeeff3af5cc1e3177fbabc5ecc34c629badfd4e6a24c7",
+    "m0_vs_m1a_comparison.csv": "aa62915b714fb5dbc044dfa98a5990802954f28f21590052b7c9a832060633d7",
+    "m1a_baseline_trajectory.csv": "b5b406a3cc95bbea338069a38f1497dbcf194dbb67f671cf0af545c9f68e0327",
+    "mc_spotcheck.csv": "70ef44c6ca8db91e4c308ad6773ec87cca7cd2d2eec36f20a0bf9c96a381f1dc"
+  }
+}

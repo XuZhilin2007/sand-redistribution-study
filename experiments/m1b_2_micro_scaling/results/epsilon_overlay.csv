@@ -1,0 +1,17 @@
+K,epsilon,t_stop,moved_mass_at_stop,net_export_at_stop,L1_step_at_stop,moved_mass_times_K,regime_note,U_density_at_stop,improvement_retention_fine
+50,0.005,253,0.246006,0.000098,0.126341,12.30,gross churn scale (moved*K >> 1): NOT a micro-correction,6.749252e-03,0.990776
+50,0.01,165,0.247305,0.000099,0.130158,12.37,gross churn scale (moved*K >> 1): NOT a micro-correction,1.114060e-02,0.977449
+50,0.02,76,0.244581,0.000391,0.118050,12.23,gross churn scale (moved*K >> 1): NOT a micro-correction,1.713302e-02,0.959262
+50,0.04,34,0.224190,0.004394,0.087277,11.21,gross churn scale (moved*K >> 1): NOT a micro-correction,3.096336e-02,0.917287
+100,0.005,340,0.248679,0.000025,0.124399,24.87,gross churn scale (moved*K >> 1): NOT a micro-correction,8.540115e-03,0.985677
+100,0.01,159,0.247388,0.000099,0.127607,24.74,gross churn scale (moved*K >> 1): NOT a micro-correction,1.239269e-02,0.973984
+100,0.02,80,0.239391,0.000862,0.109259,23.94,gross churn scale (moved*K >> 1): NOT a micro-correction,1.683283e-02,0.960508
+100,0.04,35,0.241374,0.001183,0.110294,24.14,gross churn scale (moved*K >> 1): NOT a micro-correction,3.255589e-02,0.912787
+200,0.005,338,0.248683,0.000025,0.130718,49.74,gross churn scale (moved*K >> 1): NOT a micro-correction,9.771103e-03,0.981558
+200,0.01,173,0.222232,0.003200,0.100840,44.45,gross churn scale (moved*K >> 1): NOT a micro-correction,1.278276e-02,0.972421
+200,0.02,76,0.236143,0.001328,0.104877,47.23,gross churn scale (moved*K >> 1): NOT a micro-correction,1.817635e-02,0.956059
+200,0.04,34,0.241523,0.001183,0.107116,48.30,gross churn scale (moved*K >> 1): NOT a micro-correction,3.271268e-02,0.911960
+400,0.005,321,0.248749,0.000025,0.128590,99.50,gross churn scale (moved*K >> 1): NOT a micro-correction,7.913831e-03,0.986791
+400,0.01,169,0.246659,0.000125,0.127689,98.66,gross churn scale (moved*K >> 1): NOT a micro-correction,1.249832e-02,0.972889
+400,0.02,82,0.224214,0.003365,0.096028,89.69,gross churn scale (moved*K >> 1): NOT a micro-correction,1.937894e-02,0.952024
+400,0.04,34,0.226888,0.003834,0.090706,90.76,gross churn scale (moved*K >> 1): NOT a micro-correction,3.164712e-02,0.914823

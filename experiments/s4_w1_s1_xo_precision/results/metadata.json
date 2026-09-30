@@ -1,0 +1,166 @@
+{
+  "model": "S4 Wave 1 / S1 — XO high-precision replay (cheap probe)",
+  "model_version": "1.0.0",
+  "experiment": "S1: determine whether the observed XO numerical behavior (plateau-like d_t, narrow discrepancy band, selection concentration, rebound counts, numerical-boundary riding) is robust under higher precision arithmetic",
+  "run_date_utc": "2026-09-29T09:43:05Z",
+  "config": {
+    "model": "S4 Wave 1 / S1 — XO high-precision replay (cheap probe)",
+    "model_version": "1.0.0",
+    "experiment": "S1: determine whether the observed XO numerical behavior (plateau-like d_t, narrow discrepancy band, selection concentration, rebound counts, numerical-boundary riding) is robust under higher precision arithmetic",
+    "nature": "validation task, not theory development; target evidence class = Verified Numerical Analysis (high precision); no theorem upgrades",
+    "pre_registration": "This config was written in full BEFORE any S1 computation ran. All tiers, feasibility gates, comparison quantities and decision rules below are frozen; no post-hoc tuning.",
+    "planning_source": "docs/STAGE4_RESEARCH_MAP.md S1 (PROPOSED, registered a41fd49); this round's frozen prompt = Owner Stage 4 Wave 1 S1 brief. Deviation from the map registered in RESEARCH_LOG: the map deemed an exact-rational replay infeasible ('near-CDF has radicals'), but the radical lives only in the ppf (Monte-Carlo path, unused by the deterministic expected-mass model); cdf(q_near, x) = 2x - x^2 and the XO CDF are rational-valued at every rational edge j/K, so bin probabilities are exactly rational at all execution K and an exact Fraction tier IS feasible. It is added as the X tier; the map's mpmath ladder is kept unchanged.",
+    "subject": {
+      "primary_kernel": "XO (witness_opposed_distribution, frozen Gate 2)",
+      "sanity_kernel": "KC (canonical q_near respray, Gate 1 reference)",
+      "initial_state": "canonical q_near bin probabilities (identical for XO/KC at a given K; exact tier uses the exact rational vector; float/mp tiers use their own arithmetic)",
+      "alpha": 0.25,
+      "stop_tolerance": 1e-12,
+      "exact_tolerence_fraction": "1/10^12",
+      "horizon_rule": "H(K) = 10*K active rounds or exact stop, whichever first; censored recorded as such, never extended",
+      "K_list": [
+        50,
+        100,
+        200,
+        400
+      ],
+      "invariant_anchor": "m = ceil(5K/6), b = m/K, anchor = b*(1-b) (Pack v0.3/v0.4 Model-derived Mathematical Result; verified computationally per round in the X tier, never upgraded by this round)"
+    },
+    "tiers": {
+      "F_float64": {
+        "definition": "the current committed numpy float64 implementation (run_m1a_deterministic + committed Gate-1/Gate-2 per-round diagnostics), regenerated through the committed runner modules",
+        "validation": "STAGE V: every active round must be string-identical against the committed per_round_diagnostics.csv of Gate 2 (XO rows) and Gate 1 (KC rows); committed CSV sha256 must match the recorded metadata.json output hashes; any mismatch halts the round before any precision work",
+        "role": "comparison baseline = the committed float64 record (no duplicate CSV written)"
+      },
+      "P50_mpmath_dps50": {
+        "definition": "mpmath mp.dps=50, same mathematical semantics, no renormalization of bin probs",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ]
+      },
+      "P100_mpmath_dps100": {
+        "definition": "mpmath mp.dps=100, same mathematical semantics, no renormalization of bin probs",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ]
+      },
+      "X_exact_fraction": {
+        "definition": "fractions.Fraction exact real-arithmetic replay; exact rational bin probs (CDF evaluated on exact rational edges, telescoping sum asserted == 1 exactly); exact rational tolerance 1/10^12; exact strict rebound comparison; exact tie flag worst == 0",
+        "feasibility_gates_frozen": {
+          "rule": "sequential wall-clock gates measured on the previous K's completed exact replay; on gate failure the K is skipped for the X tier and recorded as 'exact tier not computed (gate)', with P100 as the highest available tier at that K",
+          "K50_budget_seconds": 300,
+          "K100_requires": "K50 done in <= 300 s",
+          "K200_requires": "K100 done in <= 900 s",
+          "K400_requires": "K200 done in <= 2700 s"
+        },
+        "KC_scope": "KC X tier at K=50 only (sanity: exact t_stop vs float 324)"
+      }
+    },
+    "per_round_diagnostics_all_tiers": [
+      "s_t (selection = min argmax D_j, 1-based)",
+      "d_t = D_{t,s_t}",
+      "e_t = d_t - b(1-b) (excess vs invariant anchor)",
+      "moved_mass M_t = alpha * F_s",
+      "worst_t = max_j E_t(j), E = M*Delta - gamma (same composition as kernel_theory.rebound_residual / target_matched_excess)",
+      "R_t = max over {j: gamma_j > 0} of M*max(Delta_j,0)/gamma_j (guard 0; same index set as committed runners)",
+      "numerical_boundary flag |worst_t| <= 1e-12",
+      "exact tie flag worst_t == 0 (X tier only)",
+      "rebound flag = strict d_{t+1} > d_t (post-hoc, no tolerance)",
+      "X tier additionally: exact invariant check D_{t,m} == b(1-b) as Fraction equality, selection bound s_t <= m, stop-rule check d_t > 1/10^12 for every pre-stop round"
+    ],
+    "comparisons_frozen": {
+      "selection_itinerary": "F vs P50, F vs P100, P100 vs X, F vs X: first divergence round, divergent round count (XO: full H rounds; KC: common prefix)",
+      "rebound_flags": "per-round strict-flag agreement between every tier pair; N_R per tier; mismatch rounds cross-referenced against |worst| level",
+      "scalar_tolerance": "d_t/e_t/M/worst/R agreement threshold for 'same value' = |diff| <= 1e-12 absolute OR <= 1e-9 relative (diagnostic only; classification uses the frozen category rules below)",
+      "category_rules": {
+        "Robust": "agrees across every available tier (identical sequences/flags for discrete quantities; within scalar_tolerance for continuous diagnostics) — reported as robust across the tested ladder, never as an exact real-arithmetic proof (X tier closeness is evidence about float behavior, not a new theorem)",
+        "Precision-sensitive": "any tier pair disagrees on a classification-relevant value (selection sequence, rebound flag pattern, stop status, N_R, boundary/tie structure)",
+        "Unknown": "neither of the above decidable at the available tiers (e.g. tier gap at K=400 plus F-vs-P disagreement)"
+      },
+      "boundary_vs_tie": "float numerical-boundary share (497/500, 199/1000, 1997/2000, 799/4000 committed) compared against X-tier exact-tie count (worst == 0) and the exact |worst| distribution; no relabeling of the committed float records"
+    },
+    "itinerary_analysis_frozen": {
+      "scope": "XO only, all tiers; minimal description, explicitly NOT symbolic-dynamics theory (S10 stays parked)",
+      "quantities": [
+        "number of distinct s values; top-10 s values by visit count",
+        "longest dwell run and dwell-run distribution (runs of identical consecutive s)",
+        "top-10 consecutive transition pairs s_t -> s_{t+1}",
+        "F-vs-X itinerary identity (selection stability under precision)"
+      ]
+    },
+    "kc_sanity_frozen": {
+      "expectation_under_test": "float KC t_stop = 324/699/1445/2876 at K=50/100/200/400 (committed Gate 1); a P100 or X divergence is a finding to report, not an error to fix",
+      "checks": "float string regeneration (STAGE V); P100 @ all four K; X @ K=50"
+    },
+    "out_of_scope": [
+      "no new redistribution laws, no parameter sweeps, no 2D models, no physical experiments",
+      "no general asymptotic theory, no symbolic dynamics formalization",
+      "no reinterpretation edits of committed Gate-1/Gate-2 records"
+    ],
+    "halt_conditions": [
+      "STAGE V string verification fails on any row",
+      "committed CSV sha256 does not match recorded metadata hash",
+      "X tier: any exact invariant violation (D_{t,m} != b(1-b)), any s_t > m, or any d_t <= 1/10^12 before a recorded stop — these would contradict the registered Model-derived Mathematical Result and halt interpretation",
+      "mp tier diverges from X tier at K=50 by more than 1e-30 relative in d_t (ladder implementation bug gate)"
+    ],
+    "environment": {
+      "python": "3.14 (.venv/Scripts/python.exe)",
+      "mpmath": ">=1.4",
+      "numpy": "2.5.x",
+      "test_counter": "tests/count_tests.py only"
+    }
+  },
+  "gate2_integrity": {
+    "gate2": {
+      "recorded": "6a4bd8cfe62c0cbfa3789745d21a9de99fa3d144f11b9648f1e80453ea10ebd4",
+      "actual": "6a4bd8cfe62c0cbfa3789745d21a9de99fa3d144f11b9648f1e80453ea10ebd4",
+      "match": true
+    },
+    "gate1": {
+      "recorded": "4bc6d59b5b0db1e2280ff6bc60fe23c5416828abefe7995a704a573521d91f77",
+      "actual": "4bc6d59b5b0db1e2280ff6bc60fe23c5416828abefe7995a704a573521d91f77",
+      "match": true
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3",
+    "mpmath": "1.4.1"
+  },
+  "git": {
+    "commit": "a41fd4935894541fffe57088f4f1f91b361127ae"
+  },
+  "runtime_seconds": 1151.99,
+  "command": "python experiments/s4_w1_s1_xo_precision/run_s1.py",
+  "outputs": {
+    "comparison_kc.csv": "684740d703f9cd19a924ee09b32be76c397297df72980d9a8c086c79df4bf057",
+    "comparison_pairs.csv": "e22aaaaaaa8d6a595b793933224ed3854b65f9df40ddeb8932fbfeab09dd8edf",
+    "itinerary_xo.csv": "324e4a0363476407f282ba481a045c325d36c3dfdb0923098415be90ba67d28b",
+    "kc_exact_K50.csv": "3cd9cc89847bec1d0e5a751035969bab4338236a2f4529ad7817fda4544db5bc",
+    "kc_mp100_K100.csv": "d6c72e85d31d83642a10689a2feebb50d0bca5d31eaa1e0a1b959236c4f07553",
+    "kc_mp100_K200.csv": "548123d3097bfe180f6a4e29dbc74cf2a6afade1b8d66deefff1359f5cee5538",
+    "kc_mp100_K400.csv": "d3c001dcb576ddfc9e19f21cf145a329a786fb39055bfc637a0e5fa65654cd44",
+    "kc_mp100_K50.csv": "1b0445fb68d315e9e2faa2a62f46e5484407fa2d600e40afbab9d7cfc6ecc535",
+    "stage_v_verification.csv": "3b363785ed39dc65b90127520702278f49a4506e26f34c52a2f14b60bea9dc32",
+    "summary_by_tier.csv": "07b824a1d74003a8605b7b9ff319a92994fb7f09a423807da893c5a7d7c8567a",
+    "xo_exact_K100.csv": "ba42787a636a436249e74a86e2b1e0b728c3398bb3f8a28b3730382866d3a4d3",
+    "xo_exact_K200.csv": "8c1ab9920a04a4a6fdbc00392f4bd191af1b8204796850a2e1185bde2ed9421e",
+    "xo_exact_K400.csv": "d0cdecf56e319f03a69b135b9a85e93565d4edf98735fb0228720b559d32db56",
+    "xo_exact_K50.csv": "0ddacdbe3c30f68c42ee9070e93d582acd4f63d1491334d811483f42e2223ba2",
+    "xo_mp100_K100.csv": "c91fa2b5935a0a10ff6a75789a8ed295efd98483e80a318a38042fa665c740f1",
+    "xo_mp100_K200.csv": "1afef745bc4bb48d218a796996ada0d75fb06644370e1584ce30f9647b71e727",
+    "xo_mp100_K400.csv": "1199d2468e2b65fe2788cbb6fcc3e55236956fd66496142c0b185afaf1710052",
+    "xo_mp100_K50.csv": "3f7410d8fc263929a6a78b8bdb70dfd7ebd8afafde927ece718e7d5a8b468bdd",
+    "xo_mp50_K100.csv": "382f9f2f6233540ba76256284e1ed6e360a9e5d9e95ab9de640caaa056c73061",
+    "xo_mp50_K200.csv": "58bc96c8a00ac07ae6c677af7b6c7b5c8f1d330469e2d0d09484e41eae7dcb5d",
+    "xo_mp50_K400.csv": "1a8cc83022aa0d88ed3b63b69aff4c2773857b193c11b3ba22154c072a4b50f9",
+    "xo_mp50_K50.csv": "43f6a71233f8fb3accddd49637268359f49d0f00ed3b72581fd57099ddfbf58e"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "model": "M1C",
+  "base_model": "M1B / M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1C — correction-kernel ablation (A vs B): single-mechanism test of the redistribution kernel",
+  "research_question": "Does churn persist when the M1 selection rule is held fixed but the fixed biased redistribution law is replaced by a target-aware corrective kernel?",
+  "working_hypothesis_under_test": "M1 late-stage persistent churn arises because the controller can locate where mass must be removed but the removed mass re-enters only through a fixed, exogenous, biased redistribution law q that cannot target the current deficit.",
+  "variants": {
+    "A": "canonical M1A/M1B baseline, untouched: removed mass resprayed with fixed q_near (redistribution='throw')",
+    "B": "selection identical (same cumulative-excess argmax, same alpha removal, same stopping rules); removed mass redistributed by target-aware deficit filling: deficit_i = max(1/K - p_minus_i, 0), add_i = M_removed * deficit_i / sum(deficit) (redistribution='deficit_fill')"
+  },
+  "single_change_declaration": "Variant B differs from Variant A ONLY in the redistribution kernel. cumulative-excess definition, sweep-boundary rule, alpha, initial condition, target, stopping rules, metrics, K values and horizon are shared and unchanged.",
+  "invariants": [
+    "mass conservation: sum(p_next) == sum(p_current) within float tolerance",
+    "non-negativity: no bin mass below zero",
+    "same selection: A and B use the identical canonical decision rule on the same current state",
+    "no local overfill: the corrective step never pushes a deficit bin above the uniform target (add_i <= deficit_i, guaranteed by total_deficit >= removed mass)",
+    "degenerate fallback: total deficit == 0 or removed > total deficit must raise, never silently fall back to q"
+  ],
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "primary_K": 100,
+  "T_max": 5000,
+  "alpha": 0.25,
+  "stop_tolerance_exact": 1e-12,
+  "epsilon_overlay": [0.005, 0.01, 0.02, 0.04],
+  "throw_distribution": "q_near(x) = 2(1-x); used by Variant A and by the shared initial condition",
+  "redistribution_B_target": "u_i = 1/K (the uniform target already encoded by the selection rule and the U metric)",
+  "late_stage_definition": "active rounds with D_max < 0.005 (M1B.2 convention), plus last-25%-of-active-rounds window; reported for both variants",
+  "no_post_hoc_tuning": "single frozen mechanism per variant; results accepted as-is (falsification-oriented; no parameter, kernel or stopping adjustment after seeing trajectories)",
+  "mc_path_scope": "Variant B is implemented for the deterministic expected-mass path only; all Stage-1 churn evidence (M1A.1/M1B/M1B.2) lives on that path. The MC particle path is out of scope for this ablation.",
+  "baseline_reproduction_sources": {
+    "annihilation_events": "experiments/m1b_2_micro_scaling/results/annihilation_events.csv",
+    "cross_K_scaling": "experiments/m1b_2_micro_scaling/results/cross_K_scaling.csv",
+    "band_and_dip_statistics": "experiments/m1b_2_micro_scaling/results/band_and_dip_statistics.csv",
+    "epsilon_overlay": "experiments/m1b_2_micro_scaling/results/epsilon_overlay.csv",
+    "long_horizon_trajectory_K100": "experiments/m1a_1_long_horizon/results/long_horizon_trajectory_K100.csv"
+  },
+  "baseline_policy": "if any Variant A reproduction check fails, M1C interpretation stops before any A-vs-B comparison (baseline divergence must be resolved first)",
+  "output_dir": "results"
+}

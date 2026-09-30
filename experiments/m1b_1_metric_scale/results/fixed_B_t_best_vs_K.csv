@@ -1,0 +1,9 @@
+scale,t_best_K50,t_best_K100,t_best_K200,t_best_K400,max_min_ratio,note
+coarse B=5,190,602,1111,730,5.847,
+coarse B=10,292,561,1363,2627,8.997,
+coarse B=25,292,653,1349,2627,8.997,
+coarse B=50,292,653,1349,2627,8.997,
+fine (B=K=50),,,,,,fine-grid t_best at K=50: 292
+fine (B=K=100),,,,,,fine-grid t_best at K=100: 653
+fine (B=K=200),,,,,,fine-grid t_best at K=200: 1349
+fine (B=K=400),,,,,,fine-grid t_best at K=400: 2627

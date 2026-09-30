@@ -1,0 +1,206 @@
+{
+  "model": "M2 Gate 2",
+  "model_version": "0.1.0",
+  "experiment": "M2 Gate 2 — sign-placement generality gate: witness-aligned vs witness-opposed pointwise sign-reflected sign-changing mismatch",
+  "run_date_utc": "2026-09-20T14:19:07Z",
+  "config": {
+    "model": "M2 Gate 2",
+    "base_model": "M1A/M1B/M1C canonical (Stage 2 closure a544eee); Gate 1 + Interpretation Audit (7cf0fa3 / 795c559 / 7629dc4)",
+    "model_version": "0.1.0",
+    "experiment": "M2 Gate 2 — sign-placement generality gate: witness-aligned vs witness-opposed pointwise sign-reflected sign-changing mismatch",
+    "research_question": "Keeping the absolute sign-changing mismatch profile identical (Delta_O = -Delta_A pointwise), does placing the positive mismatch over the historical canonical witness-support region (XA) versus outside it (XO) change rebound / recurrence / churn-like dynamics? Primary causal comparison XA <-> XO; KC is contextual reference only.",
+    "frozen_inheritance": {
+      "target": "T(x) = x (uniform target, T(j) = j/K)",
+      "alpha": 0.25,
+      "selection": "cumulative-excess argmax D(j) = F(j) - j/K, ties -> smallest index (canonical, untouched)",
+      "removal": "prefix removal, each swept bin scaled by (1 - alpha) (canonical, untouched)",
+      "dynamics": "deterministic expected-mass path (canonical, untouched)",
+      "exact_stopping": "stop when D_max <= 1e-12 (canonical exact tolerance, untouched)",
+      "initial_state": "canonical q_near bin probabilities, identical for XA / XO / contextual KC at a given K (shared; never regenerated per kernel)"
+    },
+    "kernels": {
+      "XA": {
+        "role": "Witness-Aligned: positive mismatch over most of the canonical witness-support region, negative in Far (role name only, no claim rebound must occur)",
+        "Delta": "1/2 x on [0,1/3]; 1/3 - 1/2 x on [1/3,2/3]; 2/3 - x on [2/3,5/6]; x - 1 on [5/6,1]",
+        "G": "3/2 x | x/2 + 1/3 | 2/3 | 2x - 1",
+        "density": "3/2 | 1/2 | 0 | 2 (all >= 0)",
+        "positive_support": "0 < x < 2/3",
+        "negative_support": "2/3 < x < 1",
+        "max_Delta": "1/6",
+        "min_Delta": "-1/6",
+        "zero_crossing": "x = 2/3 (and endpoints 0, 1)",
+        "respray_distribution": "sand_m0.model.witness_aligned_distribution()",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ]
+      },
+      "XO": {
+        "role": "Witness-Opposed: negative mismatch over the canonical witness-support band, positive mismatch in the Far side (exact pointwise sign reflection of XA)",
+        "Delta": "Delta_O(x) = -Delta_A(x) pointwise",
+        "G": "G_O(x) = 2x - G_A(x): x/2 | 3/2 x - 1/3 | 2x - 2/3 | 1",
+        "density": "1/2 | 3/2 | 2 | 0 (all >= 0)",
+        "positive_support": "2/3 < x < 1",
+        "negative_support": "0 < x < 2/3",
+        "max_Delta": "1/6",
+        "min_Delta": "-1/6",
+        "zero_crossing": "x = 2/3 (and endpoints 0, 1)",
+        "respray_distribution": "sand_m0.model.witness_opposed_distribution()",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ]
+      }
+    },
+    "critical_control_property": "Delta_O(x) = -Delta_A(x) on every analytic test point and every execution grid; hence same breakpoints, same regularity, same piecewise complexity, same pointwise absolute mismatch, same max absolute amplitude (1/6), same initial state, same controller, same stopping rule. The ONLY manipulated variable is sign placement.",
+    "discretization_rule": "q_j = G(j/K) - G((j-1)/K) by exact evaluation of the analytic CDF on bin edges (ThrowDistribution.bin_probs); breakpoints 1/3, 2/3, 5/6 are NOT rounded to the grid; no midpoint sampling, no numerical integration, no renormalization beyond the canonical fp residue correction",
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "tau_num": 1e-12,
+    "tau_num_usage": "floating validation only (static CDF checks, mass checks, decomposition residual, floating-boundary diagnostics); NOT a stopping tolerance",
+    "horizon_rule": "H(K) = 10*K active rounds or exact stop, whichever first; censored observations recorded as 'not stopped within pre-registered Gate-2 horizon'; no extension, no non-convergence interpretation",
+    "switch_convention": {
+      "definition": "large boundary switch: |Delta a| > threshold (M1A.1 / M1C.4 convention)",
+      "threshold": 0.2
+    },
+    "classification_convention": {
+      "categories": [
+        "No rebound",
+        "Isolated rebound",
+        "Short recurrent transient",
+        "Long-span recurrent / churn-like transient"
+      ],
+      "mapping": "N_R = 0 -> No rebound; N_R = 1 -> Isolated rebound; N_R >= 2 and S_R/K < 1 -> Short recurrent transient; N_R >= 2 and S_R/K >= 1 -> Long-span recurrent / churn-like transient (reporting convention as in Gate 1; full quantitative signature attached to every label)",
+      "no_frozen_churn_threshold": true
+    },
+    "witness_risk_semantics": "E_t(j) = M_t Delta(j) - gamma_t(j) via the repository rebound_residual helper (M1C.3/M1C.5); j_risk = argmax_j E_t(j) with smallest-index ties; x_risk = j_risk/K; called x_witness only on actual rebound rounds; prefix-restricted argmax (j <= j*) retained as supplementary (raw argmax can land on structurally-impossible suffix positions where E(K) = -D_max); sign at risk = sign of Delta at x_risk classified positive/zero/negative at tau_num; any actual rebound witness not classified positive halts execution (indexing/logic gate)",
+    "support_migration_definition": "per kernel, positive support XA (0 < x < 2/3) vs XO (2/3 < x < 1); share of risk locations with sign(Delta) = positive reported for (a) all active rounds, (b) top-25% R_t rounds, (c) actual rebound rounds, in raw and prefix-restricted views",
+    "kc_context_source": "experiments/m2_gate1_generality/results/ (committed Gate 1 rows; no re-run, contextual reference only — XA-vs-KC is NOT sign-effect identification)",
+    "theory_verification": {
+      "decomposition_identity": "D_new(j) = D_TM_new(j) + M * Delta(j) on every active round vs the actual next state; max_abs_decomposition_residual <= tau_num",
+      "rebound_criterion": "actual rebound iff exists j: M*Delta(j) > gamma(j); TP/TN/FP/FN with plain strict semantics; |worst excess| <= tau_num flagged numerical-boundary; unexplained non-boundary FP/FN halts interpretation"
+    },
+    "execution_order": [
+      "A1 reality inspection",
+      "A2 Gate 1 bookkeeping correction check (KC Far share: 6/1958 = 0.31%, prose typo '31/1958' corrected in the audit doc; raw data untouched)",
+      "A3 minimal XA/XO kernel support (two frozen constructors in sand_m0.model; simulator untouched)",
+      "A4 static validation incl. the critical sign-reflection property",
+      "A5 tests",
+      "B XA @ K=50,100,200,400; XO @ K=50,100,200,400 (fixed matrix, no sequential decisions)",
+      "C theory verification, support-migration analysis, tables, figures, interpretation",
+      "D docs, RESEARCH_LOG append, NEXT_STEPS update, Git wrap-up"
+    ],
+    "falsification_matrix": {
+      "X1": "XA recurrent, XO no/limited rebound -> positive mismatch placement relative to the evolving high-risk region materially affects recurrent rebound dynamics; long XA churn additionally supports 'everywhere-positive mismatch is not necessary for long recurrent dynamics' (not universal)",
+      "X2": "XA and XO both stop quickly -> placing substantial positive mismatch over the historical canonical witness-support region is not sufficient to recover canonical long churn; weakens 'static witness-band alignment is sufficient'",
+      "X3": "XA and XO both show similar recurrence -> static witness alignment has weak predictive power under counterfactual laws; trajectory-dependent state reconstruction may dominate (Working Hypothesis only)",
+      "X4": "XO more recurrent than XA -> strong falsification: canonical historical witness distribution cannot be treated as a fixed intervention map; witness geometry is endogenous to the law-induced trajectory (not a theorem)"
+    },
+    "forbidden_drift": "no third kernel, no breakpoint/amplitude/sign-boundary sweeps, no alpha/initial-state/stopping changes, no deadband, no smooth approximation, no a_crit generalization, no new long-run theorem, no Gate 3, no Stage 4 start",
+    "output_dir": "results"
+  },
+  "headline": {
+    "theory": {
+      "active_rounds": 7524,
+      "TP": 2231,
+      "TN": 4059,
+      "FP": 407,
+      "FN": 827,
+      "numerical_boundary": 3492,
+      "FP_nonboundary": 0,
+      "FN_nonboundary": 0,
+      "max_decomposition_residual": 5.329070518200751e-15
+    },
+    "dynamics": {
+      "XA@K=50": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "XA@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "XA@K=200": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "XA@K=400": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "XO@K=50": {
+        "stop_status": "not stopped within pre-registered Gate-2 horizon",
+        "t_stop": "",
+        "N_R": 41,
+        "f_R": "0.08200",
+        "S_R_over_K": "2.28000",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "XO@K=100": {
+        "stop_status": "not stopped within pre-registered Gate-2 horizon",
+        "t_stop": "",
+        "N_R": 581,
+        "f_R": "0.58100",
+        "S_R_over_K": "9.93000",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "XO@K=200": {
+        "stop_status": "not stopped within pre-registered Gate-2 horizon",
+        "t_stop": "",
+        "N_R": 56,
+        "f_R": "0.02800",
+        "S_R_over_K": "0.57500",
+        "category": "Short recurrent transient"
+      },
+      "XO@K=400": {
+        "stop_status": "not stopped within pre-registered Gate-2 horizon",
+        "t_stop": "",
+        "N_R": 2380,
+        "f_R": "0.59500",
+        "S_R_over_K": "9.98250",
+        "category": "Long-span recurrent / churn-like transient"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "7629dc4d67610a7e69064b5b34f0b5052bd39139",
+    "working_tree_dirty_at_run_time": true
+  },
+  "runtime_seconds": 2.31,
+  "command": "python experiments/m2_gate2_sign_placement/run_experiment.py",
+  "outputs": {
+    "fig_gate2_D_max.png": "bca75b952d5c3e55030ba3c5db31285399adf5cde6d3de13d4f12161755d251c",
+    "fig_gate2_R_t.png": "fc645910fcda2ff7b610564054052810fda692c578bc455147b6248b997f4785",
+    "fig_gate2_boundary.png": "673d013c04f668b8ccd338a6da61ef0fe05a0bf48eda821d600ad99fd23d1b56",
+    "fig_gate2_risk_location.png": "7b0e9e72faa2c515e94c09519660a714f38f69f8ea7485ad7b75bc2122171943",
+    "per_round_diagnostics.csv": "6a4bd8cfe62c0cbfa3789745d21a9de99fa3d144f11b9648f1e80453ea10ebd4",
+    "static_kernel_validation.csv": "d1af1cf38d73a80396cced3feff91dc80ea8eac2060bc279857f68589dc28677",
+    "support_migration.csv": "599f5dc702cea5253c4eeb3fd9ff932009588621e1b007a50022a723cc0429da",
+    "trajectory_summary.csv": "353e0ccc96effa51afdd2e9bfcc515b882fbbed5bcf070d8cbee1d5d10275dde"
+  }
+}

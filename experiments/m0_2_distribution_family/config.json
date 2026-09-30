@@ -1,0 +1,43 @@
+{
+  "model": "M0",
+  "model_version": "0.1.0",
+  "experiment": "M0.2 Phase 2A — throw distribution family (frozen before running)",
+  "family": {
+    "name": "power family (frozen 2026-09-18, before any simulation of this phase)",
+    "definition": "q_p(x) = (p+1)*(1-x)^p on [0,1], p > -1",
+    "intuition": "p is the power-law tilt toward the operator: p=0 uniform, p=1 the M0 baseline q_near, p>0 near-biased, -1<p<0 far-biased",
+    "closed_form_domain": "model needs p > -1; continuous closed forms for S also need p > -0.5 (all frozen cases satisfy both)",
+    "cases_p": [-0.25, 0.0, 0.25, 0.5, 1.0, 2.0],
+    "roles": {
+      "-0.25": "far-biased counterexample",
+      "0.0": "uniform boundary control",
+      "0.25": "near-boundary mild interior case",
+      "0.5": "mild near-bias",
+      "1.0": "M0/M0.1 baseline (regression anchor, q_near)",
+      "2.0": "strong near-bias"
+    },
+    "not_included": "historical r=U^2 stays a separate future sensitivity case by design"
+  },
+  "space": "x in [0,1], equal-area coordinate",
+  "a": 0.5,
+  "K": 100,
+  "T": 30,
+  "N": 100000,
+  "baseline_alpha": 0.25,
+  "metric": {
+    "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (identical to docs/M0_MODEL.md)",
+    "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (sanity check only)"
+  },
+  "alpha_spotcheck": {
+    "purpose": "verify time-rescaling for general q (NOT an alpha optimization)",
+    "cases_p": [0.5, 2.0, -0.25],
+    "alphas": [0.1, 0.5, 1.0]
+  },
+  "mc_spotcheck": {
+    "purpose": "confirm finite-particle version fluctuates around deterministic prediction",
+    "cases_p": [0.5, 2.0, -0.25],
+    "alpha": 0.25,
+    "seeds": [20260917, 20260918, 20260919, 20260920, 20260921]
+  },
+  "output_dir": "results"
+}

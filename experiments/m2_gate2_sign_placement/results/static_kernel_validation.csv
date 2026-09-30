@@ -1,0 +1,113 @@
+kernel,K,check,detail,pass
+XA,50,G(0)=0,G(0)=0.000e+00,True
+XA,50,G(1)=1,G(1)=1.0000000000000000,True
+XA,50,G nondecreasing (bin edges),min diff=0.000e+00,True
+XA,50,G nondecreasing (dense grid),min diff=0.000e+00,True
+XA,50,q_j >= -tau_num,min q=0.000e+00,True
+XA,50,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XA,50,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XA,50,sign reflection |Delta_O + Delta_A| <= tau on grid,max=5.551e-17,True
+XA,50,sign reflection G_O + G_A == 2x on grid,max=1.110e-16,True
+XA,50,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=0.1666666667, Delta(5/6)=-0.1666666667, grid range=[-0.160000,0.163333]",True
+XA,50,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XA,50,G continuous at 1/3,branch gap=0.000e+00,True
+XA,50,G continuous at 2/3,branch gap=0.000e+00,True
+XA,50,G continuous at 5/6,branch gap=1.110e-16,True
+XA,100,G(0)=0,G(0)=0.000e+00,True
+XA,100,G(1)=1,G(1)=1.0000000000000000,True
+XA,100,G nondecreasing (bin edges),min diff=0.000e+00,True
+XA,100,G nondecreasing (dense grid),min diff=0.000e+00,True
+XA,100,q_j >= -tau_num,min q=0.000e+00,True
+XA,100,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XA,100,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XA,100,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XA,100,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XA,100,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=0.1666666667, Delta(5/6)=-0.1666666667, grid range=[-0.163333,0.165000]",True
+XA,100,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XA,100,G continuous at 1/3,branch gap=0.000e+00,True
+XA,100,G continuous at 2/3,branch gap=0.000e+00,True
+XA,100,G continuous at 5/6,branch gap=1.110e-16,True
+XA,200,G(0)=0,G(0)=0.000e+00,True
+XA,200,G(1)=1,G(1)=1.0000000000000000,True
+XA,200,G nondecreasing (bin edges),min diff=0.000e+00,True
+XA,200,G nondecreasing (dense grid),min diff=0.000e+00,True
+XA,200,q_j >= -tau_num,min q=0.000e+00,True
+XA,200,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XA,200,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XA,200,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XA,200,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XA,200,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=0.1666666667, Delta(5/6)=-0.1666666667, grid range=[-0.165000,0.165833]",True
+XA,200,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XA,200,G continuous at 1/3,branch gap=0.000e+00,True
+XA,200,G continuous at 2/3,branch gap=0.000e+00,True
+XA,200,G continuous at 5/6,branch gap=1.110e-16,True
+XA,400,G(0)=0,G(0)=0.000e+00,True
+XA,400,G(1)=1,G(1)=1.0000000000000000,True
+XA,400,G nondecreasing (bin edges),min diff=0.000e+00,True
+XA,400,G nondecreasing (dense grid),min diff=0.000e+00,True
+XA,400,q_j >= -tau_num,min q=0.000e+00,True
+XA,400,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XA,400,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XA,400,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XA,400,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XA,400,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=0.1666666667, Delta(5/6)=-0.1666666667, grid range=[-0.165833,0.166250]",True
+XA,400,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XA,400,G continuous at 1/3,branch gap=0.000e+00,True
+XA,400,G continuous at 2/3,branch gap=0.000e+00,True
+XA,400,G continuous at 5/6,branch gap=1.110e-16,True
+XO,50,G(0)=0,G(0)=0.000e+00,True
+XO,50,G(1)=1,G(1)=1.0000000000000000,True
+XO,50,G nondecreasing (bin edges),min diff=0.000e+00,True
+XO,50,G nondecreasing (dense grid),min diff=0.000e+00,True
+XO,50,q_j >= -tau_num,min q=0.000e+00,True
+XO,50,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XO,50,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XO,50,sign reflection |Delta_O + Delta_A| <= tau on grid,max=5.551e-17,True
+XO,50,sign reflection G_O + G_A == 2x on grid,max=1.110e-16,True
+XO,50,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=-0.1666666667, Delta(5/6)=0.1666666667, grid range=[-0.163333,0.160000]",True
+XO,50,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XO,50,G continuous at 1/3,branch gap=2.776e-17,True
+XO,50,G continuous at 2/3,branch gap=1.110e-16,True
+XO,50,G continuous at 5/6,branch gap=0.000e+00,True
+XO,100,G(0)=0,G(0)=0.000e+00,True
+XO,100,G(1)=1,G(1)=1.0000000000000000,True
+XO,100,G nondecreasing (bin edges),min diff=0.000e+00,True
+XO,100,G nondecreasing (dense grid),min diff=0.000e+00,True
+XO,100,q_j >= -tau_num,min q=0.000e+00,True
+XO,100,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XO,100,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XO,100,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XO,100,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XO,100,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=-0.1666666667, Delta(5/6)=0.1666666667, grid range=[-0.165000,0.163333]",True
+XO,100,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XO,100,G continuous at 1/3,branch gap=2.776e-17,True
+XO,100,G continuous at 2/3,branch gap=1.110e-16,True
+XO,100,G continuous at 5/6,branch gap=0.000e+00,True
+XO,200,G(0)=0,G(0)=0.000e+00,True
+XO,200,G(1)=1,G(1)=1.0000000000000000,True
+XO,200,G nondecreasing (bin edges),min diff=0.000e+00,True
+XO,200,G nondecreasing (dense grid),min diff=0.000e+00,True
+XO,200,q_j >= -tau_num,min q=0.000e+00,True
+XO,200,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XO,200,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XO,200,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XO,200,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XO,200,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=-0.1666666667, Delta(5/6)=0.1666666667, grid range=[-0.165833,0.165000]",True
+XO,200,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XO,200,G continuous at 1/3,branch gap=2.776e-17,True
+XO,200,G continuous at 2/3,branch gap=1.110e-16,True
+XO,200,G continuous at 5/6,branch gap=0.000e+00,True
+XO,400,G(0)=0,G(0)=0.000e+00,True
+XO,400,G(1)=1,G(1)=1.0000000000000000,True
+XO,400,G nondecreasing (bin edges),min diff=0.000e+00,True
+XO,400,G nondecreasing (dense grid),min diff=0.000e+00,True
+XO,400,q_j >= -tau_num,min q=0.000e+00,True
+XO,400,|sum(q)-1| <= tau_num,sum=1.0000000000000000e+00,True
+XO,400,density pdf >= 0 on dense grid,min pdf=0.000e+00,True
+XO,400,sign reflection |Delta_O + Delta_A| <= tau on grid,max=1.110e-16,True
+XO,400,sign reflection G_O + G_A == 2x on grid,max=2.220e-16,True
+XO,400,"extrema: |Delta(1/3)| = |Delta(5/6)| = 1/6 with frozen signs (XA: +1/6 @1/3, -1/6 @5/6; XO reflected); grid bounded by them","Delta(1/3)=-0.1666666667, Delta(5/6)=0.1666666667, grid range=[-0.166250,0.165833]",True
+XO,400,sign supports (Delta>0 on own positive support),"probe x=0.2, x=0.8",True
+XO,400,G continuous at 1/3,branch gap=2.776e-17,True
+XO,400,G continuous at 2/3,branch gap=1.110e-16,True
+XO,400,G continuous at 5/6,branch gap=0.000e+00,True

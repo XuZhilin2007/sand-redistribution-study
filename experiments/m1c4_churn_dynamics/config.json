@@ -1,0 +1,32 @@
+{
+  "model": "M1C.4",
+  "base_model": "M1C.3 / M1B.2 / M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1C.4 — churn-regime scaling & switching audit of the existing canonical Variant A trajectories (deterministic dynamics audit, no new model)",
+  "research_question": "Why do the single-step rebound/contraction events proven in M1C.3 organize into a long-lived churn regime? Is there cross-K stable macroscopic structure, a simple switching rhythm, and a deterministic approach-to-stop signature?",
+  "audit_scope": "Existing canonical Variant A only: q_near, alpha=0.25, exact tol=1e-12, T_max=5000, K in {50,100,200,400}, deterministic expected-mass path. No new q/alpha/K/stochasticity/2D; trajectories regenerated deterministically (bit-identical to committed results).",
+  "churn_window_definition": {
+    "onset": "first active round t with D_max < onset_below (M1B.2 operational macroscopic-cleanup boundary; documented there as an approximate phase divider)",
+    "onset_below": 0.05,
+    "end": "last active round t = t_stop - 1 (the stopping state itself is the stop event, not churn)",
+    "status": "analysis convention reusing the existing M1B.2 divider; not a claimed sharp transition (M1B.2: no clear breakpoint exists)",
+    "early_phase": "active rounds before onset"
+  },
+  "R_t_definition": "R_t = max over j with gamma_t(j) > 0 of [ M_t * max(Delta(j), 0) / gamma_t(j) ], where gamma_t(j) = D_max(t) - D_TM_new,t(j) (positive at every prefix on an active step, M1C.2) and Delta(j) = G_near(j) - j/K. Equivalence R_t > 1 iff D_max rebound is exact in real arithmetic (verified per round against the M1C.3 excess criterion). gamma_t(j) > 0 always holds on active steps in exact arithmetic, so no boundary case exists at gamma = 0; the implementation guards fp only.",
+  "switch_convention": {
+    "definition": "large boundary switch: |Delta a| > threshold (existing M1A.1 diagnostic threshold; M1A.1 verified such jumps are real peak switches)",
+    "threshold": 0.2
+  },
+  "terminal_windows_rounds": [5, 10, 20],
+  "terminal_alignment_tau": 40,
+  "recurrence_audit": {
+    "summary_state": "[D_max, a_t, moved_mass, R_t] standardized within the churn window",
+    "stride_cap": 800,
+    "sampled_lag_exclusion": 20,
+    "note": "stride sampling makes distances upper bounds on full-density near-returns; convention recorded"
+  },
+  "symbol_lag_analysis": {"max_lag": 100, "quantities": ["rebound symbol agreement", "R_t autocorrelation", "D_max autocorrelation"]},
+  "fp_tolerance": 1e-12,
+  "no_forced_theory": "no cycle/invariant-distribution/universal-fraction/attractor/chaos/ergodicity claims; 'metastable churn regime' is descriptive candidate terminology only",
+  "output_dir": "results"
+}

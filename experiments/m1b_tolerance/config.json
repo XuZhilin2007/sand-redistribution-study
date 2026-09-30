@@ -1,0 +1,31 @@
+{
+  "model": "M1B",
+  "base_model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1B — perceptual tolerance / deadband stopping (only the stopping rule changes)",
+  "change_vs_M1A": "stop if D_max <= epsilon instead of D_max <= 1e-12. Boundary rule, update rule, q, alpha, metric, initial condition all unchanged.",
+  "epsilon_interpretation": "no radial prefix holds more than epsilon of extra total sand mass relative to the perfectly uniform state. Model Assumption / perceptual-tolerance proxy — NOT a human JND or visual threshold.",
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "T_max": 5000,
+  "alpha": 0.25,
+  "epsilons": [
+    {"epsilon": 0.0, "implemented_tolerance": 1e-12, "meaning": "exact M1A baseline (canonical numerical tolerance)"},
+    {"epsilon": 0.005, "implemented_tolerance": 0.005, "meaning": "0.5% cumulative excess tolerance"},
+    {"epsilon": 0.01, "implemented_tolerance": 0.01, "meaning": "1% cumulative excess tolerance"},
+    {"epsilon": 0.02, "implemented_tolerance": 0.02, "meaning": "2% cumulative excess tolerance"},
+    {"epsilon": 0.04, "implemented_tolerance": 0.04, "meaning": "4% cumulative excess tolerance"}
+  ],
+  "frozen_note": "epsilon set frozen before any M1B run; it is a simple small-to-large scale, not a calibration. No post-hoc epsilon may be added as a formal result.",
+  "throw_distribution": "q_near(x) = 2(1-x); bin probabilities from exact CDF integration at every K",
+  "controls": {
+    "cases": ["uniform", "far"],
+    "setup": "K=100, epsilon=0.01",
+    "expectation": "immediate stop (no positive cumulative near-side excess at t=0)"
+  },
+  "monotonicity_check": {
+    "dense_epsilon_grid": "200 log-spaced values in [1e-12, 0.06], evaluated on the reference D_max sequence per K",
+    "expected": "t_stop(eps) non-increasing in eps (first-passage of the same reference sequence)"
+  },
+  "output_dir": "results"
+}

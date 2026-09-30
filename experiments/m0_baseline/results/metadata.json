@@ -1,0 +1,89 @@
+{
+  "model": "M0",
+  "model_version": "0.1.0",
+  "run_date_utc": "2026-09-18T05:25:50Z",
+  "config": {
+    "model": "M0",
+    "model_version": "0.1.0",
+    "description": "Canonical M0 baseline: 1D selective near-zone recycle and respray with fixed throw distributions. Toy model; parameters are not real-world optima.",
+    "space": "x in [0,1], equal-area coordinate",
+    "a": 0.5,
+    "alpha": 0.25,
+    "K": 100,
+    "T": 30,
+    "N": 100000,
+    "metric": {
+      "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (histogram squared-L2 distance to the uniform bin vector; MSE reading is U/K)",
+      "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (total variation distance; sanity check only)"
+    },
+    "seeds": [
+      20260917,
+      20260918,
+      20260919,
+      20260920,
+      20260921,
+      20260922,
+      20260923,
+      20260924,
+      20260925,
+      20260926,
+      20260927,
+      20260928,
+      20260929,
+      20260930,
+      20260931,
+      20260932,
+      20260933,
+      20260934,
+      20260935,
+      20260936
+    ],
+    "experiments": [
+      {
+        "id": "EXP-M0-A",
+        "distribution": "near",
+        "question": "Does the near-biased initial state produce a finite-time interior minimum (t_best > 0) after which continued operation worsens uniformity?"
+      },
+      {
+        "id": "EXP-M0-B",
+        "distribution": "uniform",
+        "question": "Negative control: is t = 0 already optimal, and does continued selective recycling only degrade uniformity?"
+      },
+      {
+        "id": "EXP-M0-C",
+        "distribution": "far",
+        "question": "Boundary control: does the improvement pattern of EXP-M0-A vanish or change when the initial bias direction mismatches the recycle action?"
+      }
+    ],
+    "output_dir": "results"
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "eaa8971bd3d4e7a653d38cf58a7824a2c67125b5",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 2.1,
+  "command": "python experiments/m0_baseline/run_experiment.py",
+  "outputs": {
+    "EXP-M0-A_deterministic.csv": "21597510e599d3e64f28c83aa2bb91874df6d3f10e47cd966fad81673a45332a",
+    "EXP-M0-A_mc_per_seed.csv": "17a938e5dcc6b879b63a7cfc2c490440a8566168501e4543e95da17876f0374d",
+    "EXP-M0-A_mc_seed_best.csv": "d10cea216e61cfe33e464edcb0e1ee2b2c8c8c7a79b85239fd526ebb62e24216",
+    "EXP-M0-A_mc_summary.csv": "eb9e9546291c600d823968c1dc2c6adc4a26c9e8ede7b93130dcd34956d91a44",
+    "EXP-M0-B_deterministic.csv": "74f24e20d92391c5e8431659edf83c3c95acab6de6ec9302122cbbe23a37243f",
+    "EXP-M0-B_mc_per_seed.csv": "ca9f5fa620d581dbe1727550118b1507d9a1f510716e393fba5e4ab7a858823d",
+    "EXP-M0-B_mc_seed_best.csv": "5db367468002996116eda9ac0a1e3f684f07b88975dbae1bac69ad6b1e13db56",
+    "EXP-M0-B_mc_summary.csv": "be883944eea51befd41a186ed2f0a838dc61a3212ba577b8742dbf229842defc",
+    "EXP-M0-C_deterministic.csv": "06b1b8c8b5eb79d120f088e9fdfdd5b40a4f0f98eaab75a963192ba41e982ff6",
+    "EXP-M0-C_mc_per_seed.csv": "4647a72762f269dae918443b5c464e964763715367443dcb809d6422fa049c01",
+    "EXP-M0-C_mc_seed_best.csv": "bc70ac0e02a0f45f672f9e89b809429bf028611176e29527c3a7a63d0426d473",
+    "EXP-M0-C_mc_summary.csv": "da95091c3b587b01d05bdcae5fa26b4be83671a2576085818005c42128ba21e8",
+    "fig_EXP-M0-A_uniformity.png": "fb01289e673acfda6ed75c64ddfb490d3d9c225f6527aaa6276a0febcb527939",
+    "fig_EXP-M0-B_uniformity.png": "b82ca57712c8dba6fbaabe1352e9cfa87b8b2b7799eb854127bb7650a1e30a61",
+    "fig_EXP-M0-C_uniformity.png": "70f117e3af681f8176721649d72977fc5f15df5b8d626c64959321b09f11f4b6",
+    "fig_det_vs_mc.png": "91b32941a4d4c0aee11c50d82ccac3874b5545e06a624b876196708beaafbf2f"
+  }
+}

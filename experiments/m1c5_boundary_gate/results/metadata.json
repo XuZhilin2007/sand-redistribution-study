@@ -1,0 +1,74 @@
+{
+  "model": "M1C.5",
+  "model_version": "0.1.0",
+  "experiment": "M1C.5 — boundary-gated rebound theory: analytic reduction of the churn switching gate (analysis/verification of existing canonical A trajectories, no new model)",
+  "run_date_utc": "2026-09-19T14:31:36Z",
+  "config": {
+    "model": "M1C.5",
+    "base_model": "M1C.4 / M1C.3 / M1C.2",
+    "model_version": "0.1.0",
+    "experiment": "M1C.5 — boundary-gated rebound theory: analytic reduction of the churn switching gate (analysis/verification of existing canonical A trajectories, no new model)",
+    "research_question": "Can the empirically observed boundary gate (M1C.4: a < 0.55 never rebounds, a >= 0.8 always rebounds) be derived analytically from the M1C.3 exact rebound criterion?",
+    "canonical_specialization": {
+      "variant": "A (canonical q_near respray)",
+      "target": "T(x) = x (uniform)",
+      "respray": "G(x) = 2x - x^2, Delta(x) = x(1-x)",
+      "alpha": 0.25,
+      "boundary_relation": "D(a) = D_max and F(a) = a + D_max exactly (a = j*/K is the argmax of D)"
+    },
+    "theory_chain": {
+      "region1_reduction": "M*Delta(j) - gamma(j) = (1-alpha)D(j) - D_max + alpha*h(j/K) on the swept prefix, h(x) = x[F_a(2-x)-1], F_a = a + D_max",
+      "state_reduced_bound": "residual <= alpha*(max_j h(j/K) - D_max) because (1-alpha)D(j) - D_max <= -alpha*D_max",
+      "necessity": "rebound REQUIRES max_{j<=j*} h(j/K) > D_max",
+      "maximization": "F_a <= 1/2 -> h <= 0 -> rebound impossible (exact); F_a > 1/2 -> interior max at x* = 1 - 1/(2F_a) with value (2F_a-1)^2/(4F_a); x* <= a iff (a+D_max)(1-a) <= 1/2 which holds for all canonical A states (D_max <= 0.25 < sqrt(2)-1)",
+      "threshold": "necessary gate: a > a_crit(D_max) with a_crit(D) = [(1-D) + sqrt(D(D+2))]/2 (large root; continuum-style envelope, discrete grid max differs by O(1/K^2) rounding)",
+      "logic_direction": "a <= a_crit => rebound impossible (provable direction). a > a_crit is NECESSARY only, NOT sufficient: the residual additionally needs (1-alpha)D(j) close to its bound, i.e. D(j) near D_max at the gate-maximizing prefix"
+    },
+    "profile_factor": {
+      "P(x_r)": "D(x_r)/D_max at the rebound-driving prefix x_r (realized argmax of the residual); compares rebound rounds vs gate-open contraction rounds",
+      "status": "simple diagnostic, not a new formalism"
+    },
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "T_max": 5000,
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "churn_window": "as M1C.4: first D_max < 0.05 (onset, M1B.2 divider) through t_stop - 1",
+    "fp_tolerance": 1e-12,
+    "no_post_hoc_tuning": "a_crit closed form fixed by the M1C.3 criterion; no parameter adjusted to fit the observed 0.58 gate",
+    "output_dir": "results"
+  },
+  "headline": {
+    "worst_region1_reduction_residual": 3.95516952522712e-16,
+    "worst_h_grid_vs_closed_form": 0.00014156459733375215,
+    "necessary_gate_false_negatives_total": 0,
+    "acrit_p50_by_K": {
+      "50": "0.60429",
+      "100": "0.59921",
+      "200": "0.59518",
+      "400": "0.59258"
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "197859bf6b337afee11d448f0453c7afbc37dedd",
+    "working_tree_dirty_at_run_time": true
+  },
+  "runtime_seconds": 1.32,
+  "command": "python experiments/m1c5_boundary_gate/run_analysis.py",
+  "outputs": {
+    "fig_gate_margin_B.png": "ebc58f3711ad9ccf19de0749b306739330789b47fda393728fb6ba3863fb5da6",
+    "fig_gate_scatter.png": "9dee366e357c607703c14ec8c5bf8e94f15582d85e501665793daafe18f28187",
+    "fig_profile_factor.png": "dae42a8822c5137f189bb93003602a87fdfdfdc98d44363f54f27ef7971fd9be",
+    "gate_summary.csv": "59850d43af39e127e70f3140b5667db2c73dbc5b74f6791d10c78c31edcad616",
+    "per_round_gate.csv": "23d8c3f53bcf30c385a83d2a6529113bafe8a891fdee50ad3f7a3622791c7fd7"
+  }
+}

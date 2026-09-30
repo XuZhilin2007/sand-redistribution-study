@@ -1,0 +1,90 @@
+{
+  "model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1A.1 — long-horizon & resolution diagnostics (no model changes)",
+  "run_date_utc": "2026-09-18T14:04:43Z",
+  "config": {
+    "model": "M1A",
+    "model_version": "0.1.0",
+    "experiment": "M1A.1 — long-horizon & resolution diagnostics (no model changes)",
+    "diagnostic_only": "M1A feedback rule, stopping rule and throw distribution are unchanged; this experiment only observes them longer and at finer resolution.",
+    "space": "x in [0,1], equal-area coordinate",
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "T_max": 5000,
+    "baseline_K": 100,
+    "alpha": 0.25,
+    "stop_tolerance": 1e-12,
+    "throw_distribution": "q_near(x) = 2(1-x); bin probabilities from exact CDF integration at every K (never copied across K)",
+    "metric": {
+      "raw": "U(t) = sum (p_i - 1/K)^2",
+      "cross_resolution": "U_density(t) = K * U(t)  (density-L2 discretization; raw U not compared across K)",
+      "cross_resolution_2": "D_max(t) = max_j [cumulative mass - j/K] (one-sided CDF discrepancy; directly comparable across K)"
+    },
+    "checkpoints_t": [
+      0,
+      100,
+      500,
+      1000,
+      2000,
+      5000
+    ],
+    "windows": [
+      100,
+      500
+    ],
+    "recurrence": {
+      "max_lag": 50,
+      "second_half_only": true
+    },
+    "boundary_ambiguity": {
+      "near_optimal_thresholds": {
+        "A_1pct": 0.99,
+        "A_5pct": 0.95
+      },
+      "large_jump_threshold": 0.2,
+      "note": "diagnostic thresholds only; they never alter the sweep policy"
+    },
+    "d_profiles_figure_rounds": "auto: early, medium, late, plus before/after the largest boundary jump",
+    "output_dir": "results"
+  },
+  "headline": {
+    "stopped_at_per_K": {
+      "50": "324",
+      "100": "699",
+      "200": "1445",
+      "400": "2876"
+    },
+    "best_round_K100": 653,
+    "first_divergence_note": "K=100 run reproduces the canonical M1A trajectory bit-for-bit for t=0..100",
+    "recurrence_min_L1": 0.027409613464365837,
+    "recurrence_min_lag": 1,
+    "one_step_L1_mean": 0.07629826340162009
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "2c67183d358f87db8dcf0e2b9f7a6c6cc5e58f7b",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 2.0,
+  "command": "python experiments/m1a_1_long_horizon/run_experiment.py",
+  "outputs": {
+    "boundary_ambiguity_summary.csv": "c80b377de97ea47a32b2beb22c071efd4fcec448b7f0b0540fd3c1f78eff7060",
+    "checkpoints_and_windows.csv": "0e6e2621c173a34d6ce5d73e59a0bb04ea7ece48c8c84622517b5c993f04b518",
+    "fig_d_profiles.png": "d10107a7c06bb1d339452e1ea5e99f0d828e61a69c2953022505dc3468877045",
+    "fig_k_sensitivity.png": "57fd4c9a6ca7abf513775b5e10c3379a606deba71d5f6b7e2ac6b8ab9b365e0e",
+    "fig_long_horizon_K100.png": "2ba94b4804f1a482b6a0bf6448a3bf27f517a7666bfa6c6c183070f91a01c34a",
+    "k_sensitivity_summary.csv": "d8490f2eb3945b9c5cb26c30010de3c83a06857ee1f81fb4eecc91825505e42f",
+    "largest_boundary_jumps.csv": "649f3d3a4c7b0dc974a5c61a83942621f08d9a1223d0a2f308cc88c0784611ed",
+    "long_horizon_trajectory_K100.csv": "82d6a98c385726e3848522a548b1ef304491a7a4265eb0df312b7e7413f1ee12",
+    "recurrence_l1_K100.csv": "9ff43a127ae4e9340ffec4dffd1872729c19c4bf460d2a808455aa9c68cfef94"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "model": "M1B",
+  "model_version": "0.1.0",
+  "experiment": "M1B.1 — uniformity metric & observation-scale audit (diagnostics only)",
+  "run_date_utc": "2026-09-18T15:06:47Z",
+  "config": {
+    "model": "M1B",
+    "base_model": "M1A",
+    "model_version": "0.1.0",
+    "experiment": "M1B.1 — uniformity metric & observation-scale audit (diagnostics only)",
+    "diagnostic_only": "No controller, stopping rule, q, alpha or dynamics change. Observation scales are diagnostic instruments, never policy inputs.",
+    "space": "x in [0,1], equal-area coordinate",
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "B_list": [
+      5,
+      10,
+      25,
+      50
+    ],
+    "divisibility_note": "every B divides every K, so coarse aggregation is exact (no interpolation)",
+    "T_max": 5000,
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "epsilons": [
+      0.0,
+      0.005,
+      0.01,
+      0.02,
+      0.04
+    ],
+    "throw_distribution": "q_near(x) = 2(1-x)",
+    "metrics": {
+      "fine_grid": "U_K = K * sum_i (p_i - 1/K)^2  (simulation-scale; identical to all prior rounds)",
+      "observation_scale": "U_B = B * sum_b (P_b - 1/B)^2 with P_b = exact aggregate of K/B consecutive bins (B fixed => comparable across K)",
+      "stop_quality": {
+        "absolute_gap": "U_stop - U_best (same K, same B)",
+        "residual_regret": "(U_stop - U_best) / U_best  (small-denominator warning applies)",
+        "improvement_loss": "(U_stop - U_best) / (U_initial - U_best)",
+        "improvement_retention": "1 - improvement_loss"
+      }
+    },
+    "no_success_thresholds": "retention 90/95/99% lines are reading aids only; no near-optimal threshold is defined in advance",
+    "regression_anchors": [
+      "stopping times must match committed M1B epsilon_k_summary.csv",
+      "K=100 reference trajectory must match committed M1A.1 long-horizon trajectory"
+    ],
+    "output_dir": "results"
+  },
+  "headline": {
+    "anchors_pass": {
+      "stopping_times_match_M1B": true,
+      "K100_matches_M1A1": true
+    },
+    "fixed_B_t_best_stable": {
+      "coarse B=5": "5.847",
+      "coarse B=10": "8.997",
+      "coarse B=25": "8.997",
+      "coarse B=50": "8.997"
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "0dcc89ae17aa51c3fbc8c0ae2694e6b315901b14",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 1.14,
+  "command": "python experiments/m1b_1_metric_scale/run_experiment.py",
+  "outputs": {
+    "fig_coarse_profiles.png": "42d18af890131f38a081124fef475c53725c9fb696e47eece6577cc1461132b5",
+    "fig_regret_vs_loss.png": "5d28c734ab30e08df1b8a81519c433b9ea4c93dab69b241e6d102c043849596d",
+    "fig_retention_vs_epsilon.png": "13f1a399dcf03c5742fd40674405809e3949c46b517a4640f84784ae3fd950f6",
+    "fig_t_best_vs_K.png": "ba648859234005bf22bc711d44002d5278ce54a8641e2a0bd46228f724e0de32",
+    "fixed_B_t_best_vs_K.csv": "828de0fa1f387a725e744b31707e497a70fa03cd0ed1cd1296f5775f318f34cc",
+    "fixed_scale_optimum.csv": "d11ad74231723f1d6dc930b65444881dccdb6ab95f1262b1bf62a64aa3c3096f",
+    "multiscale_retention_summary.csv": "15d332b61bf5893d8133134cfb3cbe3983997258a3340e690729f732f6927aa6",
+    "stop_quality_by_scale.csv": "05f480fa04c48dd664c4074fc62f252e89f0f4815c8154dc775de9671cf2cf7f"
+  }
+}

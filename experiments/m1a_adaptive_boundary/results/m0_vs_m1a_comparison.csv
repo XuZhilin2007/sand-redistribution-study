@@ -1,0 +1,5 @@
+model,distribution,alpha,best_round,best_U,U_final,U_initial,final_worse_than_best,near_mass_final,near_mass_min,sweeps_executed,stopped_at
+M0 (fixed a=0.5),q_near,0.25,4,1.679566822985e-03,1.660109457592e-02,3.333000000000e-03,True,0.0011808341,0.0011808341,100,never (fixed rule always sweeps)
+M1A (adaptive),q_near,0.25,98,1.486334200541e-04,1.703958929868e-04,3.333000000000e-03,True,0.5153122593,0.5011087759,100,None
+M1A (adaptive),q_uniform,0.25,0,5.814502872727e-32,5.814502872727e-32,5.814502872727e-32,False,0.5000000000,0.5000000000,0,0
+M1A (adaptive),q_far,0.25,0,3.333000000000e-03,3.333000000000e-03,3.333000000000e-03,False,0.2500000000,0.2500000000,0,0

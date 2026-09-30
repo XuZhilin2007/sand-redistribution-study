@@ -1,0 +1,5 @@
+K,S0a_class,S0a_ok,S0b_bad_rounds,S0b_ok,S0c_bad_rounds,S0c_ok,S0d_A_vs_ties_rebs,S0d_cons_vs_B_tstar,S0d_ok,S0e_bb_pairs,S0e_ba_cross,S0e_worst_residual,S0e_ok,pass
+50,LOCK,True,0,True,0,True,497==497+0,3==1+2,True,0/0,1/1,0.000e+00,True,True
+100,CYCLE,True,0,True,0,True,597==199+398,403==401+2,True,2/2,398/398,3.333e-63,True,True
+200,LOCK,True,0,True,0,True,1997==1997+0,3==1+2,True,0/0,1/1,0.000e+00,True,True
+400,CYCLE,True,0,True,0,True,2397==799+1598,1603==1601+2,True,2/2,1598/1598,3.333e-64,True,True

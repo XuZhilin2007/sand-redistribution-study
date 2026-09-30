@@ -1,0 +1,124 @@
+{
+  "model": "M0",
+  "model_version": "0.1.0",
+  "experiment": "M0.2 Phase 2A — throw distribution family (frozen before running)",
+  "family": {
+    "name": "power family (frozen 2026-09-18, before any simulation of this phase)",
+    "definition": "q_p(x) = (p+1)*(1-x)^p on [0,1], p > -1",
+    "intuition": "p is the power-law tilt toward the operator: p=0 uniform, p=1 the M0 baseline q_near, p>0 near-biased, -1<p<0 far-biased",
+    "closed_form_domain": "model needs p > -1; continuous closed forms for S also need p > -0.5 (all frozen cases satisfy both)",
+    "cases_p": [
+      -0.25,
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "roles": {
+      "-0.25": "far-biased counterexample",
+      "0.0": "uniform boundary control",
+      "0.25": "near-boundary mild interior case",
+      "0.5": "mild near-bias",
+      "1.0": "M0/M0.1 baseline (regression anchor, q_near)",
+      "2.0": "strong near-bias"
+    },
+    "not_included": "historical r=U^2 stays a separate future sensitivity case by design"
+  },
+  "run_date_utc": "2026-09-18T09:45:28Z",
+  "config": {
+    "model": "M0",
+    "model_version": "0.1.0",
+    "experiment": "M0.2 Phase 2A — throw distribution family (frozen before running)",
+    "family": {
+      "name": "power family (frozen 2026-09-18, before any simulation of this phase)",
+      "definition": "q_p(x) = (p+1)*(1-x)^p on [0,1], p > -1",
+      "intuition": "p is the power-law tilt toward the operator: p=0 uniform, p=1 the M0 baseline q_near, p>0 near-biased, -1<p<0 far-biased",
+      "closed_form_domain": "model needs p > -1; continuous closed forms for S also need p > -0.5 (all frozen cases satisfy both)",
+      "cases_p": [
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "roles": {
+        "-0.25": "far-biased counterexample",
+        "0.0": "uniform boundary control",
+        "0.25": "near-boundary mild interior case",
+        "0.5": "mild near-bias",
+        "1.0": "M0/M0.1 baseline (regression anchor, q_near)",
+        "2.0": "strong near-bias"
+      },
+      "not_included": "historical r=U^2 stays a separate future sensitivity case by design"
+    },
+    "space": "x in [0,1], equal-area coordinate",
+    "a": 0.5,
+    "K": 100,
+    "T": 30,
+    "N": 100000,
+    "baseline_alpha": 0.25,
+    "metric": {
+      "primary": "U(t) = sum_{i=1}^{K} (p_i(t) - 1/K)^2  (identical to docs/M0_MODEL.md)",
+      "secondary": "TV(t) = 0.5 * sum_{i=1}^{K} |p_i(t) - 1/K|  (sanity check only)"
+    },
+    "alpha_spotcheck": {
+      "purpose": "verify time-rescaling for general q (NOT an alpha optimization)",
+      "cases_p": [
+        0.5,
+        2.0,
+        -0.25
+      ],
+      "alphas": [
+        0.1,
+        0.5,
+        1.0
+      ]
+    },
+    "mc_spotcheck": {
+      "purpose": "confirm finite-particle version fluctuates around deterministic prediction",
+      "cases_p": [
+        0.5,
+        2.0,
+        -0.25
+      ],
+      "alpha": 0.25,
+      "seeds": [
+        20260917,
+        20260918,
+        20260919,
+        20260920,
+        20260921
+      ]
+    },
+    "output_dir": "results"
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "mc_spotcheck_max_abs_mean_minus_theory_plus_floor": {
+    "0.5": "1.944e-05",
+    "2.0": "4.063e-05",
+    "-0.25": "1.804e-05"
+  },
+  "git": {
+    "commit": "d7f5a2782fbfc7e891be760af3aad4f7b0900115",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 1.31,
+  "command": "python experiments/m0_2_distribution_family/run_experiment.py",
+  "outputs": {
+    "alpha_rescaling.csv": "5f8b9013a12aff4323b4672084496b3ea65d3f0720d84ccbc8673e2055afb52b",
+    "comparison.csv": "e18d88968199b8b833b49c65fd4714546cf4d9db9b437a7abdaa902bdc6ef21e",
+    "deterministic_trajectories.csv": "1e98289a618fa58d9981db7731abecda025e735a66acffe73e8aa0114a80ad96",
+    "fig_family_shapes.png": "189756d125b98c364e0611d615b275b5397f9639c12d02c0e75f456486cb9ce4",
+    "fig_prediction_vs_observed.png": "83d029a57f88a9876d1acd0d763186d7a519c1c972a24676464dee8e2aded7ef",
+    "fig_u_vs_z_family.png": "0b7302d3512e663be0edf093224bab2218eb5b47dedabd62efb03a5bf9ad4410",
+    "fig_uniformity_vs_round.png": "bb13bf027272fad8feb28176b44678fe7e74f0d074dd7e4ad5dff595788e2425",
+    "mc_spotcheck.csv": "79bd9385e057a582568dd03f1146eb4462f3458929a39346ff4e72e4574bb62b",
+    "predictions.csv": "c3211e005e3f13abc16ad92de1da0ad5f94e6d15e169f33ba01a0b48f1c4cd93"
+  }
+}

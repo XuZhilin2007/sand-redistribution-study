@@ -1,0 +1,87 @@
+{
+  "model": "M1C.6",
+  "model_version": "0.1.0",
+  "experiment": "M1C.6 — boundary return & peak-competition dynamics: closing the deterministic churn feedback loop (audit of existing canonical A trajectories, no new model)",
+  "run_date_utc": "2026-09-19T15:41:13Z",
+  "config": {
+    "model": "M1C.6",
+    "base_model": "M1C.5 / M1C.4 / M1C.3",
+    "model_version": "0.1.0",
+    "experiment": "M1C.6 — boundary return & peak-competition dynamics: closing the deterministic churn feedback loop (audit of existing canonical A trajectories, no new model)",
+    "research_question": "What deterministic mechanism brings the sweep boundary back across the analytic rebound gate after a rebound-induced boundary switch?",
+    "episode_definition": {
+      "episode": "rebound transition t_r -> t_r+1 (D_max rises) opens an episode; the episode runs to the round before the next rebound (or to t_stop for the terminal episode). The sweep boundary of the rebound round is a_{t_r} = argmax of state t_r.",
+      "tau_return": "min s > 0 with B_{t_r+s} > 0 (first gate re-opening after the rebound), -1 if never before stop",
+      "tau_rebound": "next rebound round minus t_r (episode length)"
+    },
+    "B_definition": "B_t = a_t - a_crit(D_max,t) with a_crit(D) = [(1-D)+sqrt(D(D+2))]/2 (M1C.5). B_t <= 0 => rebound impossible at round t.",
+    "peak_definition": {
+      "local_maximum": "D(j) >= D(j+1) and (j == 0 or D(j) > D(j-1)); a plateau contributes its first index only",
+      "meaningful_secondary": "highest local maximum at grid distance > sep from the argmax, sep = max(2, K//50) (excludes adjacent-grid near-ties, M1A.1 convention)",
+      "note": "diagnostic convention, frozen; no smoothness assumed"
+    },
+    "switch_mechanism_classification": {
+      "scope": "rebound rounds with a large switch (|a_{t_r+1} - a_{t_r}| > 0.2, M1A.1 threshold)",
+      "P1": "post-rebound argmax coincides (within 2 grid points) with the pre-rebound meaningful secondary peak -> existing peak overtakes",
+      "P_multi": "coincides with a third-or-lower pre-rebound meaningful peak",
+      "P2_new": "post-rebound argmax at a position that was not a pre-rebound meaningful peak -> reinjection-rescaled profile",
+      "no_switch": "|a_{t_r+1} - a_{t_r}| <= 0.2",
+      "status": "operational definitions, frozen"
+    },
+    "pair_update_identity": "for any fixed index pair (j1, j2): D_new(j1) - D_new(j2) = [D_TM_new(j1) - D_TM_new(j2)] + M[Delta(j1) - Delta(j2)] — direct corollary of the M1C.2 decomposition; verified per round on the top-2 meaningful peaks",
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "T_max": 5000,
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "large_switch_threshold": 0.2,
+    "fp_tolerance": 1e-12,
+    "alignment_window": [
+      -2,
+      5
+    ],
+    "no_forced_theory": "no limit-cycle/attractor/chaos/ergodicity claims; 'two-peak reduced model' viability is assessed, not assumed",
+    "output_dir": "results"
+  },
+  "headline": {
+    "worst_pair_update_identity_residual": 2.1441182163073336e-15,
+    "gate_never_returns_share": {
+      "50": "0.0000",
+      "100": "0.0000",
+      "200": "0.0000",
+      "400": "0.0000"
+    },
+    "gap_closing_share_contraction": {
+      "50": "1.0000",
+      "100": "1.0000",
+      "200": "1.0000",
+      "400": "1.0000"
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "c84d02a53850f0bdc49981a81976af3297f185bd",
+    "working_tree_dirty_at_run_time": true
+  },
+  "runtime_seconds": 1.95,
+  "command": "python experiments/m1c6_boundary_return/run_analysis.py",
+  "outputs": {
+    "boundary_map.csv": "5959f84f826aff452916b9b942cde9b803bdc92c4c590ac5a4148821f95912b9",
+    "episode_table.csv": "cc5534fa936bbefc6ed243bb5282ca113c2428fc35b9d40c2396a75efdf687b2",
+    "fig_boundary_map_K100.png": "36b4cc0995ea26b492f46f8a44b5ac9190b642f5e9993d7c2c24142f74eaecd4",
+    "fig_gate_episode_alignment.png": "5b3a83d3ee79a99561e004fdd4e08c4bc56a4eb0cc8a10a9b23b8995fda050b7",
+    "fig_peak_gap_alignment_K100.png": "1980ed6c2f10940cf2d388a08cca206eb27d56993b18c1d784a8cccbbc10c9a9",
+    "fig_terminal_vs_ordinary.png": "4beda45f0233ae6482caba7502b3e2cfec73a54e30e601a925fe2a25730abe46",
+    "gate_alignment.csv": "47ad18ec340561bb12ad7c273ba0a0e398a61352603c2d4939cbcd7d62b6d104",
+    "gate_return_summary.csv": "0a7be079a4d0ff15cb425e8164be44dbd77390fe9a29fb0c647ecde021189507",
+    "terminal_comparison.csv": "59e022e4f65ad6b96585bc99ab992f8829bb40a9128ae160b7f31a2095d0ca74"
+  }
+}

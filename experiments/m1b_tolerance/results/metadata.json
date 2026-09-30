@@ -1,0 +1,105 @@
+{
+  "model": "M1B",
+  "model_version": "0.1.0",
+  "experiment": "M1B — perceptual tolerance / deadband stopping (only the stopping rule changes)",
+  "run_date_utc": "2026-09-18T14:40:10Z",
+  "config": {
+    "model": "M1B",
+    "base_model": "M1A",
+    "model_version": "0.1.0",
+    "experiment": "M1B — perceptual tolerance / deadband stopping (only the stopping rule changes)",
+    "change_vs_M1A": "stop if D_max <= epsilon instead of D_max <= 1e-12. Boundary rule, update rule, q, alpha, metric, initial condition all unchanged.",
+    "epsilon_interpretation": "no radial prefix holds more than epsilon of extra total sand mass relative to the perfectly uniform state. Model Assumption / perceptual-tolerance proxy — NOT a human JND or visual threshold.",
+    "space": "x in [0,1], equal-area coordinate",
+    "K_list": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "T_max": 5000,
+    "alpha": 0.25,
+    "epsilons": [
+      {
+        "epsilon": 0.0,
+        "implemented_tolerance": 1e-12,
+        "meaning": "exact M1A baseline (canonical numerical tolerance)"
+      },
+      {
+        "epsilon": 0.005,
+        "implemented_tolerance": 0.005,
+        "meaning": "0.5% cumulative excess tolerance"
+      },
+      {
+        "epsilon": 0.01,
+        "implemented_tolerance": 0.01,
+        "meaning": "1% cumulative excess tolerance"
+      },
+      {
+        "epsilon": 0.02,
+        "implemented_tolerance": 0.02,
+        "meaning": "2% cumulative excess tolerance"
+      },
+      {
+        "epsilon": 0.04,
+        "implemented_tolerance": 0.04,
+        "meaning": "4% cumulative excess tolerance"
+      }
+    ],
+    "frozen_note": "epsilon set frozen before any M1B run; it is a simple small-to-large scale, not a calibration. No post-hoc epsilon may be added as a formal result.",
+    "throw_distribution": "q_near(x) = 2(1-x); bin probabilities from exact CDF integration at every K",
+    "controls": {
+      "cases": [
+        "uniform",
+        "far"
+      ],
+      "setup": "K=100, epsilon=0.01",
+      "expectation": "immediate stop (no positive cumulative near-side excess at t=0)"
+    },
+    "monotonicity_check": {
+      "dense_epsilon_grid": "200 log-spaced values in [1e-12, 0.06], evaluated on the reference D_max sequence per K",
+      "expected": "t_stop(eps) non-increasing in eps (first-passage of the same reference sequence)"
+    },
+    "output_dir": "results"
+  },
+  "headline": {
+    "reference_stopped_at_per_K": {
+      "50": "324",
+      "100": "699",
+      "200": "1445",
+      "400": "2876"
+    },
+    "t_U_best_per_K": {
+      "50": 292,
+      "100": 653,
+      "200": 1349,
+      "400": 2627
+    },
+    "all_cases_match_reference_first_passage": true,
+    "monotonicity_verified_per_K": {
+      "50": true,
+      "100": true,
+      "200": true,
+      "400": true
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "5244e947bf0c754a094a3db1634f895a88faf8e1",
+    "working_tree_dirty_at_run_time": false
+  },
+  "runtime_seconds": 2.33,
+  "command": "python experiments/m1b_tolerance/run_experiment.py",
+  "outputs": {
+    "controls.csv": "48292cee68e44935b33583960edaf50d1c268ec52fc81f4d83a6cbc35668c73c",
+    "epsilon_k_summary.csv": "09b41aa3ee428e619f85345cb1f7c4ac1e321307830013fe142bb4c4b706175b",
+    "fig_m1b_reference_D_max.png": "a9e1206f416687f825f63940055cd6c524e39d360ae851f3ba91c4402281a9b6",
+    "fig_regret_vs_epsilon.png": "c7370fb3ebd8793962f55b9a393bd125a2a14b381b011792f97c50b90f6d4a98",
+    "fig_stopping_vs_epsilon.png": "d826353af44b6acad4666cba6224a1bfe2c29d56c0b1aa1f91cc1051a06791da",
+    "first_passage_monotonicity.csv": "fc315731b2110001e06fb8b88defa1f4d52c1ee818d3f14957a74ecd5e0f6042"
+  }
+}

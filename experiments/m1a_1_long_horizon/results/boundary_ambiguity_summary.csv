@@ -1,0 +1,12 @@
+statistic,value
+active_decisions_total,699
+active_rounds_with_gap_below_1pct_of_Dmax,601
+active_rounds_with_top2_adjacent(sep<=2/K),671
+active_rounds_with_far_second_peak(sep>0.1),8
+active_rounds_with_A1pct_multiple_components,75
+active_rounds_with_A1pct_reaching_beyond_0.1_from_argmax,20
+median_top2_value_gap,4.959e-05
+median_top2_separation,0.0100
+median_farthest_A1pct_point,0.0200
+late300_active_decisions_with_A1pct_multiple_components,28
+late300_median_farthest_A1pct_point,0.0100

@@ -1,0 +1,304 @@
+{
+  "model": "M2 Gate 1",
+  "model_version": "0.1.0",
+  "experiment": "M2 Gate 1 — redistribution-mismatch generality gate: sign / amplitude / spatial-shape controls of Delta = G - T on the canonical M1 dynamics",
+  "run_date_utc": "2026-09-20T10:27:24Z",
+  "config": {
+    "model": "M2 Gate 1",
+    "base_model": "M1A/M1B/M1C canonical (Stage 2 closure commit a544eee)",
+    "model_version": "0.1.0",
+    "experiment": "M2 Gate 1 — redistribution-mismatch generality gate: sign / amplitude / spatial-shape controls of Delta = G - T on the canonical M1 dynamics",
+    "research_question": "Stage 3 / M2 Gate 1: how do mismatch sign, mismatch amplitude, and mismatch spatial shape affect rebound, repeated rebound, switching, long-span churn-like transient, and exact stopping / finite-horizon censoring on the canonical M1 dynamics? (Frozen scope: no continuum, no Monte Carlo, no finite particles, no 2D, no perception, no alpha sweep, no deadband, no new stopping rules.)",
+    "frozen_inheritance": {
+      "target": "T(x) = x (uniform target, T(j) = j/K)",
+      "alpha": 0.25,
+      "selection": "cumulative-excess argmax D(j) = F(j) - j/K, ties -> smallest index (canonical, untouched)",
+      "removal": "prefix removal, each swept bin scaled by (1 - alpha) (canonical, untouched)",
+      "dynamics": "deterministic expected-mass path (canonical, untouched)",
+      "exact_stopping": "stop when D_max <= 1e-12 (canonical exact tolerance, untouched; tau_num below is NOT a stopping tolerance)",
+      "initial_state": "canonical q_near bin probabilities, identical for every kernel at a given K (shared; never regenerated per kernel)"
+    },
+    "kernels": {
+      "K0": {
+        "role": "zero-mismatch / target-matched integrity reference (reuse of M1C.1 Variant U)",
+        "G": "G0(x) = x (uniform respray law)",
+        "Delta": "Delta0(x) = 0",
+        "respray_distribution": "DISTRIBUTIONS['uniform']",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ],
+        "new_kernel": false
+      },
+      "K-": {
+        "role": "negative mismatch mirror; sign control + theorem-backed implementation audit (G <= T order theorem applies)",
+        "G": "G_minus(x) = x^2 (far-biased law, existing repository 'far')",
+        "Delta": "Delta_minus(x) = x^2 - x = -x(1-x) <= 0 (sign mirror of canonical Delta_C)",
+        "respray_distribution": "DISTRIBUTIONS['far']",
+        "K_list": [
+          100
+        ],
+        "new_kernel": true
+      },
+      "KW": {
+        "role": "weak positive mismatch amplitude ablation (lambda = 1/4 frozen; no family sweep)",
+        "G": "G_W(x) = x + (1/4) x(1-x) = 5/4 x - 1/4 x^2",
+        "Delta": "Delta_W(x) = (1/4) x(1-x) (same shape/sign as canonical at 1/4 amplitude)",
+        "respray_distribution": "sand_m0.model.weak_positive_distribution()",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ],
+        "new_kernel": true
+      },
+      "KC": {
+        "role": "canonical q_near calibration anchor; minimal integrity reproduction only (no re-mining of canonical dynamics)",
+        "G": "G_C(x) = 2x - x^2 (canonical q_near)",
+        "Delta": "Delta_C(x) = x(1-x)",
+        "respray_distribution": "null (canonical path, redistribution_dist=None)",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ],
+        "new_kernel": false
+      },
+      "KS": {
+        "role": "positive spatial-shape control (flat-top vs parabolic hump; scope boundary: KS also changes mismatch regularity, so any KC-vs-KS difference may only be stated as sensitivity to mismatch spatial profile / regularity)",
+        "G": "G_S(x) = x + Delta_S(x), piecewise: 7/4 x on [0,1/3]; x + 1/4 on [1/3,2/3]; 3/4 + 1/4 x on [2/3,1]",
+        "Delta": "Delta_S(x): 3/4 x on [0,1/3]; 1/4 on [1/3,2/3]; 3/4(1-x) on [2/3,1]; Delta_S >= 0, max = 1/4, integral = 1/6 (matched to canonical peak/integral/symmetry/endpoints)",
+        "respray_distribution": "sand_m0.model.flat_top_distribution()",
+        "K_list": [
+          50,
+          100,
+          200,
+          400
+        ],
+        "new_kernel": true
+      }
+    },
+    "discretization_rule": "q_j = G(j/K) - G((j-1)/K) by exact evaluation of the analytic CDF on bin edges (ThrowDistribution.bin_probs); no midpoint density sampling, no approximate integration, no arbitrary normalization (only the canonical floating-point residue correction), no rounding of the KS breakpoints 1/3, 2/3 to the grid",
+    "primary_K": 100,
+    "alpha": 0.25,
+    "stop_tolerance_exact": 1e-12,
+    "tau_num": 1e-12,
+    "tau_num_usage": "Gate 1 floating validation tolerance only: mass normalization, decomposition residual acceptance, CDF checks, numerical-boundary classification; NOT a stopping tolerance (exact stopping semantics untouched)",
+    "horizon_rule": "H(K) = 10*K active rounds, or exact stop, whichever happens first; if not stopped by 10K the observation is recorded as 'not stopped within pre-registered Gate-1 horizon' (finite-horizon censored). No automatic extension, no non-convergence interpretation.",
+    "switch_convention": {
+      "definition": "large boundary switch: |Delta a| > threshold (M1A.1 / M1C.4 diagnostic convention)",
+      "threshold": 0.2
+    },
+    "classification_convention": {
+      "categories": [
+        "No rebound",
+        "Isolated rebound",
+        "Short recurrent transient",
+        "Long-span recurrent / churn-like transient"
+      ],
+      "mapping": "N_R = 0 -> No rebound; N_R = 1 -> Isolated rebound; N_R >= 2 and S_R/K < 1 -> Short recurrent transient; N_R >= 2 and S_R/K >= 1 -> Long-span recurrent / churn-like transient. S_R/K >= 1 is a REPORTING CONVENTION (like the M1C.4 switch threshold 0.2), not a claimed sharp transition; every label is reported together with its full quantitative signature (N_R, f_R, S_R/K, boundary switching, D_max behavior).",
+      "no_frozen_churn_threshold": "there is no frozen N_R threshold that turns a count into 'churn'"
+    },
+    "R_t_definition": "R_t = max over j with gamma_t(j) > 0 of [ M_t * max(Delta(j), 0) / gamma_t(j) ], gamma_t(j) = D_max(t) - D_TM_new,t(j) — exactly the M1C.4 definition; Delta from the kernel's own respray bins. R_t > 1 iff rebound is equivalent to the M1C.3 exact criterion in real arithmetic (verified per round).",
+    "theory_verification": {
+      "decomposition_identity": "D_new(j) = D_TM_new(j) + M * Delta(j) verified on every active round against the actual next state; max_abs_decomposition_residual recorded (acceptance <= tau_num)",
+      "rebound_criterion": "actual rebound iff exists j: M*Delta(j) > gamma(j); TP/TN/FP/FN counted with plain strict semantics; rounds with |worst excess| <= tau_num flagged as numerical-boundary cases (not forced either way); unexplained non-boundary FP/FN pauses interpretation"
+    },
+    "pre_run_theory_expectations": [
+      "K0: M1C.2 theorem (G = T) => every active round strictly decreases D_max; zero genuine rebounds; fast exact stop expected (Variant U committed t=6 at all canonical K)",
+      "K-: M1C.3 order theorem (G <= T) => every active round strictly decreases D_max; zero genuine rebounds; stopping time NOT known a priori (horizon censoring possible)",
+      "KW: G_W >= T somewhere => outside the G <= T stable class; rebound possible by the exact criterion; dynamics UNKNOWN (this is the experiment)",
+      "KC: canonical reproduction only (t_stop 324/699/1445/2876 at K=50/100/200/400)",
+      "KS: G_S >= T on (0,1) => outside the G <= T stable class; rebound possible; dynamics UNKNOWN; shape/regularity sensitivity is the question"
+    ],
+    "execution_order": [
+      "A1 generic fixed-G support: reuse run_m1a_deterministic(redistribution='throw', redistribution_dist=law) — no simulator changes",
+      "A2 static kernel validation (all new kernels, all their K)",
+      "A3 K0 integrity vs committed M1C.1 Variant U rows (16 summary fields x 4 K)",
+      "A4 KC integrity vs committed M1C.1 Variant A rows (16 summary fields x 4 K) + t_stop vs committed M1B.2 annihilation events",
+      "A5 K- @ K=100 acceptance gate (zero genuine rebound, strict active-round D_max decrease, decomposition pass, criterion pass, mass conservation pass); failure stops all scientific interpretation",
+      "B1 KW @ K=100; B2 KS @ K=100",
+      "C KW and KS @ K = 50, 200, 400 (fixed, regardless of K=100 outcome)"
+    ],
+    "baseline_policy": "K0/KC string-compare against committed M1C.1 variant_summary rows (expected = committed, got = fresh run); any mismatch stops Gate 1 scientific execution before B/C",
+    "acceptance_rule_K_minus": {
+      "zero_genuine_rebound": true,
+      "strict_active_round_D_max_decrease": true,
+      "decomposition_residual_le_tau_num": true,
+      "rebound_criterion_FP_FN_zero": true,
+      "mass_conservation_le_tau_num": true
+    },
+    "no_post_hoc_tuning": "frozen kernel set {K0, K-, KW, KC, KS}; no lambda sweep, no parameter sweep, no new kernels, no alpha/initial-condition/controller changes, no horizon extension; results accepted as-is; Gate 2 (sign-changing mismatch) is explicitly NOT part of this execution",
+    "forbidden_drift": "no lambda midpoint, no parameter sweep, no new positive/sign-changing kernels, no alpha change, no epsilon/deadband study, no horizon extension, no continuum/Monte Carlo, no new rebound gate theorem, no a_crit generalization, no phase-transition fitting, no reduced model, no novelty claims",
+    "baseline_integrity_sources": {
+      "m1c1_variant_summary": "experiments/m1c1_uniform_kernel_ablation/results/variant_summary.csv",
+      "m1b2_annihilation_events": "experiments/m1b_2_micro_scaling/results/annihilation_events.csv"
+    },
+    "output_dir": "results"
+  },
+  "headline": {
+    "dynamics": {
+      "K0@K=50": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "K0@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "K0@K=200": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "K0@K=400": {
+        "stop_status": "exact_stop",
+        "t_stop": 6,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KC@K=50": {
+        "stop_status": "exact_stop",
+        "t_stop": 324,
+        "N_R": 117,
+        "f_R": "0.36111",
+        "S_R_over_K": "6.32000",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "KC@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 699,
+        "N_R": 251,
+        "f_R": "0.35908",
+        "S_R_over_K": "6.86000",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "KC@K=200": {
+        "stop_status": "exact_stop",
+        "t_stop": 1445,
+        "N_R": 531,
+        "f_R": "0.36747",
+        "S_R_over_K": "7.17500",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "KC@K=400": {
+        "stop_status": "exact_stop",
+        "t_stop": 2876,
+        "N_R": 1059,
+        "f_R": "0.36822",
+        "S_R_over_K": "7.16500",
+        "category": "Long-span recurrent / churn-like transient"
+      },
+      "K-@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 3,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KW@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 8,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KS@K=100": {
+        "stop_status": "exact_stop",
+        "t_stop": 26,
+        "N_R": 5,
+        "f_R": "0.19231",
+        "S_R_over_K": "0.11000",
+        "category": "Short recurrent transient"
+      },
+      "KW@K=50": {
+        "stop_status": "exact_stop",
+        "t_stop": 8,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KS@K=50": {
+        "stop_status": "exact_stop",
+        "t_stop": 26,
+        "N_R": 5,
+        "f_R": "0.19231",
+        "S_R_over_K": "0.22000",
+        "category": "Short recurrent transient"
+      },
+      "KW@K=200": {
+        "stop_status": "exact_stop",
+        "t_stop": 8,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KS@K=200": {
+        "stop_status": "exact_stop",
+        "t_stop": 26,
+        "N_R": 5,
+        "f_R": "0.19231",
+        "S_R_over_K": "0.05500",
+        "category": "Short recurrent transient"
+      },
+      "KW@K=400": {
+        "stop_status": "exact_stop",
+        "t_stop": 8,
+        "N_R": 0,
+        "f_R": "0.00000",
+        "S_R_over_K": "",
+        "category": "No rebound"
+      },
+      "KS@K=400": {
+        "stop_status": "exact_stop",
+        "t_stop": 29,
+        "N_R": 10,
+        "f_R": "0.34483",
+        "S_R_over_K": "0.04750",
+        "category": "Short recurrent transient"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3"
+  },
+  "git": {
+    "commit": "a544eee5e516311f0056bc59dfd3de3aeb040c08",
+    "working_tree_dirty_at_run_time": true
+  },
+  "runtime_seconds": 2.11,
+  "command": "python experiments/m2_gate1_generality/run_experiment.py",
+  "outputs": {
+    "baseline_integrity.csv": "82d0feb026a7c18f2258c4d9c551ab833cafd768e7baf93d2f0adf97fe209888",
+    "fig_gate1_D_max_K100.png": "a97f12b1ecf87dbeeb65230853dca786cd4dcdcb366d948936be33730a1a4057",
+    "fig_gate1_KC_KW_KS_comparison_K100.png": "f5a8ec67e6ecc8b76b3f97302e75cbfe9e674354e8c47cb1059159f4e678170f",
+    "fig_gate1_boundary_K100.png": "1b0ccda52bdecb14b07ebb230acd83f1ececd5faf69e1a5dac6e0606c7981156",
+    "fig_gate1_rebound_R_K100.png": "cd90df461c0a5ce035491063b1604f4592fd3bc958665e760fa469d948484983",
+    "per_round_diagnostics.csv": "4bc6d59b5b0db1e2280ff6bc60fe23c5416828abefe7995a704a573521d91f77",
+    "rebound_summary.csv": "bdda0489d9adfa102ceaae885b36bb04c8a65ebd8d4e737285d21c668b7412fd",
+    "static_kernel_validation.csv": "27e6c2db7f6e067f19c4083db59ffae81e1d696fe6de9f23dfc6e1cc103b643f"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "model": "M1C.6",
+  "base_model": "M1C.5 / M1C.4 / M1C.3",
+  "model_version": "0.1.0",
+  "experiment": "M1C.6 — boundary return & peak-competition dynamics: closing the deterministic churn feedback loop (audit of existing canonical A trajectories, no new model)",
+  "research_question": "What deterministic mechanism brings the sweep boundary back across the analytic rebound gate after a rebound-induced boundary switch?",
+  "episode_definition": {
+    "episode": "rebound transition t_r -> t_r+1 (D_max rises) opens an episode; the episode runs to the round before the next rebound (or to t_stop for the terminal episode). The sweep boundary of the rebound round is a_{t_r} = argmax of state t_r.",
+    "tau_return": "min s > 0 with B_{t_r+s} > 0 (first gate re-opening after the rebound), -1 if never before stop",
+    "tau_rebound": "next rebound round minus t_r (episode length)"
+  },
+  "B_definition": "B_t = a_t - a_crit(D_max,t) with a_crit(D) = [(1-D)+sqrt(D(D+2))]/2 (M1C.5). B_t <= 0 => rebound impossible at round t.",
+  "peak_definition": {
+    "local_maximum": "D(j) >= D(j+1) and (j == 0 or D(j) > D(j-1)); a plateau contributes its first index only",
+    "meaningful_secondary": "highest local maximum at grid distance > sep from the argmax, sep = max(2, K//50) (excludes adjacent-grid near-ties, M1A.1 convention)",
+    "note": "diagnostic convention, frozen; no smoothness assumed"
+  },
+  "switch_mechanism_classification": {
+    "scope": "rebound rounds with a large switch (|a_{t_r+1} - a_{t_r}| > 0.2, M1A.1 threshold)",
+    "P1": "post-rebound argmax coincides (within 2 grid points) with the pre-rebound meaningful secondary peak -> existing peak overtakes",
+    "P_multi": "coincides with a third-or-lower pre-rebound meaningful peak",
+    "P2_new": "post-rebound argmax at a position that was not a pre-rebound meaningful peak -> reinjection-rescaled profile",
+    "no_switch": "|a_{t_r+1} - a_{t_r}| <= 0.2",
+    "status": "operational definitions, frozen"
+  },
+  "pair_update_identity": "for any fixed index pair (j1, j2): D_new(j1) - D_new(j2) = [D_TM_new(j1) - D_TM_new(j2)] + M[Delta(j1) - Delta(j2)] — direct corollary of the M1C.2 decomposition; verified per round on the top-2 meaningful peaks",
+  "K_list": [50, 100, 200, 400],
+  "T_max": 5000,
+  "alpha": 0.25,
+  "stop_tolerance_exact": 1e-12,
+  "large_switch_threshold": 0.2,
+  "fp_tolerance": 1e-12,
+  "alignment_window": [-2, 5],
+  "no_forced_theory": "no limit-cycle/attractor/chaos/ergodicity claims; 'two-peak reduced model' viability is assessed, not assumed",
+  "output_dir": "results"
+}

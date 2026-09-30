@@ -1,0 +1,28 @@
+{
+  "model": "M1A",
+  "model_version": "0.1.0",
+  "experiment": "M1A.1 — long-horizon & resolution diagnostics (no model changes)",
+  "diagnostic_only": "M1A feedback rule, stopping rule and throw distribution are unchanged; this experiment only observes them longer and at finer resolution.",
+  "space": "x in [0,1], equal-area coordinate",
+  "K_list": [50, 100, 200, 400],
+  "T_max": 5000,
+  "baseline_K": 100,
+  "alpha": 0.25,
+  "stop_tolerance": 1e-12,
+  "throw_distribution": "q_near(x) = 2(1-x); bin probabilities from exact CDF integration at every K (never copied across K)",
+  "metric": {
+    "raw": "U(t) = sum (p_i - 1/K)^2",
+    "cross_resolution": "U_density(t) = K * U(t)  (density-L2 discretization; raw U not compared across K)",
+    "cross_resolution_2": "D_max(t) = max_j [cumulative mass - j/K] (one-sided CDF discrepancy; directly comparable across K)"
+  },
+  "checkpoints_t": [0, 100, 500, 1000, 2000, 5000],
+  "windows": [100, 500],
+  "recurrence": {"max_lag": 50, "second_half_only": true},
+  "boundary_ambiguity": {
+    "near_optimal_thresholds": {"A_1pct": 0.99, "A_5pct": 0.95},
+    "large_jump_threshold": 0.2,
+    "note": "diagnostic thresholds only; they never alter the sweep policy"
+  },
+  "d_profiles_figure_rounds": "auto: early, medium, late, plus before/after the largest boundary jump",
+  "output_dir": "results"
+}
