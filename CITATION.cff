@@ -3,7 +3,8 @@ message: "Please cite the specific public snapshot used. This repository is a re
 type: software
 title: "Sand Redistribution Study: deterministic mass-feedback model and canonical XO boundary reduction"
 authors:
-  - name: "XuZhilin2007"
+  - given-names: Zhilin
+    family-names: Xu
 repository-code: "https://github.com/XuZhilin2007/sand-redistribution-study"
 version: "0.1.0"
 keywords:
