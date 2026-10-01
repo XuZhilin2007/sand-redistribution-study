@@ -11,8 +11,8 @@ This repository contains a **one-dimensional deterministic mass-feedback model**
 | 证据层级 / Evidence | 当前结果 / Result |
 |---|---|
 | 已有数学结果 / Existing math | 一般单步更新的分解与若干下降判据；canonical XO 的原不变量 T1。 / General one-step decomposition and descent statements; the earlier canonical XO invariant T1. |
-| 新数学结果 / New mathematical result | S3 已证明 canonical XO 在明确前提下有限步进入并保持双边界区，边界观测量满足单变量精确递推，且无限时间选择行为按 $K\bmod6$ 分两类（T2–T5）。 / Under stated assumptions, S3 proves finite boundary entry, persistence, scalar closure of boundary observables, and a residue-class selection dichotomy. |
-| 计算核验 / Verified computation | S1 精确算术重放与 S2 的 51 个 $K$ 的有限时限核验。LOCK/CYCLE 只表示冻结的 $H=10K$ 实验分类。 / Exact S1 replay and the 51-case S2 finite-horizon checks; LOCK/CYCLE are classifier labels at $H=10K$. |
+| 新数学结果 / New mathematical result | S3 已证明 canonical XO 在明确前提下有限步进入并保持双边界区，边界观测量满足单变量精确递推，且无限时间选择行为按 $`K\bmod6`$ 分两类（T2–T5）。 / Under stated assumptions, S3 proves finite boundary entry, persistence, scalar closure of boundary observables, and a residue-class selection dichotomy. |
+| 计算核验 / Verified computation | S1 精确算术重放与 S2 的 51 个 $`K`$ 的有限时限核验。LOCK/CYCLE 只表示冻结的 $`H=10K`$ 实验分类。 / Exact S1 replay and the 51-case S2 finite-horizon checks; LOCK/CYCLE are classifier labels at $`H=10K`$. |
 | 未知 / Open | 学术新颖性、完整状态的渐近行为、其他规则和初态、二维及现实验证等。 / Literature novelty, full-state asymptotics, other laws and initial states, 2D, and real-world validation. |
 
 S3 状态为 **CLOSED — PASS**，证明已入库。[审计记录](docs/S3_XO_BOUNDARY_THEOREM_AUDIT.md)中的独立 PASS 是项目所有者提供的审计结论；完整审计对话未随仓库发布。定理不宣称周期性、全状态一维化或一般沙子再分配定律。 / S3 is **CLOSED — PASS**, with its proof deposited. The independent PASS verdict in the [audit provenance](docs/S3_XO_BOUNDARY_THEOREM_AUDIT.md) was reported by the project owner; the full audit transcript is not included. The theorem does not claim periodicity, a one-dimensional reduction of the entire state, or a general law of sand redistribution.
