@@ -2,6 +2,8 @@
 
 > 状态：理论 + existing-trajectory verification 轮（2026-09-19）。M1C.4 的直接后续；**无新模型、无新参数、无新实验**——只对既有 canonical Variant A 确定性轨迹（K∈{50,100,200,400}）做推导核验。
 >
+> **文字勘误（2026-10-06）**：§0 第 3 条与 §5 的旧句“h 恒为零”已更正为“h 非正、连续最大值为零”；§4 端点分支改用直接恒等式。原稿保留于 Git 历史，必要门槛结论、适用范围与实验结果不变。记号与历史术语见[阅读说明](READING_NOTES.md)。
+>
 > 实验：[M1C5_REPORT.md](../experiments/m1c5_boundary_gate/M1C5_REPORT.md)；前置：[M1C4_CHURN_REGIME_AUDIT.md](M1C4_CHURN_REGIME_AUDIT.md)（a-门控 observation）、[M1C3_REDISTRIBUTION_LAW_ORDER.md](M1C3_REDISTRIBUTION_LAW_ORDER.md)（精确反弹判据）、[M1C2_TARGET_MATCHED_KERNEL_THEORY.md](M1C2_TARGET_MATCHED_KERNEL_THEORY.md)
 >
 > North Star：把 M1C.4 的经验门（a<0.55 必收缩、a≥0.8 必反弹、apparent gate ≈0.58）提升为**由 exact rebound criterion 推出的解析可能边界**。
@@ -14,7 +16,7 @@
    `M·Δ(j) − γ(j) = (1−α)·D(j) − D_max + α·h(j/K)`，其中 `h(x) = x[F_a(2−x)−1]`、`F_a = F(a) = a + D_max`。全部 5344 个 active 轮核验，最大残差 **4.0×10⁻¹⁶**。
 2. **State-reduced 必要条件（定理）**：由 `(1−α)D(j) ≤ (1−α)D_max`，
    `M·Δ(j) − γ(j) ≤ α·(h(j/K) − D_max)`，故 **rebound ⟹ max_{j≤j\*} h(j/K) > D_max**——只依赖 (a, D_max)，不依赖完整 D-profile。
-3. **解析最大化**：h 是开口向下抛物线。`F_a ≤ 1/2 ⟹ h ≡ 0`（精确，rebound 不可能）；`F_a > 1/2` 时内部最大在 `x\* = 1 − 1/(2F_a)`，值 `(2F_a−1)²/(4F_a)`。x\* ≤ a 的条件是 `(a+D_max)(1−a) ≤ 1/2`，对 canonical A 全部状态成立（D_max ≤ 0.25 < √2−1；实测 0 轮违反）。
+3. **解析最大化**：h 是开口向下抛物线。`F_a ≤ 1/2 ⟹ h(x) ≤ 0 on [0,a]`，连续最大值为 `h(0)=0`，正格点上的值严格小于零（精确，rebound 不可能）；`F_a > 1/2` 时内部最大在 `x\* = 1 − 1/(2F_a)`，值 `(2F_a−1)²/(4F_a)`。x\* ≤ a 的条件是 `(a+D_max)(1−a) ≤ 1/2`，对 canonical A 全部状态成立（D_max ≤ 0.25 < √2−1；实测 0 轮违反）。
 4. **闭式门槛**：`(2F_a−1)²/(4F_a) > D_max` 的解给出
    **a_crit(D) = [(1−D) + √(D(D+2))]/2**（大根；小根落在 F_a≤1/2 惰性分支）。
    **rebound 在 a ≤ a_crit(D_max) 时数学上不可能。**
@@ -66,7 +68,13 @@ h(x) = (2F_a−1)x − F_a·x²，h(0) = 0，开口向下：
 
 **x\* ≤ a 条件**：x\* ≤ a ⟺ (a+D_max)(1−a) ≤ 1/2。该式对 a 的最大值 ((1+D)/2)² 在 **D ≤ √2−1 ≈ 0.414** 时 ≤ 1/2。canonical A 全程 D_max ≤ 0.25（初值即全轨迹最大，实测 4 K 全部 0 轮违反）⟹ **x\* ≤ a 恒成立，内部最大公式适用于每一轮**。
 
-（x\* > a 分支的 h(a) = a[D(2−a)−(1−a)²]：因 a(2−a)−1 = −(1−a)² ≤ 0，该值 ≤ a·D(2−a) < D 当 a < 1 且 D < D/(1)……直接验证：h(a) > D 要求 a(2−a) > 1 − D(2−a)/a，而 2a−a² ≤ 1 恒成立（(1−a)² ≥ 0），故 h(a) ≤ a·D(2−a)；对 a<1、D≤0.25 有 a(2−a) ≤ 1，故 h(a) ≤ D(2−a)，h(a)>D 需要 2−a>1 即 a<1 且 a·D(2−a)>D——只在 a→1 极限时接近。该分支在 canonical 轨迹上不出现（x\*≤a 恒成立），记录完整性而已。）
+**端点分支（2026-10-06 文字更正）**：若 x\* > a，h 在 [0,a] 上的最大值位于 a。令 D = D_max ≥ 0；由 F_a = a+D 直接展开，
+
+$$
+h(a)-D=a[(a+D)(2-a)-1]-D=-(a+D)(1-a)^2\le0.
+$$
+
+因此 h(a) ≤ D_max，必要条件 max h > D_max 不成立，rebound 不可能。这里 0 ≤ a ≤ 1；原 canonical 验证轨迹中没有出现 x\* > a 的分支。此式替代旧稿中冗长且不准确的中间推导，不改变主结果的适用范围。
 
 ## 5. 闭式门槛（定理，主结果）
 
@@ -77,7 +85,7 @@ h(x) = (2F_a−1)x − F_a·x²，h(0) = 0，开口向下：
 a = [(1−D) ± √(D(D+2))] / 2
 ```
 
-**大根即门槛**：`a_crit(D) = [(1−D) + √(D(D+2))]/2`。小根 a = [(1−D)−√(D(D+2))]/2 落在 F_a < 1/2 的惰性分支（该分支 h≡0，rebound 无论 a 如何都不可能），无 gate 意义。φ(F) = (2F−1)²/(4F) 在 F > 1/2 严格递增 ⟹ 必要条件等价于 **a > a_crit(D_max)**。
+**大根即门槛**：`a_crit(D) = [(1−D) + √(D(D+2))]/2`。对活跃状态 D_max > 0，小根 a = [(1−D)−√(D(D+2))]/2 落在 F_a < 1/2 的惰性分支（该分支 h≤0，连续最大值为零，rebound 不可能），无 gate 意义。φ(F) = (2F−1)²/(4F) 在 F > 1/2 严格递增 ⟹ 必要条件等价于 **a > a_crit(D_max)**。
 
 **逻辑方向（重要）**：
 

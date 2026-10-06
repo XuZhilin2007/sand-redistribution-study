@@ -1,5 +1,7 @@
 # 内容许可 / Content license
 
+**项目版权署名 / Project copyright attribution: Copyright 2026 Zhilin Xu.**
+
 本公开快照采用按文件类型和目录划分的双许可。此说明只授予项目所有者有权授权的原创材料；文中引用的第三方材料仍按其原有权利与署名要求处理。
 
 This public snapshot uses two licenses by file category. The statement applies to original material the project owner is entitled to license. Referenced third-party material retains its own rights and attribution requirements.
@@ -14,3 +16,5 @@ The legal texts themselves remain under their respective publishers' terms. `CIT
 CC BY 4.0 允许复制和改编（包括商业用途），但要求合理署名、提供许可链接，并说明所作修改。Apache-2.0 允许软件复用和修改，并包含自己的通知条件。学术引用与许可署名不是同一件事：请同时参照 [CITATION.cff](CITATION.cff) 引用具体的公开版本。
 
 CC BY 4.0 permits sharing and adaptation, including commercial use, subject to attribution, a license link, and indication of changes. Apache-2.0 governs the software categories above. License attribution and scholarly citation serve different purposes; please also cite the specific public release using [CITATION.cff](CITATION.cff).
+
+`LICENSE` 中 Apache 官方附录的 `[yyyy]`、`[name of copyright owner]` 是应用示例，保留官方文本原样；本项目的版权署名见本页上方。 / The placeholders in the official Apache appendix are application examples. The license text is preserved verbatim; the project's attribution appears above.

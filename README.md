@@ -1,6 +1,6 @@
 # 沙子再分配研究 / Sand Redistribution Study
 
-**公开研究快照 · Public research snapshot** — 2026-10-01
+**公开研究快照 · Public research snapshot** — [v0.1.1](https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.1.1) · 2026-10-06（初始快照 / initial snapshot: 2026-10-01）
 
 本仓库保存一个由沙面修正问题启发的**一维确定性质量反馈模型**、相应代码与实验记录，以及 canonical XO 轨迹的边界约化证明。这里的“沙子”是问题来源；模型不是现实沙粒仿真，结论也不直接预测真实沙坑。主要研究结果已有中英双语[公开研究报告](docs/RESEARCH_REPORT.md)；核心定理同时提供[中文完整证明译本](docs/S3_XO_BOUNDARY_THEOREM_PROOF_ZH.md)与[英文正式证明](docs/S3_XO_BOUNDARY_THEOREM_PROOF.md)。
 
@@ -23,8 +23,11 @@ S3 状态为 **CLOSED — PASS**，证明已入库。[审计记录](docs/S3_XO_B
 2. [中文定理导读 / Chinese theorem guide](docs/XO_THEOREM_GUIDE_ZH.md)、[中文证明译本 / Full Chinese proof translation](docs/S3_XO_BOUNDARY_THEOREM_PROOF_ZH.md) 与 [英文正式证明 / Formal English proof](docs/S3_XO_BOUNDARY_THEOREM_PROOF.md)；[定理登记 / Registration](docs/S3_XO_BOUNDARY_THEOREM_REGISTRATION.md)给出精确适用范围。
 3. [S1 精度报告](docs/S4_W1_S1_XO_PRECISION.md)、[S2 边界显微镜报告](docs/S4_W1_S2_BOUNDARY_MICROSCOPE.md)与 `experiments/s4_w1_s1_xo_precision/`、`experiments/s4_w1_s2_boundary_microscope/` 内的冻结配置和结果。
 4. [Stage 2](docs/RESEARCH_CHECKPOINT_2026-09-20.md) 与 [Stage 3](docs/RESEARCH_CHECKPOINT_2026-09-20_STAGE3.md) 历史 checkpoint：分别记录一般单步数学和跨规则对照。后续 S1–S3 结果会取代其中有关 XO 的早期开放问题或浮点解释。 / These dated checkpoints preserve earlier results and their then-current questions; later S1–S3 work supersedes some XO interpretations.
+5. [阅读说明、术语与勘误 / Reading notes, terminology, and errata](docs/READING_NOTES.md) — 历史名称、局部记号、M1C5 更正与公开版本来源 / historical labels, local notation, M1C5 corrections, and public-version provenance.
 
 历史报告按写作时点保留，不应把其中的“下一步”或“尚未证明”当作当前状态。请以本页、双语公开报告及 S3 正式证明为当前入口。 / Dated reports are preserved as historical evidence; their old next steps and proof targets are not the live status. Use this page, the bilingual report, and the S3 proof as the current entry points.
+
+v0.1.1 修订文稿、导航与引用信息；研究范围和冻结实验材料保持原样。S8 文献核验、S9 终稿及其他延伸分支当前暂不启动。版本变更见 [RELEASE_NOTES.md](RELEASE_NOTES.md)。 / v0.1.1 corrects exposition, navigation, and citation metadata while preserving the research scope and frozen experimental materials. S8 literature verification, S9 manuscript work, and other extensions are currently deferred. See the release notes for version changes.
 
 ## 复现 / Reproduction
 
@@ -36,7 +39,7 @@ python -m venv .venv
 .venv\Scripts\python.exe tests\count_tests.py
 ```
 
-macOS/Linux 将执行路径改为 `.venv/bin/python`。该测试入口逐个执行 `tests/test_*.py`。本快照在新建的 Python 3.14.6 虚拟环境中按上述固定版本安装依赖后，**20 套、382 项运行时断言全部通过**（2026-10-01）。/ On macOS/Linux, use `.venv/bin/python`. The runner executes each `tests/test_*.py`. In a fresh Python 3.14.6 environment with the pinned dependencies, this snapshot passed **20 suites and 382 runtime assertions** on 2026-10-01.
+macOS/Linux 将执行路径改为 `.venv/bin/python`。该测试入口逐个执行 `tests/test_*.py`。初始快照在新建的 Python 3.14.6 虚拟环境中按上述固定版本安装依赖后通过测试（2026-10-01）；v0.1.1 在同一环境复跑，**20 套、382 项运行时断言全部通过**（2026-10-06）。 / On macOS/Linux, use `.venv/bin/python`. The runner executes each `tests/test_*.py`. The initial snapshot was checked in a fresh Python 3.14.6 environment with pinned dependencies on 2026-10-01; v0.1.1 passed **20 suites and 382 runtime assertions** again in that environment on 2026-10-06.
 
 已提交的 CSV、JSON 与图像是证据记录；完整 S1/S2 运行可较耗时，不是阅读或运行测试的前提。冻结配置和原始输出应一同使用，不应把一个有限时限的分类当成无限时间定理。 / Committed CSV, JSON, and figures are evidence records. Full S1/S2 runs can be time-consuming and are not required for reading or running the test suite. Use frozen configurations together with their outputs; finite-horizon labels must not be read as asymptotic theorems.
 
@@ -45,3 +48,5 @@ macOS/Linux 将执行路径改为 `.venv/bin/python`。该测试入口逐个执�
 `src/` 为模型实现；`tests/` 为回归测试；`experiments/` 保存冻结配置、执行脚本和结果；`docs/` 保存数学推导、阶段报告和当前双语导读。本仓库从私人研究记录制作**独立历史的公开快照**；内部评审草稿、原始聊天材料和旧归档不在此版本内。 / This is an independent-history public snapshot of the private research record. Internal review drafts, raw chat materials, and the old bootstrap archive are not included.
 
 软件源代码、测试、实验脚本和运行配置采用 **Apache License 2.0**（[LICENSE](LICENSE)）；研究文字、图表和已发布的实验结果采用 **Creative Commons Attribution 4.0 International**（[CONTENT_LICENSE.md](CONTENT_LICENSE.md)）。具体文件边界以该说明为准。公开引用署名为 **Zhilin Xu**；引用本项目时请标明所用版本，具体信息见 [CITATION.cff](CITATION.cff)。 / Software and configurations use **Apache-2.0**; research prose, figures, and published results use **CC BY 4.0**. The [content license note](CONTENT_LICENSE.md) defines the file boundary. The citation author is **Zhilin Xu**; cite the specific version used, following [CITATION.cff](CITATION.cff).
+
+需要固定版本时，请引用 [v0.1.1](https://github.com/XuZhilin2007/sand-redistribution-study/tree/v0.1.1) 标签及相应文件；`main` 会继续接收后续修订。 / For a fixed version, cite the v0.1.1 tag and the relevant file; `main` may receive later revisions.

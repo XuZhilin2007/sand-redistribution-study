@@ -6,7 +6,7 @@
 >
 > **S3：CLOSED — PASS**。证明本体：[S3_XO_BOUNDARY_THEOREM_PROOF.md](S3_XO_BOUNDARY_THEOREM_PROOF.md)。独立审计：[S3_XO_BOUNDARY_THEOREM_AUDIT.md](S3_XO_BOUNDARY_THEOREM_AUDIT.md)，GPT-6.1 Sol，**PASS — no substantive gap found**。
 >
-> **状态迁移 provenance**：登记提交 `04dab39` 当时仅有定理陈述，证明尚未入库。该历史事实保留于 RESEARCH_LOG。本次先存入 Astra 的完整 P1–P4 证明及独立审计 provenance，再完成登记升级；不把已提交的历史实验改写为证明。
+> **状态迁移 provenance**：`04dab39` 是私人来源仓库中的登记提交，当时仅有定理陈述，证明尚未入库。后来先存入 Astra 的完整 P1–P4 证明及独立审计 provenance，再完成登记升级；不把历史实验改写为证明。私人提交编号与 RESEARCH_LOG 仅为来源记录，不是本公开独立历史中的提交或证明依赖；公开证明 §2 已完整重录既有不变量证明。引用本版时使用公开标签与文件路径，见[阅读说明](READING_NOTES.md)。 / The commit ID belongs to the private source history. Its log records provenance, not a dependency of the deposited public proof; cite this snapshot using a public tag or commit and file path.
 
 ## 1. 冻结适用范围
 

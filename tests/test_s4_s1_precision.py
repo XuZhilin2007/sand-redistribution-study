@@ -1,4 +1,4 @@
-"""S4 Wave 1 / S1 high-precision replay tests (docs/S4_S1_XO_PRECISION.md).
+"""S4 Wave 1 / S1 high-precision replay tests (docs/S4_W1_S1_XO_PRECISION.md).
 
 Run:  python tests/test_s4_s1_precision.py
 
