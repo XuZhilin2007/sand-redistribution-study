@@ -6,9 +6,9 @@ authors:
   - given-names: Zhilin
     family-names: Xu
 repository-code: "https://github.com/XuZhilin2007/sand-redistribution-study"
-version: "0.1.1"
-date-released: "2026-10-06"
-url: "https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.1.1"
+version: 0.2.0
+date-released: 2026-10-07
+url: "https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.2.0"
 keywords:
   - mass redistribution
   - deterministic feedback

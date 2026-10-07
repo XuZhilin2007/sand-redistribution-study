@@ -1,5 +1,22 @@
 # 公开版本记录 / Public release history
 
+## v0.2.0 — A/T6 核心补充与限定附录 / A/T6 supplements and scoped appendices
+
+> 2026-10-07。原 S3、S1/S2 冻结材料与 v0.1.1 标签保留；本版分别正式收录 A 与 T6。 / The original S3 and frozen S1/S2 record and v0.1.1 tag are preserved. A and T6 are registered separately.
+
+- **A：** canonical 初态、XO、最小指标平局、精确算术、K≥6、0<α<1 下的长期边界结构推广。 / Long-term boundary extension to every 0<α<1 under the stated canonical XO assumptions.
+- **T6：** 仅 α=1/4、H=10K；原冻结分类器对所有 K≥6 与长期二分一致，依赖原 S3，不依赖 A。 / Reliability of the unchanged classifier for every K≥6 at α=1/4 and H=10K; depends on S3, not A.
+- 新增[独立补充登记](docs/XO_EXTENSION_REGISTRATION.md)与[审查来源](docs/XO_EXTENSION_REVIEW.md)，更新 README、双语报告、阅读说明和中文导读；原 S3 审计不扩写。 / Separate registration/review provenance and updated current reading routes; the original audit remains unchanged.
+- 收录 F、首次选择公式、限定探针、径向聚合/半共轭和文献线索；S12 明确为标量 float 代理，C1 补齐参数和按被扫次数衰减。 / Scoped auxiliaries, explicitly labelled scalar float statistics, and parameterized radial aggregation.
+- 验收迁移为仓内入口，从本仓 S2 文件读取冻结函数，记录配置、实际窗口、算术和源码 SHA-256；新增日常精简回归，两条任意 α 的有限窗反例保留。 / Repository-local validation, frozen configs and hashes, and routine exact regression with both scope counterexamples.
+- 实际测试数量、完整矩阵与脱离实验室复现见[候选验收](docs/XO_EXTENSION_VALIDATION.md)。 / See integrated validation for actual suite counts, full matrices, and isolated reproduction.
+- 修正 S3 中英文和导读的 GitHub 公式转义显示；等价 TeX 宏与换行调整不改变数学内容，18 个编号公式仍对应。 / Corrected GitHub display escaping with equivalent TeX macros and line breaks; all 18 tagged bilingual formulas still match.
+- 项目引用版本为 0.2.0；cff-version 1.2.0 格式字段保持原样。 / Project citation version is 0.2.0; the CFF format version is unchanged.
+
+本版不宣称任意 α 的 H=10K 分类保证、周期性、全状态渐近、一般噪声/二维理论或学术新颖性。实验室 base/、旧错误稿、私人 Git 历史和本机管理记录不进入公开版。 / No arbitrary-α finite-window guarantee, periodicity, full-state asymptotics, general noise/2D theory, or novelty claim is added. Private histories and lab management records are excluded.
+
+
+
 ## v0.1.1 — 文稿与引用维护 / Exposition and citation maintenance
 
 > Released 2026-10-06. The canonical XO S3 theorem remains CLOSED — PASS within its existing scope. This patch adds no experiment, new theorem, or extension of the model.

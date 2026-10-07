@@ -125,7 +125,7 @@ $$
 若未被扫到，(U) 则减去正量 $`F_s(1-G_j)/4`$。所以一旦 $`D_j<a`$，它就一直严格低于 $`a`$。在 $`D_j\ge a`$ 期间，因 $`F_s=sh+d\ge a`$，每一步的下降至少为
 
 $$
-\tfrac14\min\{a-L_j,\ a(1-G_j)\}>0,
+\tfrac14\min\lbracea-L_j,\ a(1-G_j)\rbrace>0,
 \tag{4}
 $$
 
@@ -139,7 +139,7 @@ $$
 (R) 向前保持；结合 (I)，此后只有 $`\ell,m`$ 可能最大化超额。为得到显式保守上界，(2) 及其第一种情况给出 $`a-L_j\ge29h/108`$。另有 $`1-G_j\ge2h`$：当 $`jh\le2/3`$ 时用 $`1-G_j\ge1/3\ge2h`$；在最后一段线性区间用 $`1-G_j=2z-rh/3\ge7h/3`$。所以 (4) 至少为
 
 $$
-\frac14\min\{29h/108,\ 2ah\}\ge\frac{5}{121K}.
+\frac14\min\lbrace29h/108,\ 2ah\rbrace\ge\frac{5}{121K}.
 $$
 
 初始 $`D_{0,j}\le1/4`$，且 $`1/4-a\le81/484`$。故最迟在某个
@@ -231,7 +231,8 @@ $$
 结合最小指标平局规则，得到
 
 $$
-s_t=\begin{cases}m,&x_t>h,\\\ell,&x_t\le h,\end{cases}
+s_t=\begin{cases}m,&x_t>h,\\
+\ell,&x_t\le h,\end{cases}
 \qquad d_t=a+(h-x_t)^+.
 \tag{10}
 $$
@@ -285,9 +286,9 @@ $$
 
 $$
 \begin{aligned}
-K\bmod6\in\{0,1,2\}&\Longrightarrow
+K\bmod6\in\lbrace0,1,2\rbrace&\Longrightarrow
 \exists T\ \forall t\ge T:\ s_t=m,\\
-K\bmod6\in\{3,4,5\}&\Longrightarrow
+K\bmod6\in\lbrace3,4,5\rbrace&\Longrightarrow
 s_t=\ell\text{ and }s_t=m\text{ each infinitely often}.
 \end{aligned}
 \tag{14}

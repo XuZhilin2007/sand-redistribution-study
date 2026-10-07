@@ -145,7 +145,7 @@ $$
 For an unswept coordinate, (U) subtracts $`F_s(1-G_j)/4>0`$. Therefore, once $`D_j<a`$, it remains strictly below $`a`$. While $`D_j\ge a`$, it decreases by at least
 
 $$
-\tfrac14\min\{a-L_j,\ a(1-G_j)\}>0,
+\tfrac14\min\lbracea-L_j,\ a(1-G_j)\rbrace>0,
 \tag{4}
 $$
 
@@ -161,7 +161,7 @@ is reached in finite time and is forward-invariant. With (I), only $`\ell`$ and 
 For the explicit bound, (2) and the first case give $`a-L_j\ge29h/108`$ for all interior indices. Also $`1-G_j\ge2h`$: for $`jh\le2/3`$, use $`1-G_j\ge1/3\ge2h`$; on the last linear segment, use $`1-G_j=2z-rh/3\ge7h/3`$. Thus the decrease in (4) is at least
 
 $$
-\frac14\min\{29h/108,\ 2ah\}\ge\frac{5}{121K}.
+\frac14\min\lbrace29h/108,\ 2ah\rbrace\ge\frac{5}{121K}.
 $$
 
 Initially $`D_{0,j}\le1/4`$ and $`1/4-a\le81/484`$. Hence (R) holds by a time
@@ -255,7 +255,8 @@ $$
 Smallest-index tie handling therefore gives
 
 $$
-s_t=\begin{cases}m,&x_t>h,\\\ell,&x_t\le h,\end{cases}
+s_t=\begin{cases}m,&x_t>h,\\
+\ell,&x_t\le h,\end{cases}
 \qquad d_t=a+(h-x_t)^+.
 \tag{10}
 $$
@@ -313,9 +314,9 @@ If $`r\in\{0,1,2\}`$, this is at least $`(35/36)(4/3)=35/27>1`$. If $`r\in\{3,4,
 
 $$
 \begin{aligned}
-K\bmod6\in\{0,1,2\}&\Longrightarrow
+K\bmod6\in\lbrace0,1,2\rbrace&\Longrightarrow
 \exists T\ \forall t\ge T:\ s_t=m,\\
-K\bmod6\in\{3,4,5\}&\Longrightarrow
+K\bmod6\in\lbrace3,4,5\rbrace&\Longrightarrow
 s_t=\ell\text{ and }s_t=m\text{ each infinitely often}.
 \end{aligned}
 \tag{14}
