@@ -8,7 +8,7 @@
 
 $$
 F_{t,j}=\sum_{i\le j}p_{t,i},\quad D_{t,j}=F_{t,j}-j/K,\quad
-d_t=\max_jD_{t,j},\quad s_t=\min\operatorname*{argmax}_jD_{t,j}.
+d_t=\max_jD_{t,j},\quad s_t=\min\lbrace j:D_{t,j}=d_t\rbrace.
 $$
 
 记 $`h=1/K`$、$`m=\lceil5K/6\rceil`$、$`\ell=m-1`$、$`b=m/K`$、$`c=2b-b^2`$、$`a=b(1-b)`$、$`r=K\bmod6`$、$`q=(6-r)/(3K)`$。这里 $`q`$ 是 XO 喷撒律分配到第 $`m`$ 格的质量份额，不是整个喷撒分布。$`x_t=p_{t,m}`$ 是第 $`m`$ 格当前质量。

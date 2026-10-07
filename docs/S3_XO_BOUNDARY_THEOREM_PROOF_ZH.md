@@ -11,7 +11,7 @@ F_{t,j}=\sum_{i\le j}p_{t,i},\qquad
 D_{t,j}=F_{t,j}-j/K,\qquad d_t=\max_jD_{t,j}.
 $$
 
-选择规则为 $`s_t=\min\operatorname*{argmax}_jD_{t,j}`$。若 $`d_t\le10^{-12}`$，按容差规则停机；在活跃轮，从前 $`s_t`$ 格各移除自身质量的四分之一，并将总移除质量 $`M_t=F_{t,s_t}/4`$ 重新分配：
+选择规则为 $`s_t=\min\lbrace j:D_{t,j}=d_t\rbrace`$。若 $`d_t\le10^{-12}`$，按容差规则停机；在活跃轮，从前 $`s_t`$ 格各移除自身质量的四分之一，并将总移除质量 $`M_t=F_{t,s_t}/4`$ 重新分配：
 
 $$
 p_{t+1,i}=\begin{cases}

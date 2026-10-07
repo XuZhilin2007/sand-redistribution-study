@@ -13,7 +13,7 @@ F_{t,j}=\sum_{i\le j}p_{t,i},\qquad
 D_{t,j}=F_{t,j}-j/K,\qquad d_t=\max_jD_{t,j}.
 $$
 
-Selection is $`s_t=\min\operatorname*{argmax}_jD_{t,j}`$. The stopping rule is $`d_t\le10^{-12}`$. On an active step, remove one quarter of each selected-prefix bin and redistribute the removed mass $`M_t=F_{t,s_t}/4`$:
+Selection is $`s_t=\min\lbrace j:D_{t,j}=d_t\rbrace`$. The stopping rule is $`d_t\le10^{-12}`$. On an active step, remove one quarter of each selected-prefix bin and redistribute the removed mass $`M_t=F_{t,s_t}/4`$:
 
 $$
 p_{t+1,i}=\begin{cases}
