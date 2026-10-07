@@ -9,3 +9,6 @@ venv/
 htmlcov/
 .DS_Store
 Thumbs.db
+
+# Fresh supplement validation output (committed evidence lives under results/).
+/xo-validation-output/

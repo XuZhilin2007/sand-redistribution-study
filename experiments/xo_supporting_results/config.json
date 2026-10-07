@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "config_kind": "checked fixed-verifier settings",
+  "F": {
+    "seed": 20261006,
+    "canonical_samples": 40,
+    "perturbed_samples": 20,
+    "sample_H": 150,
+    "xo_sanity_K": 12,
+    "xo_sanity_H": 2000,
+    "alpha": "1/4",
+    "tolerance": "1/1000000000000"
+  },
+  "D": {
+    "K_min": 6,
+    "K_max": 4000,
+    "second_step_K_max": 60,
+    "alpha": "1/4"
+  },
+  "S12": {
+    "K_values": [
+      50,
+      200,
+      8,
+      14,
+      26
+    ],
+    "epsilon_values": [
+      "1/100",
+      "1/20",
+      "1/10",
+      "1/5"
+    ],
+    "steps": 200000,
+    "seed_rule": "1000*K + int(100*epsilon)",
+    "arithmetic": "scalar float proxy after exact full-state setup"
+  },
+  "S6": {
+    "K_values": [
+      20,
+      50,
+      100
+    ],
+    "H": 1000,
+    "seed": 42,
+    "alpha": "1/4",
+    "kinds": [
+      "canonical",
+      "uniform",
+      "near_uniform",
+      "suffix_transfer_stop_control"
+    ]
+  },
+  "C1": {
+    "R": 12,
+    "T": 5,
+    "alpha": "1/4",
+    "seed": 20261006,
+    "max_active_steps": 5,
+    "tolerance": "1/1000000000000"
+  }
+}

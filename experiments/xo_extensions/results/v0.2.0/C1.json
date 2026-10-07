@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "R": 12,
+  "T": 5,
+  "verified_active_steps": 5,
+  "zero_kernel_ring": 12,
+  "many_to_one_demonstrated": true
+}

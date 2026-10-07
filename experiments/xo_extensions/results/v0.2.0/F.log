@@ -1,0 +1,4 @@
+PASS: unconditional Fm monotonicity and a0 floor in all valid states.
+Finite sample statistics: {'canonical_runs': 40, 'perturbed_runs': 20, 'perturbed_true_violation': 6, 'perturbed_Fm_changed': 4, 'perturbed_stopped': 2, 'canonical_confined_before_half': 21, 'canonical_interior_at_final_state': 7}
+Positive-floor, suffix-violating example: {'K': 8, 'm': 6, 'a0': '1/50', 'Mstar': '21/200', 'initial_d': '21/200', 'weak_suffix_dominance': False, 'Fm_changed_states': 99, 'old_Mstar_floor_failed_states': 0, 'stopped_at': None, 'last_interior': 1, 's_max': 7, 'H': 100, 'unconditional_monotone_floor_ok': True}
+No infinite-time boundary-entry claim from the H=150 sample.

@@ -1,0 +1,25 @@
+PASS closed-form check: lambda max r3
+PASS closed-form check: lambda max r4
+PASS closed-form check: lambda max r5
+PASS closed-form check: ratio at lambda max
+PASS closed-form check: 11-step post-lower A bound
+PASS closed-form check: initial upper 3K base
+PASS closed-form check: initial upper monotone ratio
+PASS closed-form check: lower bound <=3K at min cycle K
+PASS closed-form check: lower bound slope
+PASS closed-form check: LOCK corrected count at K6
+PASS closed-form check: LOCK margin slope
+PASS closed-form check: CYCLE corrected chain at K9
+PASS closed-form check: CYCLE chain slope
+PASS closed-form check: small A10
+PASS closed-form check: small A11
+Computed dwell: {'K': 9, 'initial_branch': 7, 'initial_dwell': 2, 'maxA_after_B': 11, 'maxB_after_A': 1, 'boundA_after_B': 11, 'boundB_after_A': 1}
+Computed dwell: {'K': 10, 'initial_branch': 8, 'initial_dwell': 3, 'maxA_after_B': 2, 'maxB_after_A': 1, 'boundA_after_B': 2, 'boundB_after_A': 1}
+Computed dwell: {'K': 11, 'initial_branch': 9, 'initial_dwell': 8, 'maxA_after_B': 1, 'maxB_after_A': 3, 'boundA_after_B': 1, 'boundB_after_A': 3}
+Computed dwell: {'K': 15, 'initial_branch': 12, 'initial_dwell': 2, 'maxA_after_B': 10, 'maxB_after_A': 1, 'boundA_after_B': 10, 'boundB_after_A': 1}
+Computed dwell: {'K': 16, 'initial_branch': 13, 'initial_dwell': 3, 'maxA_after_B': 2, 'maxB_after_A': 1, 'boundA_after_B': 2, 'boundB_after_A': 1}
+Computed dwell: {'K': 17, 'initial_branch': 14, 'initial_dwell': 8, 'maxA_after_B': 1, 'maxB_after_A': 3, 'boundA_after_B': 1, 'boundB_after_A': 3}
+Computed dwell: {'K': 21, 'initial_branch': 17, 'initial_dwell': 2, 'maxA_after_B': 9, 'maxB_after_A': 1, 'boundA_after_B': 9, 'boundB_after_A': 1}
+Computed dwell: {'K': 22, 'initial_branch': 18, 'initial_dwell': 3, 'maxA_after_B': 2, 'maxB_after_A': 1, 'boundA_after_B': 2, 'boundB_after_A': 1}
+Computed dwell: {'K': 23, 'initial_branch': 19, 'initial_dwell': 8, 'maxA_after_B': 1, 'maxB_after_A': 3, 'boundA_after_B': 1, 'boundB_after_A': 3}
+PASS: classifier examples K=6..300: 295/295; all checks assert on failure.

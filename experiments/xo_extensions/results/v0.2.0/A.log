@@ -1,0 +1,13 @@
+exact alpha matrix block PASS: 1/8
+exact alpha matrix block PASS: 1/4
+exact alpha matrix block PASS: 3/8
+exact alpha matrix block PASS: 1/2
+exact alpha matrix block PASS: 3/4
+finite float block completed 51 x 200000 steps: 1/8
+finite float block completed 51 x 200000 steps: 1/4
+finite float block completed 51 x 200000 steps: 3/8
+finite float block completed 51 x 200000 steps: 1/2
+finite float block completed 51 x 200000 steps: 3/4
+Exact finite-label counterexample K=9 alpha=1/8 H=90: {'t_star': 3, 'R_m': 10, 'class': 'LOCK', 'post_set': [7, 8]}
+PASS: exact matrix=255; extra K6=7; float runs=255, actual steps=51000000
+Float runs are finite support; universal quantifiers come from the proof.

@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "version": "0.2.0",
+  "date": "2026-10-07",
+  "routine": {
+    "private": {
+      "suites": 21,
+      "runtime_assertions": 441,
+      "old_assertions": 382,
+      "supplement_assertions": 59,
+      "execution": "byte-identical candidate in an isolated directory; legacy S2 output writes stay in the copy"
+    },
+    "public": {
+      "suites": 21,
+      "runtime_assertions": 441,
+      "old_assertions": 382,
+      "supplement_assertions": 59,
+      "execution": "byte-identical candidate in an isolated directory; legacy S2 output writes stay in the copy"
+    }
+  },
+  "isolated_full_validation": {
+    "status": "PASS",
+    "python": "3.14.6",
+    "site_packages_disabled": true,
+    "lab_base_git_history_not_copied": true,
+    "all_verifier_and_independent_results_match_without_timings": true,
+    "executable_and_config_hashes_match_final_candidate": true,
+    "proof_document_navigation_and_equivalent_math_formatting_checked_separately": true
+  },
+  "github_markdown_math": {
+    "status": "PASS",
+    "documents": [
+      {
+        "path": "docs/S3_XO_BOUNDARY_THEOREM_PROOF.md",
+        "status": "PASS",
+        "inline_expressions": 184,
+        "display_expressions": 28
+      },
+      {
+        "path": "docs/S3_XO_BOUNDARY_THEOREM_PROOF_ZH.md",
+        "status": "PASS",
+        "inline_expressions": 176,
+        "display_expressions": 29
+      },
+      {
+        "path": "docs/XO_THEOREM_GUIDE_ZH.md",
+        "status": "PASS",
+        "inline_expressions": 53,
+        "display_expressions": 3
+      },
+      {
+        "path": "docs/XO_EXTENSION_REGISTRATION.md",
+        "status": "PASS",
+        "inline_expressions": 15,
+        "display_expressions": 2
+      },
+      {
+        "path": "docs/XO_ALPHA_EXTENSION_PROOF.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      },
+      {
+        "path": "docs/XO_T6_CLASSIFIER_PROOF.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      },
+      {
+        "path": "docs/XO_RADIAL_AGGREGATION.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      },
+      {
+        "path": "docs/XO_FIRST_SELECTION.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      },
+      {
+        "path": "README.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      },
+      {
+        "path": "docs/RESEARCH_REPORT.md",
+        "status": "PASS",
+        "inline_expressions": 0,
+        "display_expressions": 0
+      }
+    ],
+    "scope": "GitHub GFM math elements and expression preservation, not browser pixel inspection"
+  },
+  "tagged_S3_displays_EN_ZH": {
+    "count": 18,
+    "differences_after_whitespace_normalization": 0
+  },
+  "scope": "Scientific validation and GFM expression preservation; no journal-peer-review or browser-pixel-validation claim."
+}

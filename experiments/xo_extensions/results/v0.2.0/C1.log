@@ -1,0 +1,3 @@
+PASS: exact radial aggregation over active steps: 5
+PASS: distinct angular states with same radial trajectories; aggregation is many-to-one.
+PASS: deviations contract on swept rings and stay unchanged on unswept rings.
