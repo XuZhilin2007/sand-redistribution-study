@@ -1,5 +1,7 @@
 # 阅读说明、术语与勘误 / Reading notes, terminology, and errata
 
+> v0.3.0（2026-10-21）新增全 K 两轮最优停止、周期结构及推广结果，当前范围见[正式登记](V030_REGISTRATION.md)与[验收](V030_VALIDATION.md)。下方保留 v0.2.0 及更早成果形成时的范围。 / Current v0.3.0 results are registered separately; the dated text below preserves the earlier scopes.
+
 > 更新 / Updated: 2026-10-07, v0.2.0. A/T6 分别登记；历史更正与原冻结材料保留。 / A/T6 are separately registered; historical corrections and frozen materials are preserved.
 
 ## 当前与历史材料 / Current and historical material

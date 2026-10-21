@@ -8,8 +8,8 @@ This public snapshot uses two licenses by file category. The statement applies t
 
 | 文件 / Files | 许可 / License |
 |---|---|
-| `src/**/*.py`, `tests/**/*.py`, `experiments/**/*.py`, `experiments/*/config.json`, `requirements.txt`, `.gitignore`, `.gitattributes` | Apache License 2.0, full text in [LICENSE](LICENSE) |
-| `README.md`, `RELEASE_NOTES.md`, `docs/**/*.md`, `experiments/**/*.md`, `experiments/**/results/**` (including CSV, JSON, PNG), and other original research prose or figures in this snapshot | Creative Commons Attribution 4.0 International (CC BY 4.0), full text in [LICENSE-CC-BY-4.0.txt](LICENSE-CC-BY-4.0.txt) |
+| `src/**/*.py`, `tests/**/*.py`, `experiments/**/*.py`, `tools/**/*.py`, `experiments/*/config.json`, `requirements.txt`, `.gitignore`, `.gitattributes` | Apache License 2.0, full text in [LICENSE](LICENSE) |
+| `README.md`, `RELEASE_NOTES.md`, `docs/**/*.md`, `experiments/**/*.md`, `experiments/**/results/**` (including CSV, JSON, PNG), `certificates/**` (lossless certificate data), and other original research prose or figures in this snapshot | Creative Commons Attribution 4.0 International (CC BY 4.0), full text in [LICENSE-CC-BY-4.0.txt](LICENSE-CC-BY-4.0.txt) |
 
 The legal texts themselves remain under their respective publishers' terms. `CITATION.cff` is citation metadata, not an additional license. If a file is not clearly covered by the table, do not assume a broader permission; raise an issue before reuse or redistribution.
 

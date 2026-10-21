@@ -1,5 +1,7 @@
 # Canonical XO 边界约化定理：中文阅读说明
 
+> v0.3.0（2026-10-21）新增全 K 两轮最优停止、周期结构及推广结果，当前范围见[正式登记](V030_REGISTRATION.md)与[验收](V030_VALIDATION.md)。下方保留 v0.2.0 及更早成果形成时的范围。 / Current v0.3.0 results are registered separately; the dated text below preserves the earlier scopes.
+
 > 这是一份中文导读，不取代[完整形式证明](S3_XO_BOUNDARY_THEOREM_PROOF.md)。符号、量词和证据等级以正式证明及[定理登记](S3_XO_BOUNDARY_THEOREM_REGISTRATION.md)为准。下方原部分转述 S3 T1–T5；v0.2.0 新增 A/T6 导读，正式范围以[补充登记](XO_EXTENSION_REGISTRATION.md)为准，不以导读代替证明。
 
 ## 原 S3 的适用范围与基本量

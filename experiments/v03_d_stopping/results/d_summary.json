@@ -1,0 +1,17 @@
+{
+  "rows": 203,
+  "all_best_t_2": true,
+  "all_certified": true,
+  "U2_ratio_min": 0.3441780821917808,
+  "U2_ratio_max": 0.4476534007530071,
+  "elapsed_s": 311.3,
+  "git": "a304806f708af388a9ffe2c5855d90718a0ff3ee",
+  "source_files_sha256": {
+    "run_d.py": "a44e536a4cfd86f4ea6354911154f1c91a6e50e70cefd8dce167e47f8c63d482"
+  },
+  "outputs": [
+    "d_rows.csv",
+    "d_certificates.json",
+    "d_summary.json"
+  ]
+}

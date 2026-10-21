@@ -1,0 +1,70 @@
+{
+  "version": "0.3.0",
+  "format": "gzip-parts-v1",
+  "files": [
+    {
+      "target": "experiments/v03_b_lock_allk/results/b_lock_cert.json",
+      "uncompressed_size": 278827219,
+      "uncompressed_sha256": "3d8353b9474bbaa8bdc64ed43c7a896af81c28f9d1c1876bc3ca1f43b28aafa7",
+      "parts": [
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-000.json.gz",
+          "size": 15711961,
+          "sha256": "6c1890ec9afcf71878c5d2658697a79da73b5a3e4ecb95ed661eb1a8252e4e88"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-001.json.gz",
+          "size": 15759694,
+          "sha256": "cd0b66740331a23eb7ec1b57cfdbfc620116e3b4b916cabf2a1aadeade75c6c0"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-002.json.gz",
+          "size": 15759473,
+          "sha256": "a9de897771e5dfc8176dbba85ae1afe4dabadee39f0ba25a6a5760099f949a1e"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-003.json.gz",
+          "size": 15759563,
+          "sha256": "e5737b494720cb57fb20a9d7ec1f180ebeebdb556bdc90fde675fd71081cc9ea"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-004.json.gz",
+          "size": 15759779,
+          "sha256": "f92d5ca10dbe1a23fc3f9dcfcde018bbdde4e05ca8a1a01efc331cb179feea8e"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-005.json.gz",
+          "size": 15747001,
+          "sha256": "b971453a31d3acb57fee55fb6b6df263c50a2acc5590c4a538c97674f51bb70a"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-006.json.gz",
+          "size": 15759393,
+          "sha256": "2ca496d7c696bcdbe31c5c70cb2c5c763fbf978cdc3fef64f542e7b2d1bc8641"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-007.json.gz",
+          "size": 15748485,
+          "sha256": "e9e3f2e6796ee2f1be39cc96c53ab2e26d692dceea9e5b5838810e71ee4ca66e"
+        },
+        {
+          "path": "certificates/v0.3.0/b_lock_cert.part-008.json.gz",
+          "size": 4881282,
+          "sha256": "9613ad4001ef9696f4dd6e0fc98a8b6b9ce75aa2304572644af67b5d8ba5ab08"
+        }
+      ]
+    },
+    {
+      "target": "experiments/v03_e_cycle_allk/results/e_cycle_cert.json",
+      "uncompressed_size": 95362716,
+      "uncompressed_sha256": "60ec6e9d543ebc0851821a1475ed65bef4f0a7558f07996ab0f7747943be4415",
+      "parts": [
+        {
+          "path": "certificates/v0.3.0/e_cycle_cert.json.gz",
+          "size": 44799495,
+          "sha256": "d1b5f2c6f5debfc1c1d13bdf6467eb5ff7edeeff8f99cf9238596c3c70eacc3e"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "config": {
+    "experiment": "v03_t7_cyclicity",
+    "date_frozen": "2026-10-15",
+    "model": "canonical XO, alpha=1/4, exact Fraction arithmetic, smallest-index argmax, tolerance 1e-12 (never triggers, T1)",
+    "entry_cap": 4000,
+    "step0_K": [
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      21,
+      22,
+      23,
+      33,
+      34,
+      35,
+      51,
+      52,
+      53,
+      99,
+      100,
+      101,
+      153,
+      154,
+      155,
+      201,
+      202,
+      203,
+      303,
+      501,
+      999,
+      1000,
+      1001
+    ],
+    "step0_steps": 120,
+    "census_K_lo": 9,
+    "census_K_hi": 603,
+    "census_anchors": [
+      999,
+      1000,
+      1001
+    ],
+    "orbit_T": 4000,
+    "rep": 20,
+    "delta_frac": [
+      1,
+      64
+    ],
+    "win3_K_lo": 9,
+    "win3_K_hi": 603,
+    "win3_anchors": [
+      999,
+      3003,
+      999999
+    ],
+    "win3_mono_lo": 9,
+    "win3_mono_hi": 6003,
+    "alt4_K_lo": 16,
+    "alt4_K_hi": 24003,
+    "alt4_anchors": [
+      1000000
+    ],
+    "cert5_K_lo": 65,
+    "cert5_K_hi": 6005,
+    "word5": "ABBABBABBBABBABB",
+    "fast_orbit_T": 400,
+    "uni_K_hi": 24003,
+    "bfs_depth": 40,
+    "n0_tail": 1,
+    "lock_K": [
+      6,
+      7,
+      8,
+      12,
+      13,
+      14,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      30,
+      31,
+      32,
+      36,
+      37,
+      38,
+      48,
+      49,
+      50,
+      60,
+      61,
+      62,
+      72,
+      73,
+      74,
+      96,
+      97,
+      98,
+      102,
+      300,
+      600
+    ],
+    "lock_steps": 400,
+    "bfs_depth_deep": 120,
+    "_note": "cert5 range covers K_tail (shadowing start ~4700-5000) with margin"
+  },
+  "step0": {
+    "checked_K": 29
+  },
+  "step1": {
+    "n_rows": 301,
+    "csv": "t7_census_certificates.csv",
+    "max_t_entry": 116
+  },
+  "step2a": {
+    "rows": 103,
+    "csv": "t7_r3_windows.csv",
+    "K_min_pure8": 195,
+    "mixed_K": [
+      99,
+      105,
+      111,
+      117,
+      123,
+      129,
+      135,
+      141,
+      147,
+      153,
+      159,
+      165,
+      171,
+      177,
+      183,
+      189
+    ]
+  },
+  "step2b": {
+    "n_ok": 3999,
+    "worst_m1": "1553/107008",
+    "worst_m2": "865744479183120369/16888878962978370368"
+  },
+  "step2c_certs": {
+    "rows": 991,
+    "csv": "t7_r5_fast_certs.csv",
+    "min_dmin": 4.372364298230133e-07,
+    "max_t_entry": 80
+  },
+  "step2c_tail": {
+    "C_per_n": "1715/383688",
+    "K_tail": 479,
+    "w_frac": "1/2",
+    "strip_width": "256193448095/500561803329084",
+    "n_pop": 101,
+    "max_depth": 13,
+    "th_lo": "11520751/15155676",
+    "th_hi": "63460610193809/83426967221514",
+    "min_crossing_margin": "42321071/23673165912",
+    "min_inclusion_margin": "11397359102824601/1998131664343508711424",
+    "cert_json": "t7_family_cover_cert.json",
+    "uni_K_hi": 24003
+  },
+  "step2c_verify": {
+    "verified": true,
+    "checks": {
+      "C5_from_polynomial": true,
+      "sigma_inf": true,
+      "sequence": true,
+      "ok": true,
+      "beta_lo": true,
+      "sig_lo": true,
+      "sig_hi": true,
+      "band_hi": true,
+      "th_lo": true,
+      "th_hi": true,
+      "strip_width": true,
+      "strip_consistent": true,
+      "strip_positive": true,
+      "dmin_limit": true,
+      "island": true,
+      "n_pop": true,
+      "depth_within_cap": true,
+      "depth": true,
+      "min_crossing_margin": true,
+      "min_inclusion_margin": true
+    },
+    "K0": 479,
+    "max_depth": 13,
+    "min_inclusion_margin": "11397359102824601/1998131664343508711424",
+    "min_crossing_margin": "42321071/23673165912"
+  },
+  "step2c_bfs": {
+    "n_ok": 69,
+    "worst_min_thr_gap": "21150851122877315403202369589149/46732189919111863988649984000000000",
+    "worst_dmin": "21150851122877315403202369589149/35889783769873834328333070071054991",
+    "K_tail": 479
+  },
+  "step2d": {
+    "sigma3_mono": {
+      "direction": "decreasing",
+      "N0": 21,
+      "lead_coeff": "-351864",
+      "deg": 4
+    },
+    "sigma3_diff": {
+      "decay": "n^-1",
+      "C": "325/24",
+      "degA": 2,
+      "degQ": 3
+    },
+    "sigma4_mono": {
+      "direction": "increasing",
+      "N0": 565,
+      "lead_coeff": "9792",
+      "deg": 4
+    },
+    "sigma4_diff": {
+      "decay": "n^-1",
+      "C": "49/1444",
+      "degA": 2,
+      "degQ": 3
+    },
+    "sigma5_range": {
+      "min": "320/2673",
+      "max": "8840/73623",
+      "limit": "35/292"
+    },
+    "sigma5_diff": {
+      "decay": "n^-1",
+      "C": "1715/383688",
+      "degA": 2,
+      "degQ": 3
+    }
+  },
+  "step3": {
+    "rows": 33,
+    "csv": "t7_lock.csv"
+  },
+  "events": [],
+  "hard_halts": [],
+  "elapsed_s": 260.3,
+  "git": "6af74edefae6d7cd13adcdf50d2a24e9c3fc05ad",
+  "output_sha256": {
+    "t7_census_certificates.csv": "920cf47d1bda95edd8c3c08eaa5a8348207d8a359436ddc7d62c2d05046a0aa2",
+    "t7_family_cover_cert.json": "7314e040e191dea4bd2a0ec419e49ff49a185f934b3512f4c15b4bdaf4267172",
+    "t7_lock.csv": "e4f705ab43aa361df110d8c814d7c498183a645192adfe6d8ad23183cd3aa1a1",
+    "t7_r3_windows.csv": "e6321d71bc7d80a2581ff2d6d9322bfc9fbf2d068e5832e535835f01319f83af",
+    "t7_r5_fast_certs.csv": "df4fb9718ec5c4ef7be6ac69a9eca73e4069cc4e505e3ac9240236a3a708fe9f"
+  }
+}

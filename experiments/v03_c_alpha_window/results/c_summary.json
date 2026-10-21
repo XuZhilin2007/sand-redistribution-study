@@ -1,0 +1,17 @@
+{
+  "rows": 117,
+  "fails": [],
+  "counterexample": {
+    "frozen": "LOCK",
+    "two_test": "CYCLE",
+    "NA": 18,
+    "expected_frozen": "LOCK",
+    "expected_two": "CYCLE"
+  },
+  "counterexample_ok": true,
+  "elapsed_s": 5.8,
+  "git": "6af74edefae6d7cd13adcdf50d2a24e9c3fc05ad",
+  "output_sha256": {
+    "c_rows.csv": "f2c722fb80d9ad4d14635b091fb117eac9832a0ef78c644c32c3ab80c679e6a7"
+  }
+}

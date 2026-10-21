@@ -12,3 +12,6 @@ Thumbs.db
 
 # Fresh supplement validation output (committed evidence lives under results/).
 /xo-validation-output/
+# Exact large certificates are restored from checked gzip parts.
+/experiments/v03_b_lock_allk/results/b_lock_cert.json
+/experiments/v03_e_cycle_allk/results/e_cycle_cert.json

@@ -1,5 +1,43 @@
 # 公开版本记录 / Public release history
 
+## v0.3.0 — 全 K 两轮最优停止与周期结构 / All-K optimal stopping and cyclicity
+
+> 2026-10-21。主成果、范围及例外见[成果登记](docs/V030_REGISTRATION.md)，
+> 实际验收见[验收记录](docs/V030_VALIDATION.md)。
+
+- **全 K、全时间：** canonical XO、α=1/4、最小指标平局、精确算术，
+  全部整数 K≥6 和 t≥0 满足 U(pₜ)≥U(p₂)。B-lock 与 E 以解析引理、
+  精确无限族证书和有限例外全时间证书合并证明。最优不表示唯一或时间单调。
+- **T7：** 最终精确选择字、显式字表与换挡阈值、状态渐近周期及声明区间的
+  全域吸引。状态本身不表述为最终精确周期。
+- **B/B-II、C、F/G/P 与端点：** 初态稳健性及有限回返、一般 α 分类窗口和
+  标准形词典、平台格点分类、代数端点反例与 13 组精确端点表。
+- **复核：** 固定证书、调用方起点/严格性绑定、有限集合完整性、篡改拒绝、
+  真实 U 回代及独立实现。K=9 的历史错误公式用真实轨迹重算作永久反例锚。
+- **继承定位：** 对接 Laurent–Nogueira 系的旋转数与平台结果，区分已有理论
+  和本模型归约、显式分类、量化证书、最优停止；不宣称已确立学术新颖性。
+- **发布复现：** 消除本机绝对路径，保留证书所哈希的源码原始字节，
+  更新当前导读、引用版本和内容摘要。公开仓库保持独立历史。
+- **最终验收：** 私有与独立公开工作区各 22 套、610 项断言全部通过；
+  T7 独立族覆盖、E 的 301 K × 240 步、D 的 102 条 CYCLE 全时间记录全部通过；
+  12 份文档的 1475 个数学表达式与 GitHub 实际渲染逐式一致。
+- **无损证书打包：** 为符合 GitHub 文件限制，大型 B/E JSON 以 gzip 分片存储。
+  首次执行 `python -B tools/materialize_v030_certificates.py`，离线恢复原始文件
+  并校验 SHA-256；8 项运输格式检查通过，原数学代码和证书字节保持不变。
+
+**For canonical XO at α=1/4, two updates minimize squared nonuniformity for
+every integer K≥6 over all integer times.** The release also adds eventual
+selection-word classification, asymptotic mass states, initial-state results,
+general-α dictionaries/windows and exact endpoint examples. Infinite claims
+use analytic arguments and exact certificates; finite checks retain their
+stated scope. Prior theory, project-specific results, and open questions are
+identified separately.
+
+原 S1/S2 冻结记录、S3 审计和旧版本标签保持原范围。一般 α 的最优停止、
+其他指标、非 canonical 停止、噪声/核/网格扰动和全 K 端点分类留作后续。
+本版不把模型内“两轮”推广到真实沙坑。
+
+
 ## v0.2.0 — A/T6 核心补充与限定附录 / A/T6 supplements and scoped appendices
 
 > 2026-10-07。原 S3、S1/S2 冻结材料与 v0.1.1 标签保留；本版分别正式收录 A 与 T6。 / The original S3 and frozen S1/S2 record and v0.1.1 tag are preserved. A and T6 are registered separately.
