@@ -1,102 +1,78 @@
 # 沙子再分配研究 / Sand Redistribution Study
 
-**公开研究快照 · Public research snapshot — [v0.3.0](https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.3.0) · 2026-10-21**
+**公开研究快照 · Public research snapshot — [v0.4.0](https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.4.0) · 2026-10-26**
 
-本项目研究由“扫回过密区域、再撒开、适时停止”启发的一维确定性质量反馈模型。
-v0.3.0 的核心结果是：在声明的 canonical XO 设置下，**全部整数 K≥6，
-执行恰两轮使平方均匀度指标在全部时间中达到最优**。本版同时给出长期
-选择字的显式周期分类、状态渐近结构、初态推广及平台/端点证书。
+本项目研究由“回收过密前缀、再撒开、适时停止”启发的一维确定性质量反馈模型。
+v0.4.0 的主结果是：在 canonical XO、精确算术、最小指标平局规则下，
+**全部整数 K≥6、整个参数区间 J、全部整数时间 t≥0，两次更新达到平方损失的全局最小值**：
 
-This project studies a one-dimensional deterministic mass-feedback model.
-Under the canonical XO assumptions, **two updates minimize the squared
-nonuniformity over all integer times, for every integer K≥6**.
-Version 0.3.0 also deposits explicit eventual selection words, asymptotic
-states, initial-state results, and exact platform/endpoint certificates.
+```math
+J=[1999/8000,2001/8000]=[0.249875,0.250125],\qquad
+U(p)=K\sum_i(p_i-1/K)^2,\qquad U(p_t)\ge U(p_2).
+```
 
-## 当前成果 / Results
+α 遍历 J 内全部实数。区间与 K 无关；v0.3.0 的 α=1/4 定理是其特例。
+最优时刻不要求唯一，后续损失不要求单调。完整模型、假设与量词见
+[成果登记](docs/V040_REGISTRATION.md)。
 
-共同 canonical 前提：初态 p₀,ᵢ=(2K−2i+1)/K²、XO 喷撒律、最小指标平局、
-精确算术。不同成果的 α、初态与范围分别读取，完整陈述见
-[成果登记](docs/V030_REGISTRATION.md)。
+For canonical XO, exact arithmetic and smallest-index ties, **two updates
+minimize squared nonuniformity for every integer K≥6, every real α in J,
+and every integer time t≥0**. The parameter interval is uniform in K.
+This is a deterministic model result, not a calibrated physical claim.
 
-| 结果 | 适用范围与实际保证 |
+## v0.4.0 的完整证明 / Proof and evidence
+
+| 部分 | 范围与证据 |
 |---|---|
-| [B-lock + E：两轮最优停止](docs/V03_E_CYCLE_ALLK.md) | α=1/4，全部 K≥6、t≥0，U(pₜ)≥U(p₂)，U=KΣ(pᵢ−1/K)²。最优不表示唯一，也不表示 U 随时间单调。 |
-| [T7：长期结构](docs/V03_T7_CYCLICITY_PROOF.md) | α=1/4；选择序列最终精确周期，完整质量状态渐近周期。显式字表、例外、全域吸引适用区间见证明。 |
-| [B/B-II：初态结果](docs/V03_B_ROBUSTNESS_PROOF.md) | 声明的安全邻域内稳健性，以及合法初态的有限内部回返后永久边界驻留；首入不退与 C=1 不在 B 的保证内。 |
-| [C：分类窗口](docs/V03_C_ALPHA_WINDOW_PROOF.md) | 0<α<1 的新两测窗口规则；原冻结规则只在声明充分条件下保证正确。 |
-| [F](docs/V03_F_PLATEAU.md)、[G](docs/V03_G_ALPHA_DICTIONARY.md)、[P](docs/V03_P_PLATEAU_ALLK.md) | 旋转数换算、一般 α 的标准形词典、canonical 无限平台族及端点排除；有限格点核对与全称证书分层陈述。 |
-| [G-ep](docs/V03_G_ALPHA_DICTIONARY.md)、[C-ep](docs/V03_C_ENDPOINTS_ALPHA.md) | 真实代数 α 端点例外与 13 组精确端点表；不是一般 α 相图或全 K 端点分类。 |
-| [原 S3](docs/S3_XO_BOUNDARY_THEOREM_REGISTRATION.md) 与 [v0.2.0 A/T6](docs/XO_EXTENSION_REGISTRATION.md) | 保持各自原范围与审查来源；v0.3.0 以新证明补充早期开放问题。 |
+| [前缀选择](docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md) | 真实选择位置的舍入公式；全部舍入误差和平局由 η 参数化 |
+| [D₂ 一致进入](docs/v04_research/D2_ENTRY_REVIEW.md) | K≥33、α∈J 的边界支配；小 K 由有限证书补齐 |
+| [驻留与不变量](docs/XO_ALPHA_EXTENSION_PROOF.md) | 已发布定理 A；首次边界选择后永久驻留，不要求固定选择字 |
+| [全 K W0](docs/v04_research/W0_UNIFORM_BOUND_REVIEW.md) | U₀>U₂、U₁>U₂；L¹ 收缩、格子方差与精确多项式正性 |
+| [统一尾部](docs/v04_research/UNIFORM_TAIL_CLOSURE_REVIEW.md) | K≥204、整个 J、全部 t≥3：U_t−U₂>1/100；48 个精确有理闭盒 |
+| [有限区间证书验收](tools/audit_v04_interval_v3.py) | 目标集 203 个 K、207 分片、80,246 条符号义务；覆盖 K=6..203 并保留五个锚点 |
 
-For the main theorem α=1/4. Eventual exact periodicity belongs to the selection
-sequence; mass states converge asymptotically to periodic profiles.
-The general-α dictionary, classifier windows, initial-state hypotheses and
-finite endpoint tables have their own stated scopes.
+K=203/204 无缝相接。无限参数结论由解析恒等式与精确计算辅助证明承担，
+有限轨迹重放作为装配交叉检查。α 端点和平局分片均纳入闭合证明。
 
-## 阅读与证据 / Reading and evidence
+Analytic identities, exact rational interval enclosures and independently
+audited finite certificates carry the universal quantifiers. Full-vector
+replays check the implementation; sampled trajectories do not replace the proof.
+Independent implementations and AI-assisted checks are not formal proof-assistant certification.
 
-1. [正式成果登记](docs/V030_REGISTRATION.md)：假设、量词、例外和后续问题。
-2. [E](docs/V03_E_CYCLE_ALLK.md) 与 [B-lock](docs/V03_B_LOCK_ALLK.md)：全 K
-   最优停止；[D](docs/V03_D_STOPPING.md) 保存有限格点的全时间证书与分解。
-3. [T7](docs/V03_T7_CYCLICITY_PROOF.md)：最终选择字、状态渐近与族覆盖。
-4. [发布验收](docs/V030_VALIDATION.md) 与 [文件摘要](docs/V030_FILE_MANIFEST.json)：
-   实际测试、独立复验和精确字节来源。
-5. [文献继承说明](docs/V030_RELATED_WORK.md)：已有分段仿射动力学理论与本模型
-   显式结果之间的关系。周期性的一般机制与平台公式已有相关理论。
+## 快速复验 / Quick verification
 
-证明采用解析推导、精确有理数计算与无限族证书；有限轨迹交叉核查另列。
-独立实现、AI 辅助审查与程序验收不等同于形式化机器证明或期刊同行评审。
-学术新颖性仍需完整文献比较与外部评价。
-
-Analytic reduction and exact computer-assisted certificates carry the
-infinite claims. Sampled trajectory checks are recorded separately.
-The project is a reproducible research record, not a peer-reviewed paper or
-a formally verified proof development.
-
-## 复现 / Reproduction
-
-使用 Python 3.14.6，依赖固定于 [requirements.txt](requirements.txt)。
-Windows PowerShell：
+从克隆或下载源码的仓库根目录运行：
 
 ```text
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-$env:PYTHONUTF8="1"
-.venv\Scripts\python.exe -B tools\materialize_v030_certificates.py
-.venv\Scripts\python.exe -B tests\count_tests.py
+python -B tools/verify_v040.py
 ```
 
-macOS/Linux 先用 `.venv/bin/python -B tools/materialize_v030_certificates.py`
-还原证书，再用 `.venv/bin/python` 并以
-`PYTHONUTF8=1 .venv/bin/python -B tests/count_tests.py` 运行。
-完整回归含精确子族证书复验，可能需要数十分钟。不要使用 `-O`。
-科学文件按原始字节保存，避免平台换行转换破坏证书源码 SHA-256。
-GitHub 的单文件限制使两个大 JSON 采用 gzip 分片存储于
-`certificates/v0.3.0/`。首次运行上述还原脚本，用标准库离线解压并核验
-原始 SHA-256；数学代码、原 JSON 字节和所有证明字段保持不变。
-还原得到的两个 JSON 不再重复进入 Git，完整源代码下载包已包含所需分片。
+v0.4.0 主定理复验仅使用 **Python 标准库**，无需额外依赖。测试环境为
+Python 3.14；程序顺序检查固定清单、五个数学审计器和受影响的回归，
+约一分钟。默认不改写固定输入或旧报告。不要使用 `-O`。
 
-进一步独立复验：
+The v0.4.0 verification path uses only the Python standard library and is
+self-contained in the public source tree. It checks file hashes before and
+after all six checks. No private repository or local absolute path is needed.
+
+- [研究验收记录](docs/V040_VALIDATION.md)与[公开发布验收](docs/V040_PUBLICATION.md)
+- [公开文件清单](docs/V040_MANIFEST.json)与[原研究冻结清单](docs/V040_FROZEN_MANIFEST.json)
+- [阶段成果台账](docs/v04_research/RESULTS.md)：其他相图、反例、扰动与指标探针按各自形成时的范围保留；历史待办不作为当前主定理缺口
+
+## v0.3.0 继承成果 / Retained results
+
+[v0.3.0 登记](docs/V030_REGISTRATION.md)中的长期选择字、渐近质量状态、
+初态结果、一般 α 词典、平台和端点证书保留各自原范围。选择字的最终精确
+周期性与质量状态的渐近周期性始终区分。文献继承定位见
+[V030_RELATED_WORK](docs/V030_RELATED_WORK.md)。
+
+历史版本的完整回归使用 [requirements.txt](requirements.txt)；大型 B/E
+证书以经过校验的 gzip 分片保存。执行旧版本全量验证前先运行
 
 ```text
-python -B experiments/v03_t7_cyclicity/verify_independent.py
-python -B experiments/v03_e_cycle_allk/verify_e_independent.py
-python -B experiments/v03_d_stopping/verify_d_independent.py
+python -B tools/materialize_v030_certificates.py
+python -B tests/count_tests.py
 ```
 
-The public checkout is self-contained. It needs no private repository,
-research-session log or local absolute source path.
-
-## 范围、许可与引用 / Scope, licensing, citation
-
-该模型不是经真实沙坑数据校准的沙粒碰撞模拟；“两轮最优”不代表现实中
-任何沙面都应操作两轮。其他 α、指标、初态、网格与喷撒律的最优停止和
-扰动稳健性是后续研究。
-
-软件、测试、配置使用 [Apache-2.0](LICENSE)；原创文稿、图表与结果依
-[内容许可](CONTENT_LICENSE.md)采用 CC BY 4.0。署名 Zhilin Xu；
-引用版本 0.3.0 见 [CITATION.cff](CITATION.cff)。
-公开仓库保持独立历史，原 [v0.2.0](https://github.com/XuZhilin2007/sand-redistribution-study/tree/v0.2.0)
-与 [v0.1.1](https://github.com/XuZhilin2007/sand-redistribution-study/tree/v0.1.1) 标签保留。
-完整变更见 [RELEASE_NOTES.md](RELEASE_NOTES.md)。
+原始证书从 `certificates/v0.3.0/` 离线恢复并核对 SHA-256。v0.4.0 的
+一分钟主定理复验不依赖这一步。历史声明以各版本登记为准。

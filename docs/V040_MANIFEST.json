@@ -1,0 +1,193 @@
+{
+  "version": "v0.4.0",
+  "status": "PUBLIC_RELEASE",
+  "date": "2026-10-24",
+  "research_baseline_commit": "36d71a2",
+  "previous_freeze_commit": "85a6d06",
+  "main_theorem": {
+    "model": "canonical XO, exact arithmetic, smallest-index ties",
+    "K": "all integers K>=6",
+    "alpha": [
+      "1999/8000",
+      "2001/8000"
+    ],
+    "time": "all integers t>=0",
+    "conclusion": "U(p_t) >= U(p_2)"
+  },
+  "uniform_tail": {
+    "K_min": 204,
+    "time": "all integers t>=3",
+    "strict_gap": "1/100",
+    "closed_rational_boxes": 48
+  },
+  "v3_witness_sha256": "c8c7acae690f939397b88084784df4162264ccef54e5f93c32b8d5e7c979b9d1",
+  "files": {
+    "version_entries": {
+      ".gitattributes": "af1da8dee38058c181209d11e8af53f28556fc0bf4e1e4df42fe62bc7cfabedb",
+      "README.md": "8f95a483a2b31376c7ef862f17a730d7ab0ed64b51d935aeb51998b6ea51f4ac",
+      "docs/V040_REGISTRATION.md": "df13bc4d3a3e9d6a843baa2c10a9e88fcaeb37a4c54276e8d80e7de9973c8b9d",
+      "docs/V040_VALIDATION.md": "983159493c4833911ed2a7e9e91d78871b66eaf675f3d4e0809fe93a54a8ae40",
+      "docs/v04_research/STATUS.md": "4df149e932d1e4936e68381cd82265b206009ae171a519ea483e26c7fb9c4038",
+      "docs/v04_research/ALL_K_INTERVAL.md": "c6e04ebfbcbdb6baa823864cf6f870bc8818d83bbf40010b8ecc6f4813c9d64e",
+      "docs/v04_research/RESULTS.md": "1444edfe3f3d2381adfb76a56bc8093e9b727459bb8b2af364d5570a9aeed666"
+    },
+    "proofs": {
+      "docs/v04_research/W0_UNIFORM_BOUND_REVIEW.md": "d4979801d90364ef2cc4600040f9e69d94af3a58e7a49c1bd474549156b62d7e",
+      "docs/v04_research/UNIFORM_TAIL_CLOSURE_REVIEW.md": "7ec528d5e6147976193c2b81378c5577c8d18267195bc3a669d87bcdcd405118",
+      "docs/v04_research/D2_ENTRY_REVIEW.md": "0b63c39f8a79ed6a822a3eb887e2e89b73c855aea76512102f27428dd6a3752c",
+      "docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md": "ee105a4bad0b1f9e906943f4238a6014b78e5c93dda96675bc4784415157c20d",
+      "docs/XO_ALPHA_EXTENSION_PROOF.md": "471e55f7281fb06a85324320babfcb28b5b75803acb18b29e13ac326b542c426",
+      "docs/S3_XO_BOUNDARY_THEOREM_PROOF.md": "ccea20fb277fe40bf408b50d7bb57ed83c99096029de63bc2e2c99adccd1f745"
+    },
+    "auditors": {
+      "tools/audit_v04_interval_v3.py": "c835df508acc90e26aa3bfe9b421fe97089d63773f8659b68e02df1fe2462ef0",
+      "tools/audit_v04_w0_uniform.py": "3ec9f3deb79730a8fb57b53a5768bdd0172173ffb2bb931b5929fe444cb4067c",
+      "tools/audit_v04_d2_entry.py": "1a27177834419dc04f0bcc89c294a812b1b3538bbb65d1699596eebe5e45b677",
+      "tools/audit_v04_uniform_tail.py": "aff02533e6f2ef2e8019d7675d6c0f61d9e737e4c35209e734b6b0da3acb6691",
+      "tools/audit_v04_prefix_lemma.py": "f53a55d31a8d79f77ef9d0f6d0ef84b9ab7aedfc702e968ddefd289dec0d58de",
+      "tools/verify_v040.py": "ec14e189e8803bcff64603fda9bf57eef7aec889ec93bd765f9f761eadd3251b"
+    },
+    "production_and_regression_code": {
+      "experiments/v04_w_interval/interval_certs.py": "04d0cff94b886d649e21585d9d618c1597427bbd4ee69fdff06cce52e4a44458",
+      "experiments/v04_w_interval/symkernel.py": "aa4515edd711093783a3349e18390285bee55440d66c844e17123e8df3b28807",
+      "experiments/v04_w_interval/validate_interval.py": "c26057d285bf1591b91b3ffbe2b910bc2f881d13b202d6a5c7216fb7066778a1",
+      "experiments/v04_w_interval/negative_tests_w.py": "1f3e83ca432cd49f337e8a596eccea9d10aa0adf449762037c64e313de1d8134",
+      "experiments/v04_all_k/w0_sweep.py": "aa665a915ce5b3e631a09cf474e7452f3a25e259b3e173a5982e10838732e342",
+      "experiments/v04_all_k/d2_entry.py": "57f4211ac73d6002aa12c9be1c8d1d70882dbacdca7724e3b125f1b34aa07067",
+      "experiments/v04_all_k/continuum_limit.py": "23601c37ee4a80a6b8acc49486b9586fd1ae099887233447e9b8a60fe1958980"
+    },
+    "witness_and_required_data": {
+      "experiments/v04_w_interval/interval_certs_v3.jsonl": "c8c7acae690f939397b88084784df4162264ccef54e5f93c32b8d5e7c979b9d1",
+      "experiments/v04_all_k/w0_sweep.jsonl": "1ee6eac392202dc1393e91cc6618d038095b8b452c03b83e093abaac0da2c928",
+      "experiments/v04_all_k/continuum_U_polys.json": "c95710df731ea26dd3b1ebb2c6459c976ac6ffb857c0e7a967ebb144947c954e",
+      "experiments/v04_all_k/d2_entry_certificate.json": "e2f72bab803503f575fb9fefcec9edfc34e780bb7bf3221f3e421c170f3c64d0"
+    },
+    "accepted_finite_dependency": {
+      "experiments/v04_all_k/review_2026-10-23/finite_common_audit.json": "54db4de6be3fd63e13b47acc2bcbaca126ac3f54429d81ae4412bcc7c08da11d"
+    },
+    "frozen_verification_reports": {
+      "experiments/v04_all_k/review_2026-10-24/finite_common.json": "4506f6d0f3e9d1412fe72aea7a58cc8294c4c902307c43f3f54dbdda6302649a",
+      "experiments/v04_all_k/review_2026-10-24/prefix.json": "a30ba3b292e5ec1d2994f66d98a318c57b9ed520c8c7a470e8dc29ae937a2352",
+      "experiments/v04_all_k/review_2026-10-24/w0.json": "538daf7c728b2b98fa1011c8cc87dfad48be223c71cd844995b251c35fd9e658",
+      "experiments/v04_all_k/review_2026-10-24/d2.json": "ef6b5c980c6bc55547a71c6e5450a577ece27586982ca57f94394ac72213dc22",
+      "experiments/v04_all_k/review_2026-10-24/tail.json": "68ddb5511e1b22f6d064f87f3e3ed37b76cb3bce3ece79aec138e7873d9618fe",
+      "experiments/v04_all_k/review_2026-10-24/reverification.json": "5d53066b8374e5577a25e2cb755177411081fb060bbff2d7f92ba9107088b8a4"
+    },
+    "original_source_documents": {
+      "frozen_sources/v0.4.0/docs/S3_XO_BOUNDARY_THEOREM_PROOF.md.txt": "e82318d7d4a8c579c15745e3d39f045a71a1a14ef27dbb1d8a91abee50a62da4",
+      "frozen_sources/v0.4.0/docs/V040_REGISTRATION.md.txt": "61e37a4c120b91d205d681c19706261cb51d13787b16579c29f238a9dfd98537",
+      "frozen_sources/v0.4.0/docs/V040_VALIDATION.md.txt": "baa276f11cc272fc634c9fbbe018df8cde7fc78ce12bb6a257fa7955847a852d",
+      "frozen_sources/v0.4.0/docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md.txt": "7f42866f881019beacc268ba0511314aebf213fe768eb14ce1e8df4afd08f981",
+      "frozen_sources/v0.4.0/experiments/v04_all_k/review_2026-10-23/finite_common_audit.json": "643a1043734df36d1df7df2eb9e91fccfaa958d969f86be3a185e71c5a2d7be8",
+      "frozen_sources/v0.4.0/tools/audit_v04_interval_v3.py.txt": "51cba3eb25626a2e0524d15cb57f6d19595ae94ab451e50f62445874806e3210"
+    },
+    "additional_scientific_files": {
+      "docs/v04_research/A_ALPHA_PHASE.md": "ced34ed89936b12367cee3c352a98552d1c59c48a2e85156fe51363d8b34d808",
+      "docs/v04_research/B_GENERAL_ALPHA_DECOMP.md": "eac090664a9b36b33ff35e5ed5e036208bf8f05ec45f2f8e9c5fc0acbbed8660",
+      "docs/v04_research/C_PERTURBATIONS.md": "6346e6e5b7bd658a9ba211e4745f22a70a8d5703dcab129003d19110ac987f8d",
+      "docs/v04_research/D_E_PROBES.md": "17bab2692f9856b7709be17ae8dacc08e849c1b3a53a95e0443f0fdb5c4b0754",
+      "experiments/v04_a_alpha_phase/anchors25_exact.json": "f6018bd3ad4258ea735e09afde1d936c1de34f107d3fc1dcfae745c17c9c361a",
+      "experiments/v04_a_alpha_phase/cert_census.json": "265b0a3c40511bf16c0e908620d0adcb52083d21c78905ab9e25a51625f64295",
+      "experiments/v04_a_alpha_phase/cert_census.py": "2eb75ad4a1f57a2475cbb9d409859f5adff21c93166d7c01b1e2ddbc93a47e63",
+      "experiments/v04_a_alpha_phase/cert_census_validate.py": "3bacb29886c7a8b83db08e33fb50ace11cbcb6ec83bb5512be01ec41358311cd",
+      "experiments/v04_a_alpha_phase/exact_edges.json": "823b0666408f0482b3c96ecb708b053d59a075eb130a7fa7abdda0ac3879c3b4",
+      "experiments/v04_a_alpha_phase/exact_edges.py": "4597ec56f9a3bad31c0a313558a256e4ffa1ccaf419272d43ad2fa93e9ce5a8e",
+      "experiments/v04_a_alpha_phase/k6_right_edge.py": "b79832a6b065fe918767345ff45ceaafc0b566c601fa192b80a3ee5e5fea7be4",
+      "experiments/v04_a_alpha_phase/largeK_and_smallalpha.py": "952e4a90d8bb5e322a1556d40398d5015c473252fe7c8d83e906198e825dd8e8",
+      "experiments/v04_a_alpha_phase/largeK_smallalpha.json": "50c4f8bcee19f272c466539a27786aa7c16fb39b5b352e789268756fcf01cb39",
+      "experiments/v04_a_alpha_phase/replay_anchors.py": "87f82980b290eac47b75c07a8a3bb5d208c12af64c1ba8e5be64b6a5cc39a6f8",
+      "experiments/v04_a_alpha_phase/rstar_census.json": "da2fb16d886182d0a1f99d9501f9c3189e857935e2fe5c9058f1442e9dfdcf70",
+      "experiments/v04_a_alpha_phase/rstar_census.py": "d1fa64eba66b8eb553086d295c211932db1aa3688cfc4a7d16a66729a55efe9f",
+      "experiments/v04_a_alpha_phase/scan_analysis.py": "42cf31750691e77e4e85a52124b46cf229f0a22a82968fc47ce64c96ba01f6e4",
+      "experiments/v04_a_alpha_phase/scan_phase.json": "2ca9c3bde0cbe068dc4e9515919c1557163a137b367d6826e195a11cfae5641d",
+      "experiments/v04_a_alpha_phase/scan_phase.py": "540495d69d3a6eef7d07069c48fdeb2861bed37c8c009fa5773e7d5651bc2f6e",
+      "experiments/v04_b_stopping/decomp_alpha.json": "796183066e5769edbf13ef0fe832ab9b0014f4259783c782bf279db39e38d4fc",
+      "experiments/v04_b_stopping/decomp_alpha.py": "61e35e9b77c7e7e75409f43ab1fa965901730ce7dca22afbe8c202e3a4156008",
+      "experiments/v04_b_stopping/negative_tests.py": "b45d0a6783878787f128a0e6ffa0703944fe1252738c097638fae59fcbee3b9b",
+      "experiments/v04_c1_leak/leak_longrun.json": "9a85f015f96ab343c12a557574641a78b9c8dcc42b5ba885ffcc931018d4bfc4",
+      "experiments/v04_c1_leak/leak_longrun.py": "1fd58641cc70353dbd5d5e4dc306c6bfec0b9162301157cf2948507e7ae2e720",
+      "experiments/v04_c1_leak/leak_probe.json": "d16010e2a79272aa72412111325d26d2107b0e38f7a0a618f4012bde36fe97d2",
+      "experiments/v04_c1_leak/leak_probe.py": "83fe0b9d145a6831c3c9daa067205fa9c580c04b92d2476377498355648632b2",
+      "experiments/v04_c2_grid/grid_phase.json": "51b95e4dfefe811aa9daead523e2e5b3cfff24b3c73cd00b731162c9f5fddb43",
+      "experiments/v04_c2_grid/grid_phase.py": "4ede1f0874e84a19f45cb3b222a37ba42e12d57b3540de4c8b5b6e05d4eeeb45",
+      "experiments/v04_d_init/init_probe.json": "d9122cc2f3d584178e12ea0cc8b38bdd089ec6d2ffcef6716c711fc6fa749eb7",
+      "experiments/v04_d_init/init_probe.py": "1caf3bc8717a18b717a0b14becabd6354d4c52776eb4a8673c2b31978622d817",
+      "experiments/v04_e_metrics/metrics_probe.json": "969337241fb9ace5175b934c5163543acab41d4516dc4878c7bea7682b6925c1",
+      "experiments/v04_e_metrics/metrics_probe.py": "948f786941ea06e4faa6751f16c4b85d4fc5dac0bee456a52753314442c71735",
+      "experiments/v04_w_interval/s1_switch_points.py": "88a29dc462f52d51bca120b4863ea4acaab3864b87e3d51320c9002245146fc9"
+    },
+    "publication_metadata": {
+      "docs/V040_FROZEN_MANIFEST.json": "40f2dec99ebe9b3da1f81289323bfbc4b4b7bc725edcfe5e6d01dc3904b94a1c",
+      "docs/V040_PUBLICATION.md": "7be457a8f1c9799b1ec15675de31bc2137bbc4014e8835d1acb40afc9b8be8f2"
+    }
+  },
+  "verification_command": "python -B tools/verify_v040.py",
+  "source_binding": "fixed file bytes; final commit reported separately; no self-hash cycle",
+  "publication_date": "2026-10-26",
+  "private_scientific_freeze_commit": "9e2f0fc46787e4206f5729a9976d81c5ff235dc7",
+  "private_manifest_sha256": "40f2dec99ebe9b3da1f81289323bfbc4b4b7bc725edcfe5e6d01dc3904b94a1c",
+  "public_and_private_histories_are_independent": true,
+  "numerical_witness_and_model_code_bytes_preserved": true,
+  "mathematical_audit_logic_unchanged": true,
+  "proof_TeX_preserved": true,
+  "public_documentation_variants": [
+    {
+      "path": ".gitattributes",
+      "frozen_sha256": "2edd095e43f279e6eeace432dd2027ad07f38d8bc419667f04085542506c0952",
+      "public_sha256": "af1da8dee38058c181209d11e8af53f28556fc0bf4e1e4df42fe62bc7cfabedb",
+      "role": "public presentation / publication provenance"
+    },
+    {
+      "path": "README.md",
+      "frozen_sha256": "38d2e4e2fdb31b0bf53a0eefead3a07ee6a8265a7e660a6eed41560f6de523ae",
+      "public_sha256": "8f95a483a2b31376c7ef862f17a730d7ab0ed64b51d935aeb51998b6ea51f4ac",
+      "role": "public presentation / publication provenance"
+    },
+    {
+      "path": "docs/S3_XO_BOUNDARY_THEOREM_PROOF.md",
+      "frozen_sha256": "e82318d7d4a8c579c15745e3d39f045a71a1a14ef27dbb1d8a91abee50a62da4",
+      "public_sha256": "ccea20fb277fe40bf408b50d7bb57ed83c99096029de63bc2e2c99adccd1f745",
+      "role": "public presentation / publication provenance",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/docs/S3_XO_BOUNDARY_THEOREM_PROOF.md.txt",
+      "proof_TeX_unchanged": true
+    },
+    {
+      "path": "docs/V040_REGISTRATION.md",
+      "frozen_sha256": "61e37a4c120b91d205d681c19706261cb51d13787b16579c29f238a9dfd98537",
+      "public_sha256": "df13bc4d3a3e9d6a843baa2c10a9e88fcaeb37a4c54276e8d80e7de9973c8b9d",
+      "role": "public presentation / publication provenance",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/docs/V040_REGISTRATION.md.txt",
+      "proof_TeX_unchanged": true
+    },
+    {
+      "path": "docs/V040_VALIDATION.md",
+      "frozen_sha256": "baa276f11cc272fc634c9fbbe018df8cde7fc78ce12bb6a257fa7955847a852d",
+      "public_sha256": "983159493c4833911ed2a7e9e91d78871b66eaf675f3d4e0809fe93a54a8ae40",
+      "role": "public presentation / publication provenance",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/docs/V040_VALIDATION.md.txt",
+      "proof_TeX_unchanged": true
+    },
+    {
+      "path": "docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md",
+      "frozen_sha256": "7f42866f881019beacc268ba0511314aebf213fe768eb14ce1e8df4afd08f981",
+      "public_sha256": "ee105a4bad0b1f9e906943f4238a6014b78e5c93dda96675bc4784415157c20d",
+      "role": "public presentation / publication provenance",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md.txt",
+      "proof_TeX_unchanged": true
+    },
+    {
+      "path": "experiments/v04_all_k/review_2026-10-23/finite_common_audit.json",
+      "frozen_sha256": "643a1043734df36d1df7df2eb9e91fccfaa958d969f86be3a185e71c5a2d7be8",
+      "public_sha256": "54db4de6be3fd63e13b47acc2bcbaca126ac3f54429d81ae4412bcc7c08da11d",
+      "role": "fresh independent public acceptance after reference-only proof formatting",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/experiments/v04_all_k/review_2026-10-23/finite_common_audit.json"
+    },
+    {
+      "path": "tools/audit_v04_interval_v3.py",
+      "frozen_sha256": "51cba3eb25626a2e0524d15cb57f6d19595ae94ab451e50f62445874806e3210",
+      "public_sha256": "c835df508acc90e26aa3bfe9b421fe97089d63773f8659b68e02df1fe2462ef0",
+      "role": "optional Git provenance only; sign and certificate audit logic unchanged",
+      "original_bytes_preserved_at": "frozen_sources/v0.4.0/tools/audit_v04_interval_v3.py.txt"
+    }
+  ]
+}

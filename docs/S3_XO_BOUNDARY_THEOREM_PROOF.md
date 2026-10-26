@@ -63,7 +63,7 @@ $$
 
 ## 2. Existing invariant dependency — T1 [Existing Math]
 
-The previously established XO support-endpoint invariant supplies, for every time,
+The [XO support-endpoint invariant, Theorem A T1′](XO_ALPHA_EXTENSION_PROOF.md) supplies, for every time,
 
 $$
 s_t\le m,\quad F_{t,m}=c,\quad D_{t,m}=a,
@@ -71,30 +71,7 @@ s_t\le m,\quad F_{t,m}=c,\quad D_{t,m}=a,
 \tag{I}
 $$
 
-Here is the complete earlier proof, reproduced so that this release does not
-depend on an unpublished review draft. Write $`G_j=G(j/K)`$. By the support
-endpoint of XO, $`G_j=1`$ for every $`j\ge m`$. At time zero,
-$`D_{0,j}=(j/K)(1-j/K)`$; since $`m/K\ge5/6>1/2`$, this profile is strictly
-decreasing for $`j\ge m`$.
-
-Inductively assume $`D_{t,j}=D_{0,j}`$ for every $`j\ge m`$. Then each
-$`j>m`$ has $`D_{t,j}<D_{t,m}`$, so the selected prefix satisfies
-$`s_t\le m`$. If $`j> s_t`$ and $`j\ge m`$, the cumulative update gives
-$`F_{t+1,j}=F_{t,j}-M_t(1-G_j)=F_{t,j}`$. The only remaining case is
-$`j=s_t=m`$, where
-$`F_{t+1,m}=(1-\alpha)F_{t,m}+\alpha F_{t,m}G_m=F_{t,m}`$.
-Thus all cumulative coordinates at and beyond $`m`$ are conserved, and the
-induction closes. In particular,
-$`F_{t,m}=F_{0,m}=2b-b^2=c`$ and
-$`D_{t,m}=D_{0,m}=b(1-b)=a`$.
-
-For the uniform bound, $`5/6\le b\le10/11`$: if $`K\ge11`$, use
-$`\lceil5K/6\rceil\le5K/6+5/6`$; for $`K=6,\ldots,10`$, the values of $`b`$
-are $`5/6,6/7,7/8,8/9,9/10`$. Since $`x(1-x)`$ decreases on
-$`[1/2,1]`$, $`a=b(1-b)\ge10/121>10^{-12}`$. Therefore $`d_t\ge a`$
-and the tolerance stopping rule never fires in the exact model. This is the
-previously proved T1 dependency, reproduced without changing its status or
-claiming it as a new S3 result.
+Thus every update remains active. Its induction uses $`G_j=1`$ for $`j\ge m`$ and the strictly decreasing canonical suffix discrepancy: selection stays at or before $`m`$, so all cumulative coordinates at and beyond $`m`$ are conserved. This is the previously proved result, not a new S3 claim.
 
 We also use
 

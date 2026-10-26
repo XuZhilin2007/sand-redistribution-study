@@ -1,0 +1,83 @@
+{
+  "status": "VERIFIED",
+  "claim": "D2 maximizers lie in {ell,m} for K>=33, alpha in J; all K>=6 enter by t=2",
+  "J": [
+    "1999/8000",
+    "2001/8000"
+  ],
+  "analytic_K_min": 33,
+  "small_complement": [
+    6,
+    32
+  ],
+  "rho": [
+    "5999/8000",
+    "6001/8000"
+  ],
+  "lambda": [
+    "9/50",
+    "19/100"
+  ],
+  "u1": [
+    "4091/6600",
+    "8681/13200"
+  ],
+  "nu_derived": [
+    "18432779/96000000",
+    "8230113/40000000"
+  ],
+  "nu": [
+    "19/100",
+    "21/100"
+  ],
+  "mu": [
+    "37/100",
+    "2/5"
+  ],
+  "quadratic_envelopes": {
+    "A": {
+      "a": "35988001/64000000",
+      "b": "9652381/32000000",
+      "c": "0",
+      "upper": "93168458969161/2303232064000000"
+    },
+    "B": {
+      "a": "35988001/64000000",
+      "b": "20933141/32000000",
+      "c": "-129991/1200000",
+      "upper": "566090578299083/6909696192000000"
+    },
+    "C": {
+      "a": "5999/8000",
+      "b": "1646457/1600000",
+      "c": "-72991/300000",
+      "upper": "2527687443347/23036160000000"
+    }
+  },
+  "E_slope_min": "133/600",
+  "E_upper": "89/900",
+  "upper_slope_min": "11/150",
+  "upper_slope_max": "7/15",
+  "boundary_lower": "247/1980",
+  "mid_region_gap": "47/9900",
+  "analytic_dependencies": [
+    "true selector prefix lemma",
+    "two-update discrepancy identities",
+    "pointwise quadratic upper envelopes and completion of square",
+    "upper-segment monotonicity",
+    "theorem A: suffix and residence",
+    "accepted finite-complement interval witnesses"
+  ],
+  "source_sha256": {
+    "tools/audit_v04_interval_v3.py": "51cba3eb25626a2e0524d15cb57f6d19595ae94ab451e50f62445874806e3210",
+    "experiments/v04_w_interval/interval_certs_v3.jsonl": "c8c7acae690f939397b88084784df4162264ccef54e5f93c32b8d5e7c979b9d1",
+    "docs/XO_ALPHA_EXTENSION_PROOF.md": "471e55f7281fb06a85324320babfcb28b5b75803acb18b29e13ac326b542c426",
+    "docs/S3_XO_BOUNDARY_THEOREM_PROOF.md": "e82318d7d4a8c579c15745e3d39f045a71a1a14ef27dbb1d8a91abee50a62da4",
+    "tools/audit_v04_d2_entry.py": "1a27177834419dc04f0bcc89c294a812b1b3538bbb65d1699596eebe5e45b677",
+    "experiments/v04_all_k/review_2026-10-23/finite_common_audit.json": "643a1043734df36d1df7df2eb9e91fccfaa958d969f86be3a185e71c5a2d7be8",
+    "docs/v04_research/D2_ENTRY_REVIEW.md": "0b63c39f8a79ed6a822a3eb887e2e89b73c855aea76512102f27428dd6a3752c",
+    "docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md": "7f42866f881019beacc268ba0511314aebf213fe768eb14ce1e8df4afd08f981",
+    "experiments/v04_all_k/d2_entry.py": "57f4211ac73d6002aa12c9be1c8d1d70882dbacdca7724e3b125f1b34aa07067",
+    "experiments/v04_all_k/d2_entry_certificate.json": "e2f72bab803503f575fb9fefcec9edfc34e780bb7bf3221f3e421c170f3c64d0"
+  }
+}
