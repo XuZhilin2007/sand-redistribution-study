@@ -1,0 +1,4224 @@
+{
+  "evidence": "FLOAT FINITE K FINITE TIME ONLY",
+  "denominator": 1000,
+  "prefix_selection": "s0 and s1 exact; later selectors float; near ties require exact replay",
+  "horizon": 400,
+  "K_domain": [
+    6,
+    120
+  ],
+  "rows": [
+    {
+      "K": 6,
+      "sampled_good_runs_numerators": [
+        [
+          191,
+          291
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            3,
+            3,
+            3
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "292/1000",
+          "word": [
+            3,
+            4
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "788/1000",
+          "word": [
+            3,
+            5
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 7,
+      "sampled_good_runs_numerators": [
+        [
+          217,
+          356
+        ],
+        [
+          809,
+          846
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            3,
+            4,
+            4
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "357/1000",
+          "word": [
+            3,
+            5
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "847/1000",
+          "word": [
+            3,
+            6
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 8,
+      "sampled_good_runs_numerators": [
+        [
+          237,
+          380
+        ],
+        [
+          835,
+          875
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            4,
+            4,
+            4
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "381/1000",
+          "word": [
+            4,
+            6
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 9,
+      "sampled_good_runs_numerators": [
+        [
+          242,
+          391
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            4,
+            5,
+            5
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "392/1000",
+          "word": [
+            4,
+            7
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "826/1000",
+          "word": [
+            4,
+            7
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 10,
+      "sampled_good_runs_numerators": [
+        [
+          247,
+          389
+        ],
+        [
+          798,
+          897
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            5,
+            5,
+            5
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "390/1000",
+          "word": [
+            5,
+            8
+          ],
+          "entry": null
+        },
+        "4": {
+          "alpha": "898/1000",
+          "word": [
+            5,
+            8,
+            9,
+            8
+          ],
+          "entry": 2
+        }
+      }
+    },
+    {
+      "K": 11,
+      "sampled_good_runs_numerators": [
+        [
+          222,
+          337
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            5,
+            6,
+            6
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "338/1000",
+          "word": [
+            5,
+            8
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "866/1000",
+          "word": [
+            5,
+            9
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 12,
+      "sampled_good_runs_numerators": [
+        [
+          189,
+          307
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            6,
+            6,
+            6
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "308/1000",
+          "word": [
+            6,
+            9
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "792/1000",
+          "word": [
+            6,
+            10
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 13,
+      "sampled_good_runs_numerators": [
+        [
+          209,
+          322
+        ],
+        [
+          326,
+          342
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            6,
+            7,
+            7
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "323/1000",
+          "word": [
+            6,
+            9
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "808/1000",
+          "word": [
+            6,
+            11
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 14,
+      "sampled_good_runs_numerators": [
+        [
+          220,
+          331
+        ],
+        [
+          334,
+          355
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            7,
+            7,
+            7
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "332/1000",
+          "word": [
+            7,
+            10
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "828/1000",
+          "word": [
+            7,
+            12
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 15,
+      "sampled_good_runs_numerators": [
+        [
+          220,
+          338
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            7,
+            8,
+            8
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "339/1000",
+          "word": [
+            7,
+            11
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "813/1000",
+          "word": [
+            7,
+            12
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 16,
+      "sampled_good_runs_numerators": [
+        [
+          221,
+          338
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            8,
+            8,
+            8
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "339/1000",
+          "word": [
+            8,
+            12
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "823/1000",
+          "word": [
+            8,
+            13
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 17,
+      "sampled_good_runs_numerators": [
+        [
+          211,
+          319
+        ],
+        [
+          327,
+          333
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            8,
+            9,
+            9
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "320/1000",
+          "word": [
+            8,
+            12
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "805/1000",
+          "word": [
+            8,
+            14
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 18,
+      "sampled_good_runs_numerators": [
+        [
+          191,
+          304
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            9,
+            9,
+            9
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "305/1000",
+          "word": [
+            9,
+            13
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            9,
+            15
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 19,
+      "sampled_good_runs_numerators": [
+        [
+          205,
+          324
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            9,
+            10,
+            10
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "325/1000",
+          "word": [
+            9,
+            14
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "804/1000",
+          "word": [
+            9,
+            16
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 20,
+      "sampled_good_runs_numerators": [
+        [
+          212,
+          331
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            10,
+            10,
+            10
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "332/1000",
+          "word": [
+            10,
+            15
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "817/1000",
+          "word": [
+            10,
+            17
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 21,
+      "sampled_good_runs_numerators": [
+        [
+          212,
+          323
+        ],
+        [
+          329,
+          334
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            10,
+            11,
+            11
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "324/1000",
+          "word": [
+            10,
+            15
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "807/1000",
+          "word": [
+            10,
+            17
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 22,
+      "sampled_good_runs_numerators": [
+        [
+          213,
+          323
+        ],
+        [
+          334,
+          334
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            11,
+            11,
+            11
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "324/1000",
+          "word": [
+            11,
+            16
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "815/1000",
+          "word": [
+            11,
+            18
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 23,
+      "sampled_good_runs_numerators": [
+        [
+          206,
+          321
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            11,
+            12,
+            12
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "322/1000",
+          "word": [
+            11,
+            17
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "802/1000",
+          "word": [
+            11,
+            19
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 24,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          302
+        ],
+        [
+          306,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            12,
+            12,
+            12
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "303/1000",
+          "word": [
+            12,
+            17
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            12,
+            20
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 25,
+      "sampled_good_runs_numerators": [
+        [
+          203,
+          316
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            12,
+            13,
+            13
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "317/1000",
+          "word": [
+            12,
+            18
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "802/1000",
+          "word": [
+            12,
+            21
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 26,
+      "sampled_good_runs_numerators": [
+        [
+          208,
+          321
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            13,
+            13,
+            13
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "322/1000",
+          "word": [
+            13,
+            19
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "811/1000",
+          "word": [
+            13,
+            22
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 27,
+      "sampled_good_runs_numerators": [
+        [
+          208,
+          324
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            13,
+            14,
+            14
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "325/1000",
+          "word": [
+            13,
+            20
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "804/1000",
+          "word": [
+            13,
+            22
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 28,
+      "sampled_good_runs_numerators": [
+        [
+          208,
+          324
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            14,
+            14,
+            14
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "325/1000",
+          "word": [
+            14,
+            21
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "810/1000",
+          "word": [
+            14,
+            23
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 29,
+      "sampled_good_runs_numerators": [
+        [
+          201,
+          315
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            14,
+            15,
+            15
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "316/1000",
+          "word": [
+            14,
+            21
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "801/1000",
+          "word": [
+            14,
+            24
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 30,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            15,
+            15,
+            15
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            15,
+            22
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            15,
+            25
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 31,
+      "sampled_good_runs_numerators": [
+        [
+          201,
+          318
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            15,
+            16,
+            16
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "319/1000",
+          "word": [
+            15,
+            23
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "800/1000",
+          "word": [
+            15,
+            26
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 32,
+      "sampled_good_runs_numerators": [
+        [
+          205,
+          322
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            16,
+            16,
+            16
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "323/1000",
+          "word": [
+            16,
+            24
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "808/1000",
+          "word": [
+            16,
+            27
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 33,
+      "sampled_good_runs_numerators": [
+        [
+          205,
+          318
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            16,
+            17,
+            17
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "319/1000",
+          "word": [
+            16,
+            24
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "802/1000",
+          "word": [
+            16,
+            27
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 34,
+      "sampled_good_runs_numerators": [
+        [
+          206,
+          318
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            17,
+            17,
+            17
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "319/1000",
+          "word": [
+            17,
+            25
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "807/1000",
+          "word": [
+            17,
+            28
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 35,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          317
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            17,
+            18,
+            18
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "318/1000",
+          "word": [
+            17,
+            26
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            17,
+            29
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 36,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          304
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            18,
+            18,
+            18
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "305/1000",
+          "word": [
+            18,
+            26
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            18,
+            30
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 37,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          314
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            18,
+            19,
+            19
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            18,
+            27
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            18,
+            31
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 38,
+      "sampled_good_runs_numerators": [
+        [
+          204,
+          317
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            19,
+            19,
+            19
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "318/1000",
+          "word": [
+            19,
+            28
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "805/1000",
+          "word": [
+            19,
+            32
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 39,
+      "sampled_good_runs_numerators": [
+        [
+          201,
+          201
+        ],
+        [
+          203,
+          319
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            19,
+            20,
+            20
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "320/1000",
+          "word": [
+            19,
+            29
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "801/1000",
+          "word": [
+            19,
+            32
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 40,
+      "sampled_good_runs_numerators": [
+        [
+          204,
+          314
+        ],
+        [
+          317,
+          319
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            20,
+            20,
+            20
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            20,
+            29
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "805/1000",
+          "word": [
+            20,
+            33
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 41,
+      "sampled_good_runs_numerators": [
+        [
+          199,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            20,
+            21,
+            21
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "314/1000",
+          "word": [
+            20,
+            30
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            20,
+            34
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 42,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          307
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            21,
+            21,
+            21
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "308/1000",
+          "word": [
+            21,
+            31
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            21,
+            35
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 43,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            21,
+            22,
+            22
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            21,
+            31
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            21,
+            36
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 44,
+      "sampled_good_runs_numerators": [
+        [
+          202,
+          314
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            22,
+            22,
+            22
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            22,
+            32
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "804/1000",
+          "word": [
+            22,
+            37
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 45,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          315
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            22,
+            23,
+            23
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "316/1000",
+          "word": [
+            22,
+            33
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "800/1000",
+          "word": [
+            22,
+            37
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 46,
+      "sampled_good_runs_numerators": [
+        [
+          201,
+          316
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            23,
+            23,
+            23
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "317/1000",
+          "word": [
+            23,
+            34
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "803/1000",
+          "word": [
+            23,
+            38
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 47,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            23,
+            24,
+            24
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            23,
+            34
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            23,
+            39
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 48,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            24,
+            24,
+            24
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            24,
+            35
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            24,
+            40
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 49,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            24,
+            25,
+            25
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "314/1000",
+          "word": [
+            24,
+            36
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            24,
+            41
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 50,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          315
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            25,
+            25,
+            25
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "316/1000",
+          "word": [
+            25,
+            37
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "802/1000",
+          "word": [
+            25,
+            42
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 51,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            25,
+            26,
+            26
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "314/1000",
+          "word": [
+            25,
+            37
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            25,
+            42
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 52,
+      "sampled_good_runs_numerators": [
+        [
+          200,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            26,
+            26,
+            26
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "314/1000",
+          "word": [
+            26,
+            38
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "802/1000",
+          "word": [
+            26,
+            43
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 53,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            26,
+            27,
+            27
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            26,
+            39
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            26,
+            44
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 54,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          304
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            27,
+            27,
+            27
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "305/1000",
+          "word": [
+            27,
+            39
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            27,
+            45
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 55,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            27,
+            28,
+            28
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            27,
+            40
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            27,
+            46
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 56,
+      "sampled_good_runs_numerators": [
+        [
+          199,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            28,
+            28,
+            28
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "314/1000",
+          "word": [
+            28,
+            41
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "801/1000",
+          "word": [
+            28,
+            47
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 57,
+      "sampled_good_runs_numerators": [
+        [
+          199,
+          314
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            28,
+            29,
+            29
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            28,
+            42
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            28,
+            47
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 58,
+      "sampled_good_runs_numerators": [
+        [
+          199,
+          314
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            29,
+            29,
+            29
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            29,
+            43
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "801/1000",
+          "word": [
+            29,
+            48
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 59,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            29,
+            30,
+            30
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            29,
+            43
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            29,
+            49
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 60,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            30,
+            30,
+            30
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            30,
+            44
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            30,
+            50
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 61,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            30,
+            31,
+            31
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            30,
+            45
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            30,
+            51
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 62,
+      "sampled_good_runs_numerators": [
+        [
+          199,
+          314
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            31,
+            31,
+            31
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "315/1000",
+          "word": [
+            31,
+            46
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "801/1000",
+          "word": [
+            31,
+            52
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 63,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            31,
+            32,
+            32
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            31,
+            46
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            31,
+            52
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 64,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            32,
+            32,
+            32
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            32,
+            47
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "800/1000",
+          "word": [
+            32,
+            53
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 65,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ],
+        [
+          311,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            32,
+            33,
+            33
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            32,
+            47
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            32,
+            54
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 66,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            33,
+            33,
+            33
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            33,
+            48
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            33,
+            55
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 67,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            33,
+            34,
+            34
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            33,
+            49
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            33,
+            56
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 68,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            34,
+            34,
+            34
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            34,
+            50
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "800/1000",
+          "word": [
+            34,
+            57
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 69,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ],
+        [
+          313,
+          313
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            34,
+            35,
+            35
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            34,
+            50
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            34,
+            57
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 70,
+      "sampled_good_runs_numerators": [
+        [
+          198,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            35,
+            35,
+            35
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            35,
+            51
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "800/1000",
+          "word": [
+            35,
+            58
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 71,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            35,
+            36,
+            36
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            35,
+            52
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            35,
+            59
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 72,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          304
+        ],
+        [
+          306,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            36,
+            36,
+            36
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "305/1000",
+          "word": [
+            36,
+            52
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            36,
+            60
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 73,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            36,
+            37,
+            37
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            36,
+            53
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            36,
+            61
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 74,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            37,
+            37,
+            37
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            37,
+            54
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            37,
+            62
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 75,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            37,
+            38,
+            38
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            37,
+            55
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            37,
+            62
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 76,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          312
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            38,
+            38,
+            38
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "313/1000",
+          "word": [
+            38,
+            56
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            38,
+            63
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 77,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            38,
+            39,
+            39
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            38,
+            56
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            38,
+            64
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 78,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            39,
+            39,
+            39
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            39,
+            57
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            39,
+            65
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 79,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            39,
+            40,
+            40
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            39,
+            58
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            39,
+            66
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 80,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            40,
+            40,
+            40
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            40,
+            59
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            40,
+            67
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 81,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            40,
+            41,
+            41
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            40,
+            59
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            40,
+            67
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 82,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            41,
+            41,
+            41
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            41,
+            60
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            41,
+            68
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 83,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            41,
+            42,
+            42
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            41,
+            61
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            41,
+            69
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 84,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            42,
+            42,
+            42
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            42,
+            61
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            42,
+            70
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 85,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            42,
+            43,
+            43
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            42,
+            62
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            42,
+            71
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 86,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            43,
+            43,
+            43
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            43,
+            63
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "799/1000",
+          "word": [
+            43,
+            72
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 87,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            43,
+            44,
+            44
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "312/1000",
+          "word": [
+            43,
+            64
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            43,
+            72
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 88,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          309
+        ],
+        [
+          311,
+          311
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            44,
+            44,
+            44
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            44,
+            64
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            44,
+            73
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 89,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            44,
+            45,
+            45
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            44,
+            65
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            44,
+            74
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 90,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            45,
+            45,
+            45
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            45,
+            66
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            45,
+            75
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 91,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          308
+        ],
+        [
+          310,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            45,
+            46,
+            46
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            45,
+            66
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            45,
+            76
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 92,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            46,
+            46,
+            46
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            46,
+            67
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            46,
+            77
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 93,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            46,
+            47,
+            47
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            46,
+            68
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            46,
+            77
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 94,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            47,
+            47,
+            47
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            47,
+            69
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            47,
+            78
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 95,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            47,
+            48,
+            48
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            47,
+            69
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            47,
+            79
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 96,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            48,
+            48,
+            48
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            48,
+            70
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            48,
+            80
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 97,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            48,
+            49,
+            49
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            48,
+            71
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            48,
+            81
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 98,
+      "sampled_good_runs_numerators": [
+        [
+          197,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            49,
+            49,
+            49
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            49,
+            72
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            49,
+            82
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 99,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            49,
+            50,
+            50
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            49,
+            72
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            49,
+            82
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 100,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            50,
+            50,
+            50
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            50,
+            73
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            50,
+            83
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 101,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            50,
+            51,
+            51
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            50,
+            74
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            50,
+            84
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 102,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            51,
+            51,
+            51
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            51,
+            74
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            51,
+            85
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 103,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            51,
+            52,
+            52
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            51,
+            75
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            51,
+            86
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 104,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            52,
+            52,
+            52
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            52,
+            76
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            52,
+            87
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 105,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            52,
+            53,
+            53
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            52,
+            77
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            52,
+            87
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 106,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            53,
+            53,
+            53
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "311/1000",
+          "word": [
+            53,
+            78
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "798/1000",
+          "word": [
+            53,
+            88
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 107,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            53,
+            54,
+            54
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            53,
+            78
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            53,
+            89
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 108,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            54,
+            54,
+            54
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            54,
+            79
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            54,
+            90
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 109,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            54,
+            55,
+            55
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            54,
+            80
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            54,
+            91
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 110,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          308
+        ],
+        [
+          310,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            55,
+            55,
+            55
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            55,
+            80
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            55,
+            92
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 111,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            55,
+            56,
+            56
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            55,
+            81
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            55,
+            92
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 112,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            56,
+            56,
+            56
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            56,
+            82
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            56,
+            93
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 113,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          307
+        ],
+        [
+          309,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            56,
+            57,
+            57
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "308/1000",
+          "word": [
+            56,
+            82
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            56,
+            94
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 114,
+      "sampled_good_runs_numerators": [
+        [
+          193,
+          305
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            57,
+            57,
+            57
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "306/1000",
+          "word": [
+            57,
+            83
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            57,
+            95
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 115,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            57,
+            58,
+            58
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            57,
+            84
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            57,
+            96
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 116,
+      "sampled_good_runs_numerators": [
+        [
+          196,
+          309
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            58,
+            58,
+            58
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "310/1000",
+          "word": [
+            58,
+            85
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            58,
+            97
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 117,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ],
+        [
+          310,
+          310
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            58,
+            59,
+            59
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            58,
+            85
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "796/1000",
+          "word": [
+            58,
+            97
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 118,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            59,
+            59,
+            59
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            59,
+            86
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "797/1000",
+          "word": [
+            59,
+            98
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 119,
+      "sampled_good_runs_numerators": [
+        [
+          195,
+          308
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            59,
+            60,
+            60
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "309/1000",
+          "word": [
+            59,
+            87
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "795/1000",
+          "word": [
+            59,
+            99
+          ],
+          "entry": null
+        }
+      }
+    },
+    {
+      "K": 120,
+      "sampled_good_runs_numerators": [
+        [
+          192,
+          306
+        ]
+      ],
+      "first_failure_by_time": {
+        "3": {
+          "alpha": "1/1000",
+          "word": [
+            60,
+            60,
+            60
+          ],
+          "entry": null
+        },
+        "1": {
+          "alpha": "307/1000",
+          "word": [
+            60,
+            88
+          ],
+          "entry": null
+        },
+        "0": {
+          "alpha": "793/1000",
+          "word": [
+            60,
+            100
+          ],
+          "entry": null
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 6.958396499976516,
+  "source_sha256": "608ff714d7bffd7a0d09ea3a83a2b8cb4a56d08b20c5728e7b2a5a974948b867"
+}

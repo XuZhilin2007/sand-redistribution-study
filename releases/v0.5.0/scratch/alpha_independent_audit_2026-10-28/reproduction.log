@@ -1,0 +1,13 @@
+Checking verify_phase.py
+  PASS 0.285 seconds
+Checking audit_phase.py
+  PASS 7.673 seconds
+Checking finite_cover.py
+  PASS 43.699 seconds
+Checking audit_cover.py
+  PASS 58.523 seconds
+Checking uniform_probe.py
+  PASS 66.407 seconds
+Checking verify_v040.py
+  PASS 48.809 seconds
+VERIFIED_SHARP_UNIVERSAL_ALPHA_INTERVAL seconds 225.44162880000022

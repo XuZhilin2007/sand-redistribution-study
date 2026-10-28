@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+  "original_file_count": 699,
+  "original_files_changed": [],
+  "original_source_hash_mismatches": {
+    "verification.json": [],
+    "exact_results.json": [],
+    "algebra_audit.json": [],
+    "finite_cover.json": [],
+    "finite_audit.json": [],
+    "uniform_boxes.json": []
+  },
+  "semantic_comparison": {
+    "exact_results.json": true,
+    "algebra_audit.json": true,
+    "finite_cover.json": true,
+    "finite_audit.json": true,
+    "uniform_boxes.json": true
+  },
+  "comparison_ignored_fields": [
+    "elapsed_seconds",
+    "seconds",
+    "witness_sha256 (finite witness contains elapsed time)"
+  ],
+  "reproduction_status": "VERIFIED_SHARP_UNIVERSAL_ALPHA_INTERVAL",
+  "reproduction_seconds": 225.44162880000022,
+  "stages": [
+    {
+      "command": "verify_phase.py",
+      "exit_code": 0,
+      "seconds": 0.28493829999979425
+    },
+    {
+      "command": "audit_phase.py",
+      "exit_code": 0,
+      "seconds": 7.673226599999907
+    },
+    {
+      "command": "finite_cover.py",
+      "exit_code": 0,
+      "seconds": 43.6993451000003
+    },
+    {
+      "command": "audit_cover.py",
+      "exit_code": 0,
+      "seconds": 58.52319919999991
+    },
+    {
+      "command": "uniform_probe.py",
+      "exit_code": 0,
+      "seconds": 66.40698699999984
+    },
+    {
+      "command": "verify_v040.py",
+      "exit_code": 0,
+      "seconds": 48.80879210000012
+    }
+  ],
+  "baseline_status": "PASS",
+  "baseline_count": 37,
+  "baseline_unchanged": true
+}

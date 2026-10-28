@@ -1,0 +1,79 @@
+{
+  "version": "v0.4.0",
+  "status": "LOCAL_SCIENTIFIC_FREEZE",
+  "date": "2026-10-24",
+  "research_baseline_commit": "36d71a2",
+  "previous_freeze_commit": "85a6d06",
+  "main_theorem": {
+    "model": "canonical XO, exact arithmetic, smallest-index ties",
+    "K": "all integers K>=6",
+    "alpha": [
+      "1999/8000",
+      "2001/8000"
+    ],
+    "time": "all integers t>=0",
+    "conclusion": "U(p_t) >= U(p_2)"
+  },
+  "uniform_tail": {
+    "K_min": 204,
+    "time": "all integers t>=3",
+    "strict_gap": "1/100",
+    "closed_rational_boxes": 48
+  },
+  "v3_witness_sha256": "c8c7acae690f939397b88084784df4162264ccef54e5f93c32b8d5e7c979b9d1",
+  "files": {
+    "version_entries": {
+      ".gitattributes": "2edd095e43f279e6eeace432dd2027ad07f38d8bc419667f04085542506c0952",
+      "README.md": "38d2e4e2fdb31b0bf53a0eefead3a07ee6a8265a7e660a6eed41560f6de523ae",
+      "docs/V040_REGISTRATION.md": "61e37a4c120b91d205d681c19706261cb51d13787b16579c29f238a9dfd98537",
+      "docs/V040_VALIDATION.md": "baa276f11cc272fc634c9fbbe018df8cde7fc78ce12bb6a257fa7955847a852d",
+      "docs/v04_research/STATUS.md": "4df149e932d1e4936e68381cd82265b206009ae171a519ea483e26c7fb9c4038",
+      "docs/v04_research/ALL_K_INTERVAL.md": "c6e04ebfbcbdb6baa823864cf6f870bc8818d83bbf40010b8ecc6f4813c9d64e",
+      "docs/v04_research/RESULTS.md": "1444edfe3f3d2381adfb76a56bc8093e9b727459bb8b2af364d5570a9aeed666"
+    },
+    "proofs": {
+      "docs/v04_research/W0_UNIFORM_BOUND_REVIEW.md": "d4979801d90364ef2cc4600040f9e69d94af3a58e7a49c1bd474549156b62d7e",
+      "docs/v04_research/UNIFORM_TAIL_CLOSURE_REVIEW.md": "7ec528d5e6147976193c2b81378c5577c8d18267195bc3a669d87bcdcd405118",
+      "docs/v04_research/D2_ENTRY_REVIEW.md": "0b63c39f8a79ed6a822a3eb887e2e89b73c855aea76512102f27428dd6a3752c",
+      "docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md": "7f42866f881019beacc268ba0511314aebf213fe768eb14ce1e8df4afd08f981",
+      "docs/XO_ALPHA_EXTENSION_PROOF.md": "471e55f7281fb06a85324320babfcb28b5b75803acb18b29e13ac326b542c426",
+      "docs/S3_XO_BOUNDARY_THEOREM_PROOF.md": "e82318d7d4a8c579c15745e3d39f045a71a1a14ef27dbb1d8a91abee50a62da4"
+    },
+    "auditors": {
+      "tools/audit_v04_interval_v3.py": "51cba3eb25626a2e0524d15cb57f6d19595ae94ab451e50f62445874806e3210",
+      "tools/audit_v04_w0_uniform.py": "3ec9f3deb79730a8fb57b53a5768bdd0172173ffb2bb931b5929fe444cb4067c",
+      "tools/audit_v04_d2_entry.py": "1a27177834419dc04f0bcc89c294a812b1b3538bbb65d1699596eebe5e45b677",
+      "tools/audit_v04_uniform_tail.py": "aff02533e6f2ef2e8019d7675d6c0f61d9e737e4c35209e734b6b0da3acb6691",
+      "tools/audit_v04_prefix_lemma.py": "f53a55d31a8d79f77ef9d0f6d0ef84b9ab7aedfc702e968ddefd289dec0d58de",
+      "tools/verify_v040.py": "ec14e189e8803bcff64603fda9bf57eef7aec889ec93bd765f9f761eadd3251b"
+    },
+    "production_and_regression_code": {
+      "experiments/v04_w_interval/interval_certs.py": "04d0cff94b886d649e21585d9d618c1597427bbd4ee69fdff06cce52e4a44458",
+      "experiments/v04_w_interval/symkernel.py": "aa4515edd711093783a3349e18390285bee55440d66c844e17123e8df3b28807",
+      "experiments/v04_w_interval/validate_interval.py": "c26057d285bf1591b91b3ffbe2b910bc2f881d13b202d6a5c7216fb7066778a1",
+      "experiments/v04_w_interval/negative_tests_w.py": "1f3e83ca432cd49f337e8a596eccea9d10aa0adf449762037c64e313de1d8134",
+      "experiments/v04_all_k/w0_sweep.py": "aa665a915ce5b3e631a09cf474e7452f3a25e259b3e173a5982e10838732e342",
+      "experiments/v04_all_k/d2_entry.py": "57f4211ac73d6002aa12c9be1c8d1d70882dbacdca7724e3b125f1b34aa07067",
+      "experiments/v04_all_k/continuum_limit.py": "23601c37ee4a80a6b8acc49486b9586fd1ae099887233447e9b8a60fe1958980"
+    },
+    "witness_and_required_data": {
+      "experiments/v04_w_interval/interval_certs_v3.jsonl": "c8c7acae690f939397b88084784df4162264ccef54e5f93c32b8d5e7c979b9d1",
+      "experiments/v04_all_k/w0_sweep.jsonl": "1ee6eac392202dc1393e91cc6618d038095b8b452c03b83e093abaac0da2c928",
+      "experiments/v04_all_k/continuum_U_polys.json": "c95710df731ea26dd3b1ebb2c6459c976ac6ffb857c0e7a967ebb144947c954e",
+      "experiments/v04_all_k/d2_entry_certificate.json": "e2f72bab803503f575fb9fefcec9edfc34e780bb7bf3221f3e421c170f3c64d0"
+    },
+    "accepted_finite_dependency": {
+      "experiments/v04_all_k/review_2026-10-23/finite_common_audit.json": "643a1043734df36d1df7df2eb9e91fccfaa958d969f86be3a185e71c5a2d7be8"
+    },
+    "current_verification_reports": {
+      "experiments/v04_all_k/review_2026-10-24/finite_common.json": "4506f6d0f3e9d1412fe72aea7a58cc8294c4c902307c43f3f54dbdda6302649a",
+      "experiments/v04_all_k/review_2026-10-24/prefix.json": "a30ba3b292e5ec1d2994f66d98a318c57b9ed520c8c7a470e8dc29ae937a2352",
+      "experiments/v04_all_k/review_2026-10-24/w0.json": "538daf7c728b2b98fa1011c8cc87dfad48be223c71cd844995b251c35fd9e658",
+      "experiments/v04_all_k/review_2026-10-24/d2.json": "ef6b5c980c6bc55547a71c6e5450a577ece27586982ca57f94394ac72213dc22",
+      "experiments/v04_all_k/review_2026-10-24/tail.json": "68ddb5511e1b22f6d064f87f3e3ed37b76cb3bce3ece79aec138e7873d9618fe",
+      "experiments/v04_all_k/review_2026-10-24/reverification.json": "5d53066b8374e5577a25e2cb755177411081fb060bbff2d7f92ba9107088b8a4"
+    }
+  },
+  "verification_command": "python -B tools/verify_v040.py",
+  "source_binding": "fixed file bytes; final commit reported separately; no self-hash cycle"
+}

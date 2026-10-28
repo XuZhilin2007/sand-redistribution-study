@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "candidate_file_count": 114,
+  "original_evidence_prechecked": true,
+  "external_manifest_pin_checked": true,
+  "proof_documents_frozen": [
+    "docs/alpha_phase_2026-10-27/PROOF.md",
+    "docs/alpha_phase_2026-10-27/RESULTS.md"
+  ]
+}

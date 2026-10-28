@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "complete unmodified package accepted",
+      "status": "PASS"
+    },
+    {
+      "test": "wrong externally pinned manifest rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "output inside package rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "normalized output path inside package rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "existing output rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "existing evidence unchanged",
+      "status": "PASS"
+    },
+    {
+      "test": "changed proof rejected before output",
+      "status": "PASS"
+    },
+    {
+      "test": "changed proof rejected before output leaves no output",
+      "status": "PASS"
+    },
+    {
+      "test": "changed old report rejected before output",
+      "status": "PASS"
+    },
+    {
+      "test": "changed old report rejected before output leaves no output",
+      "status": "PASS"
+    },
+    {
+      "test": "missing imported kernel rejected before output",
+      "status": "PASS"
+    },
+    {
+      "test": "missing imported kernel rejected before output leaves no output",
+      "status": "PASS"
+    },
+    {
+      "test": "extra unmanifested file rejected before output",
+      "status": "PASS"
+    },
+    {
+      "test": "extra unmanifested file rejected before output leaves no output",
+      "status": "PASS"
+    },
+    {
+      "test": "timing is non-scientific: exact_results.json",
+      "status": "PASS"
+    },
+    {
+      "test": "mathematical/report result change detected: exact_results.json",
+      "status": "PASS"
+    },
+    {
+      "test": "timing is non-scientific: algebra_audit.json",
+      "status": "PASS"
+    },
+    {
+      "test": "mathematical/report result change detected: algebra_audit.json",
+      "status": "PASS"
+    },
+    {
+      "test": "timing is non-scientific: finite_cover.json",
+      "status": "PASS"
+    },
+    {
+      "test": "mathematical/report result change detected: finite_cover.json",
+      "status": "PASS"
+    },
+    {
+      "test": "timing is non-scientific: finite_audit.json",
+      "status": "PASS"
+    },
+    {
+      "test": "mathematical/report result change detected: finite_audit.json",
+      "status": "PASS"
+    },
+    {
+      "test": "timing is non-scientific: uniform_boxes.json",
+      "status": "PASS"
+    },
+    {
+      "test": "mathematical/report result change detected: uniform_boxes.json",
+      "status": "PASS"
+    },
+    {
+      "test": "misattributed universal inclusion rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "archive traversal rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "archive traversal made no external file",
+      "status": "PASS"
+    },
+    {
+      "test": "CLI read-only preflight succeeds",
+      "status": "PASS"
+    },
+    {
+      "test": "CLI repeated output attempt fails before child execution",
+      "status": "PASS"
+    }
+  ],
+  "test_count": 29,
+  "candidate_unchanged": true,
+  "manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "qualification": "Release-integrity controls only; not independent mathematical proof."
+}

@@ -1,0 +1,86 @@
+{
+  "version": "v0.4.0",
+  "status": "PASS",
+  "manifest_sha256": "40f2dec99ebe9b3da1f81289323bfbc4b4b7bc725edcfe5e6d01dc3904b94a1c",
+  "frozen_file_count": 37,
+  "initial_hash_failures": [],
+  "final_hash_failures": [],
+  "frozen_inputs_unchanged": true,
+  "results": [
+    {
+      "name": "finite_common",
+      "command": [
+        "python",
+        "-B",
+        "tools/audit_v04_interval_v3.py",
+        "--scope",
+        "common"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.474,
+      "stdout": "Auditor controls: 23 PASS\nAudited 10/203 K; failures=0; elapsed=0.6s\nAudited 20/203 K; failures=0; elapsed=1.2s\nAudited 30/203 K; failures=0; elapsed=1.9s\nAudited 40/203 K; failures=0; elapsed=2.5s\nAudited 50/203 K; failures=0; elapsed=3.2s\nAudited 60/203 K; failures=0; elapsed=3.9s\nAudited 70/203 K; failures=0; elapsed=4.7s\nAudited 80/203 K; failures=0; elapsed=5.5s\nAudited 90/203 K; failures=0; elapsed=6.4s\nAudited 100/203 K; failures=0; elapsed=7.5s\nAudited 110/203 K; failures=0; elapsed=8.5s\nAudited 120/203 K; failures=0; elapsed=9.5s\nAudited 130/203 K; failures=0; elapsed=10.6s\nAudited 140/203 K; failures=0; elapsed=11.7s\nAudited 150/203 K; failures=0; elapsed=12.9s\nAudited 160/203 K; failures=0; elapsed=14.2s\nAudited 170/203 K; failures=0; elapsed=15.5s\nAudited 180/203 K; failures=0; elapsed=16.8s\nAudited 190/203 K; failures=0; elapsed=18.2s\nAudited 200/203 K; failures=0; elapsed=19.8s\nAudited 203/203 K; failures=0; elapsed=21.3s\nVERIFIED: 203/203 K, 207 pieces, 80246 exact sign obligations\n",
+      "stderr": ""
+    },
+    {
+      "name": "prefix",
+      "command": [
+        "python",
+        "-B",
+        "tools/audit_v04_prefix_lemma.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.459,
+      "stdout": "PASS: exact analytic bounds, 570 finite crosschecks; small ties={16: [10, 11], 32: [20, 21, 22]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "W0",
+      "command": [
+        "python",
+        "-B",
+        "tools/audit_v04_w0_uniform.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.519,
+      "stdout": "Sweep independently replayed 400/1845 K\nSweep independently replayed 800/1845 K\nSweep independently replayed 1200/1845 K\nSweep independently replayed 1600/1845 K\nVERIFIED: uniform W0 for all K>=6, all alpha in J; 5535 exact sweep records independently replayed; 24 full-vector crosschecks; 3.42s\n",
+      "stderr": ""
+    },
+    {
+      "name": "D2",
+      "command": [
+        "python",
+        "-B",
+        "tools/audit_v04_d2_entry.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.071,
+      "stdout": "VERIFIED: K>=33 D2 entry on all J; all-K entry by t=2 with finite complement;\nmu in [37/100,2/5], boundary >= 247/1980, mid-region gap >= 47/9900\n",
+      "stderr": ""
+    },
+    {
+      "name": "tail",
+      "command": [
+        "python",
+        "-B",
+        "tools/audit_v04_uniform_tail.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.368,
+      "stdout": "VERIFIED: 48 exact closed boxes cover all K>=204, alpha in J;\nH'(rho)<-3/25, H(rho)>1/100; 177 exact full-vector checks; 2.29s\n",
+      "stderr": ""
+    },
+    {
+      "name": "regressions",
+      "command": [
+        "python",
+        "-B",
+        "experiments/v04_w_interval/negative_tests_w.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.106,
+      "stdout": "  [PASS] I1: P(19/80) < 0 (review value -3/40960000)\n  [PASS] I1: count_roots_open = 3 (9/40, 1/4, 11/40)\n  [PASS] I1: pos_closed rejects\n  [PASS] I1: nonneg_closed rejects\n  [PASS] simple root: count 1 on (0, 1/2)\n  [PASS] simple root: pos_closed on [0.3, 0.4] accepts\n  [PASS] double root: count 1 (distinct) on (0,1/2)\n  [PASS] double root: pos_closed on [0, 1/2] rejects (root inside)\n  [PASS] double root: nonneg_closed on [0, 1/2] accepts (tangent)\n  [PASS] root at left endpoint not counted in open\n  [PASS] root at right endpoint not counted in open\n  [PASS] root at endpoint: pos_closed rejects (value 0 at endpoint)\n  [PASS] zero polynomial: pos_closed False\n  [PASS] constant positive accepts\n  [PASS] constant negative rejects\n  [PASS] zero polynomial raises\n  [PASS] three sign changes: count 3 on (0,1)\n  [PASS] three sign changes: pos_closed rejects\n  [PASS] left-open: (a-1/4) > 0 on (1/4, 1/2]\n  [PASS] left-open: (a-1/4) not > 0 on (0, 1/4]\n  [PASS] left-open: tangent square >= 0 on (1/4, 1/2]\n  [PASS] R3 near-left double root: P(a0+eps/2) < 0\n  [PASS] R3 near-left: nonneg_closed REJECTS\n  [PASS] R3 near-left: nonneg_leftopen REJECTS\n  [PASS] R3 near-right mirror: nonneg_closed REJECTS\n  [PASS] R3 interior near-double: nonneg_closed REJECTS\n  [PASS] R3 interior near-double: gap probe finds the dip\n  [PASS] R3 positive tangential double root: nonneg accepts\n  [PASS] R3 tangential: pos_closed still rejects\n  [PASS] budget exhaustion raises BudgetExceeded\nSYMKERNEL SELFTEST: ALL PASS\n  [PASS] I1 symkernel selftest\n  [PASS] I2: true U1-U2 at a=3/10 equals -11669/2160000\n  [PASS] I2: analyze_piece(6,[1/5,3/10]) is OPEN\n  [PASS] I2: failure is the W0 prefix (not a spurious cause)\n  [PASS] W0 guards: K=6 r=1/8 OPEN\n  [PASS] K=6 r=1/125 still certifies\n  [PASS] K=9 r=1/500 still certifies (E-exception member)\n  [PASS] I5 route tag\n  [PASS] coverage: correct rows accepted\n  [PASS] coverage: missing ordinary pass K rejected\n  [PASS] coverage: missing anchor rejected\n  [PASS] coverage: duplicate rejected\n  [PASS] coverage: extra K rejected\n  [PASS] coverage: stale engine version rejected\n  [PASS] tie-split K=16 well-formed\n  [PASS] R3.2a no cross-call budget depletion (2100 calls)\n  [PASS] R3.2b certify returns well-formed record\n  [PASS] R3.1 stale engine rejected by default validator\n  [PASS] R3.1 explicit legacy engine pass allowed\n  [PASS] R3.1 production validator accepts production records\n  [PASS] R3.3 malformed resume record rejected\n  [PASS] R5 legal record accepted\n  [PASS] R5 reversed bounds rejected\n  [PASS] R5 unparseable lo rejected\n  [PASS] R5 undefined mode rejected\n  [PASS] R5 negative T1 rejected\n  [PASS] R5 zero T1 rejected\n  [PASS] R5 legal tie-split accepted\n  [PASS] R5 tie-split bad T1 entry rejected\n  [PASS] R5 budget injection -> symmetric OPEN w/ reason\n  [PASS] R5 budget injection -> tie-split OPEN keeps reasons\n  [PASS] R5 resume adopts ONLY the legal record\nNEGATIVE TESTS (v3): ALL PASS\n",
+      "stderr": ""
+    }
+  ],
+  "elapsed_seconds": 49.046
+}

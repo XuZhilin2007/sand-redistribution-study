@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "tests/test_m0_mechanism.py"
+      ],
+      "exit_code": 0,
+      "pass_count": 25,
+      "stdout": "[PASS] closed-form state == stepped state (alpha=0.0)\n[PASS] closed-form state == stepped state (alpha=0.1)\n[PASS] closed-form state == stepped state (alpha=0.25)\n[PASS] closed-form state == stepped state (alpha=0.5)\n[PASS] closed-form state == stepped state (alpha=0.75)\n[PASS] closed-form state == stepped state (alpha=1.0)\n[PASS] rho = 15/16 exactly\n[PASS] M_t = 0.75*(15/16)^t vs in-memory simulator\n[PASS] M_t closed form vs committed EXP-M0-A CSV\n[PASS] recurrence M_{t+1} = M_t*(1 - alpha*(1-Q)) round by round\n[PASS] U(z) quadratic reproduces simulated U(t) (baseline)\n[PASS] U(z) quadratic reproduces committed CSV U column\n[PASS] quadratic U(0.9000) matches direct histogram evaluation\n[PASS] quadratic U(0.7725) matches direct histogram evaluation\n[PASS] quadratic U(0.6000) matches direct histogram evaluation\n[PASS] quadratic U(0.3000) matches direct histogram evaluation\n[PASS] discrete z* within 1e-4 of the continuous 3/4\n[PASS] no trajectory round beats the continuous optimum U(z*)\n[PASS] continuous t* near 4.46 (baseline)\n[PASS] quadratic coefficients identical across all alpha\n[PASS] pooled (z, U) from all alphas on a single exact curve\n[PASS] alpha=0: state never moves (U(t)=U(0) for all t)\n[PASS] alpha=1: z_1 = 0.75 exactly (near mass 0.5625 at t=1)\n[PASS] t=4 is closer to z* than t=5 (hence U(4) < U(5))\n[PASS] discretization gap U(4) - U(z*) is positive and small (< 1e-4)\n\nall M0 mechanism tests passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "tests/test_m0_2_family.py"
+      ],
+      "exit_code": 0,
+      "pass_count": 54,
+      "stdout": "[PASS] general q (outside family): closed-form state matches simulator\n[PASS] general q (outside family): U(z) quadratic matches simulator\n[PASS] p=-0.25: bin probs sum to 1 and are non-negative\n[PASS] p=-0.25: ppf inverts cdf\n[PASS] p=0.0: bin probs sum to 1 and are non-negative\n[PASS] p=0.0: ppf inverts cdf\n[PASS] p=0.25: bin probs sum to 1 and are non-negative\n[PASS] p=0.25: ppf inverts cdf\n[PASS] p=0.5: bin probs sum to 1 and are non-negative\n[PASS] p=0.5: ppf inverts cdf\n[PASS] p=1.0: bin probs sum to 1 and are non-negative\n[PASS] p=1.0: ppf inverts cdf\n[PASS] p=2.0: bin probs sum to 1 and are non-negative\n[PASS] p=2.0: ppf inverts cdf\n[PASS] p=0 is exactly the uniform distribution\n[PASS] p=1 is exactly the M0 baseline q_near\n[PASS] p=-0.25: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=-0.25: boundary/counterexample regime observed (t=0 optimal, monotone)\n[PASS] p=0.0: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=0.0: boundary/counterexample regime observed (t=0 optimal, monotone)\n[PASS] p=0.25: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=0.25: interior regime observed (improves then worsens)\n[PASS] p=0.5: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=0.5: interior regime observed (improves then worsens)\n[PASS] p=1.0: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=1.0: interior regime observed (improves then worsens)\n[PASS] p=2.0: interior condition Q_f*S_n > Q*S_f <=> z* < 1\n[PASS] p=2.0: interior regime observed (improves then worsens)\n[PASS] boundary case p=0: z* = 1 and c_n/c_f = 1 to fp precision\n[PASS] p=-0.25: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=-0.25: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=0.0: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=0.0: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=0.25: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=0.25: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=0.5: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=0.5: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=1.0: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=1.0: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=2.0: discrete c_n/c_f matches continuous closed form within finite-bin correction\n[PASS] p=2.0: discrete z* close to closed form 2(1-u)/(3-4u)\n[PASS] p=-0.25: predicted best round 0 == observed 0 == frozen 0\n[PASS] p=0.0: predicted best round 0 == observed 0 == frozen 0\n[PASS] p=0.25: predicted best round 1 == observed 1 == frozen 1\n[PASS] p=0.5: predicted best round 2 == observed 2 == frozen 2\n[PASS] p=1.0: predicted best round 4 == observed 4 == frozen 4\n[PASS] p=2.0: predicted best round 11 == observed 11 == frozen 11\n[PASS] p=0.5: all spot-check alphas on one exact quadratic U(z)\n[PASS] p=2.0: all spot-check alphas on one exact quadratic U(z)\n[PASS] p=-0.25: all spot-check alphas on one exact quadratic U(z)\n[PASS] p=2, alpha=1: near mass after one round = Q*z = 0.875*0.875\n[PASS] p=1 reproduces M0.1 discrete z* = 0.74997187\n[PASS] p=1 reproduces M0.1 continuous t* = 4.4581\n[PASS] p=1 near-mass factor is exactly 15/16\n\nall M0.2 family tests passed\n",
+      "stderr": ""
+    }
+  ]
+}

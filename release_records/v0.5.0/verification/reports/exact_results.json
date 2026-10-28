@@ -1,0 +1,2966 @@
+{
+  "status": "VERIFIED_POST_RELEASE_PHASE_RESULTS",
+  "scope": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0.",
+  "central": {
+    "roots": {
+      "a6": {
+        "label": "a6",
+        "unique_in": [
+          "19/100",
+          "1/5"
+        ],
+        "bracket": [
+          "12068524075472538903732049619543/63382530011411470074835160268800",
+          "24137048150945077807464099239087/126765060022822940149670320537600"
+        ],
+        "approximation": 0.19040773653717682,
+        "primitive_polynomial_ascending": [
+          -2080,
+          17183,
+          -38636,
+          32735,
+          -13378,
+          2328
+        ],
+        "irreducible_mod_prime": 17,
+        "loss_polynomial_ascending": [
+          "0",
+          "-65/81",
+          "17183/2592",
+          "-9659/648",
+          "32735/2592",
+          "-6689/1296",
+          "97/108"
+        ]
+      },
+      "a10": {
+        "label": "a10",
+        "unique_in": [
+          "6/25",
+          "1/4"
+        ],
+        "bracket": [
+          "195023948636912595013838521623/792281625142643375935439503360",
+          "31203831781906015202214163459681/126765060022822940149670320537600"
+        ],
+        "approximation": 0.24615482985838558,
+        "primitive_polynomial_ascending": [
+          -37296000,
+          272381200,
+          -613816360,
+          555506236,
+          -240679790,
+          42889525
+        ],
+        "irreducible_mod_prime": 29,
+        "loss_polynomial_ascending": [
+          "0",
+          "-518/625",
+          "680953/112500",
+          "-15345409/1125000",
+          "138876559/11250000",
+          "-24067979/4500000",
+          "1715581/1800000"
+        ]
+      },
+      "b6": {
+        "label": "b6",
+        "unique_in": [
+          "19/100",
+          "1/3"
+        ],
+        "bracket": [
+          "110911353664480218911563014744643/380295180068468820449010961612800",
+          "55455676832240109455781507372343/190147590034234410224505480806400"
+        ],
+        "approximation": 0.29164543617016553,
+        "primitive_polynomial_ascending": [
+          -1136,
+          5068,
+          -4361,
+          1164
+        ],
+        "irreducible_mod_prime": 11,
+        "loss_polynomial_ascending": [
+          "0",
+          "71/81",
+          "-1267/324",
+          "4361/1296",
+          "-97/108"
+        ]
+      }
+    },
+    "low_alpha_exclusion_cells": [
+      {
+        "K": 6,
+        "s1": 3,
+        "domain": [
+          "0",
+          "4/27"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          3,
+          4
+        ]
+      },
+      {
+        "K": 6,
+        "s1": 4,
+        "domain": [
+          "4/27",
+          "913/5400"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          4,
+          5
+        ]
+      },
+      {
+        "K": 6,
+        "s1": 4,
+        "domain": [
+          "913/5400",
+          "19/100"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          5
+        ]
+      },
+      {
+        "K": 10,
+        "s1": 5,
+        "domain": [
+          "0",
+          "4/45"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          5,
+          6
+        ]
+      },
+      {
+        "K": 10,
+        "s1": 6,
+        "domain": [
+          "4/45",
+          "37/225"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "K": 10,
+        "s1": 6,
+        "domain": [
+          "37/225",
+          "6/25"
+        ],
+        "mode": "left-open",
+        "counterexample_time": 3,
+        "feasible_s2": [
+          8
+        ]
+      }
+    ],
+    "theorems": [
+      "W6=[a6,b6]",
+      "W10 intersect (6/25,1/4]=[a10,1/4]",
+      "intersection of all W_K is contained in [a10,b6]"
+    ]
+  },
+  "disconnected": {
+    "K10_certified_distant_interval": [
+      "21/25",
+      "43/50"
+    ],
+    "K13_certified_half_open_interval": [
+      "13/40",
+      "1/3"
+    ],
+    "K13_tie_word": [
+      6,
+      9,
+      11
+    ],
+    "K13_tie_U1_minus_U2": "-31191/22497280",
+    "K13_right_limit_U2_minus_actual_U2": "-155929/16224000",
+    "theorems": [
+      "W10 is disconnected",
+      "W13 is disconnected and is not closed in (0,1)"
+    ]
+  },
+  "witnesses": [
+    {
+      "K": 9,
+      "alpha": "1/5",
+      "word": [
+        4,
+        5,
+        7,
+        7
+      ],
+      "U": [
+        "80/243",
+        "282812/1476225",
+        "9935053/73811250",
+        "360718088/2989355625",
+        "19321000271144/151336128515625"
+      ],
+      "witness_time": 3,
+      "gap": "-83303117/5978711250"
+    },
+    {
+      "K": 6,
+      "alpha": "7/24",
+      "word": [
+        3,
+        4,
+        5,
+        5
+      ],
+      "U": [
+        "35/108",
+        "78323/497664",
+        "1879913/11943936",
+        "1365611737/6879707136",
+        "973453443193/3962711310336"
+      ],
+      "witness_time": 1,
+      "gap": "-161/11943936"
+    },
+    {
+      "K": 10,
+      "alpha": "1/2",
+      "word": [
+        5,
+        8,
+        8,
+        9
+      ],
+      "U": [
+        "33/100",
+        "921/6400",
+        "143031/800000",
+        "216898303/960000000",
+        "1075243663/3840000000"
+      ],
+      "witness_time": 1,
+      "gap": "-13953/400000"
+    },
+    {
+      "K": 10,
+      "alpha": "9/10",
+      "word": [
+        5,
+        8,
+        9,
+        8
+      ],
+      "U": [
+        "33/100",
+        "61737/160000",
+        "6143583/20000000",
+        "695130123/2000000000",
+        "6138885777861/20000000000000"
+      ],
+      "witness_time": 4,
+      "gap": "-4697222139/20000000000000"
+    },
+    {
+      "K": 13,
+      "alpha": "81/250",
+      "word": [
+        6,
+        9,
+        11,
+        11
+      ],
+      "U": [
+        "56/169",
+        "360640907/2320581250",
+        "3828936464969147/24511139453125000",
+        "1790011179825598343/9064770507812500000",
+        "136621055777724336149423/566548156738281250000000"
+      ],
+      "witness_time": 1,
+      "gap": "-19666884781647/24511139453125000"
+    },
+    {
+      "K": 13,
+      "alpha": "13/40",
+      "word": [
+        6,
+        9,
+        11,
+        11
+      ],
+      "U": [
+        "56/169",
+        "54567/351520",
+        "3523479/22497280",
+        "7131912639/35995648000",
+        "13931069668071/57593036800000"
+      ],
+      "witness_time": 1,
+      "gap": "-31191/22497280"
+    }
+  ],
+  "independent_polynomial_vector_cases": 45,
+  "sign_obligation_count": 188,
+  "sign_obligations": [
+    {
+      "label": "K6:s1=3:versus-1",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/9",
+        "-7/36"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=3:versus-2",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/36",
+        "-1/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=3:versus-4",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/36",
+        "-3/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=3:versus-5",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/9",
+        "-7/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=3:versus-6",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/4",
+        "-7/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=1-by-2",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-3/8",
+        "29/192"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=2-by-3",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/36",
+        "-1/72",
+        "-59/576"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:U2>U3:s2=3",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "49/54",
+        "-2029/288",
+        "20411/1728",
+        "-61481/6912",
+        "10429/3072",
+        "-119611/221184"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:U2>U3:s2=4",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "71/81",
+        "-182/27",
+        "5383/432",
+        "-1663/162",
+        "3019/768",
+        "-1037/1728"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=5-by-4",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/2",
+        "7/48"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=6-by-1",
+      "lo": "0",
+      "hi": "4/27",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "5/36",
+        "-35/72",
+        "119/576"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-1",
+      "lo": "4/27",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-2",
+      "lo": "4/27",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "13/72"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-3",
+      "lo": "4/27",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/36",
+        "3/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-5",
+      "lo": "4/27",
+      "hi": "19/100",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-6",
+      "lo": "4/27",
+      "hi": "19/100",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/9",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-1",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-2",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "13/72"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-3",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/36",
+        "3/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-5",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-6",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/9",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=1-by-2",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-157/432",
+        "1/6"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=2-by-3",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/36",
+        "1/48",
+        "-1/18"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=3-by-4",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/36",
+        "13/48",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:U2>U3:s2=4",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "71/81",
+        "-6497/972",
+        "44719/3888",
+        "-124541/11664",
+        "9781/1944",
+        "-787/864"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:U2>U3:s2=5",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "65/81",
+        "-17183/2592",
+        "9659/648",
+        "-32735/2592",
+        "6689/1296",
+        "-97/108"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=6-by-1",
+      "lo": "4/27",
+      "hi": "913/5400",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "5/36",
+        "-205/432",
+        "2/9"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-1",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-2",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "13/72"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-3",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/36",
+        "3/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-5",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:s1=4:versus-6",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/9",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=1-by-2",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/12",
+        "-157/432",
+        "1/6"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=2-by-3",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/36",
+        "1/48",
+        "-1/18"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=3-by-4",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/36",
+        "13/48",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=4-by-5",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/12",
+        "59/108",
+        "-1/12"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:U2>U3:s2=5",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "65/81",
+        "-17183/2592",
+        "9659/648",
+        "-32735/2592",
+        "6689/1296",
+        "-97/108"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6:exclude-s2=6-by-1",
+      "lo": "913/5400",
+      "hi": "19/100",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "5/36",
+        "-205/432",
+        "2/9"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-1",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "4/25",
+        "-57/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-2",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "9/100",
+        "-61/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-3",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/25",
+        "-1/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-4",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/100",
+        "1/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-6",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/100",
+        "-9/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-7",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/25",
+        "-19/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-8",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "9/100",
+        "-31/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-9",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "4/25",
+        "-7/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=5:versus-10",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/4",
+        "-7/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=1-by-2",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "7/100",
+        "-53/200",
+        "177/1600"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=2-by-3",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/20",
+        "-9/40",
+        "29/320"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=3-by-4",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-17/200",
+        "-41/4800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=4-by-5",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/100",
+        "1/200",
+        "-109/1600"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=5",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "183/200",
+        "-32267/4800",
+        "159601/14400",
+        "-4207/512",
+        "473989/153600",
+        "-1787617/3686400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=6",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "567/625",
+        "-484031/75000",
+        "4132729/360000",
+        "-367431/40000",
+        "1339177/384000",
+        "-98057/184320"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=7-by-6",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-1/4",
+        "7/96"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=8-by-4",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-39/50",
+        "353/1200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=9-by-2",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "7/100",
+        "-57/100",
+        "193/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=10-by-1",
+      "lo": "0",
+      "hi": "4/45",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "9/100",
+        "-61/200",
+        "209/1600"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-1",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-69/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-2",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-1/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-3",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "29/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-4",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "23/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-5",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/100",
+        "9/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-7",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-1/8"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-8",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-11/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-9",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-10",
+      "lo": "4/45",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "6/25",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-1",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-69/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-2",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-1/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-3",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "29/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-4",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "23/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-5",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/100",
+        "9/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-7",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-1/8"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-8",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-11/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-9",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-10",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "6/25",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=1-by-2",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "7/100",
+        "-521/2000",
+        "93/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=2-by-3",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/20",
+        "-441/2000",
+        "77/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=3-by-4",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-149/2000",
+        "11/2400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=4-by-5",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/100",
+        "37/2000",
+        "-41/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=5-by-6",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/100",
+        "297/2000",
+        "-129/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=6",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "567/625",
+        "-964819/150000",
+        "96912133/9000000",
+        "-186905501/20000000",
+        "25529083/6000000",
+        "-22075481/28800000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=7",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "13097/15000",
+        "-3735749/600000",
+        "21294061/1800000",
+        "-9811787/937500",
+        "26984173/6000000",
+        "-5611609/7200000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=8",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "518/625",
+        "-18487/3000",
+        "1567993/112500",
+        "-8339999/703125",
+        "14198279/3000000",
+        "-1417901/1800000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=9-by-3",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/25",
+        "-1563/2000",
+        "279/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=10-by-1",
+      "lo": "4/45",
+      "hi": "37/225",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "9/100",
+        "-601/2000",
+        "109/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-1",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-69/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-2",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-1/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-3",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "29/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-4",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "23/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-5",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/100",
+        "9/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-7",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-1/8"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-8",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "2/25",
+        "-11/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-9",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/20",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:s1=6:versus-10",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "6/25",
+        "-13/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=1-by-2",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "7/100",
+        "-521/2000",
+        "93/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=2-by-3",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/20",
+        "-441/2000",
+        "77/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=3-by-4",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/100",
+        "-149/2000",
+        "11/2400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=4-by-5",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/100",
+        "37/2000",
+        "-41/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=5-by-6",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/100",
+        "297/2000",
+        "-129/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=6-by-7",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-3/100",
+        "53/200",
+        "-13/240"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=7-by-8",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/20",
+        "159/500",
+        "-13/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:U2>U3:s2=8",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "518/625",
+        "-18487/3000",
+        "1567993/112500",
+        "-8339999/703125",
+        "14198279/3000000",
+        "-1417901/1800000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=9-by-7",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/25",
+        "-53/125",
+        "13/150"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10:exclude-s2=10-by-1",
+      "lo": "37/225",
+      "hi": "6/25",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "9/100",
+        "-601/2000",
+        "109/800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s1:versus-1",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s1:versus-2",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "13/72"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s1:versus-3",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/36",
+        "3/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s1:versus-5",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "1/12",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s1:versus-6",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "2/9",
+        "-1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s2:versus-1",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "205/432",
+        "-2/9"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s2:versus-2",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/12",
+        "181/216",
+        "-7/18"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s2:versus-3",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/9",
+        "353/432",
+        "-1/3"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s2:versus-4",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/12",
+        "59/108",
+        "-1/12"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central s2:versus-6",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "5/36"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 central U0>U2",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "289/162",
+        "-13121/2592",
+        "4361/1296",
+        "-97/108"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "a6:strict monotonicity",
+      "lo": "19/100",
+      "hi": "1/5",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-65/81",
+        "17183/1296",
+        "-9659/216",
+        "32735/648",
+        "-33445/1296",
+        "97/18"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 U3>U2 past a6 bracket",
+      "lo": "1/5",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "-65/81",
+        "17183/2592",
+        "-9659/648",
+        "32735/2592",
+        "-6689/1296",
+        "97/108"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "b6:strict monotonicity",
+      "lo": "19/100",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-71/81",
+        "1267/162",
+        "-4361/432",
+        "97/27"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high s1:versus-1",
+      "lo": "1/3",
+      "hi": "1",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "35/144"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high s1:versus-2",
+      "lo": "1/3",
+      "hi": "1",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/12",
+        "31/72"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high s1:versus-3",
+      "lo": "1/3",
+      "hi": "1",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/9",
+        "7/16"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high s1:versus-4",
+      "lo": "1/3",
+      "hi": "1",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/12",
+        "1/4"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high s1:versus-6",
+      "lo": "1/3",
+      "hi": "1",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "5/36"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high U1<U2",
+      "lo": "1/3",
+      "hi": "2/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "-65/81",
+        "9839/2592",
+        "-5561/1296",
+        "995/864"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K6 high U0<U2",
+      "lo": "2/3",
+      "hi": "1",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "-277/162",
+        "1603/324",
+        "-5561/1296",
+        "995/864"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-1",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/25",
+        "-19/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-2",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/20",
+        "17/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-3",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "79/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-4",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-3/100",
+        "6/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-5",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-1/25",
+        "19/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-6",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-3/100",
+        "1/8"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-8",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "1/20",
+        "-3/20"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-9",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "3/25",
+        "-1/5"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s1:versus-10",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "21/100",
+        "-1/5"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-1",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "7/100",
+        "559/3000",
+        "-31/240"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-2",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "133/300",
+        "-151/600"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-3",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/20",
+        "1981/3000",
+        "-17/48"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-4",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-2/25",
+        "109/150",
+        "-28/75"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-5",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-9/100",
+        "2093/3000",
+        "-409/1200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-6",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-2/25",
+        "202/375",
+        "-119/600"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-7",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/20",
+        "83/250",
+        "-1/25"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-9",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "7/100",
+        "-83/750",
+        "1/75"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central s2:versus-10",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "4/25",
+        "-83/750",
+        "1/75"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "a10:strict monotonicity",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-518/625",
+        "680953/56250",
+        "-15345409/375000",
+        "138876559/2812500",
+        "-24067979/900000",
+        "1715581/300000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central U0>U2",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "13411/7500",
+        "-234409/50000",
+        "50519/15000",
+        "-4531/4800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central U1>U2",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "13097/15000",
+        "-720511/200000",
+        "50519/15000",
+        "-4531/4800"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central t>=4:Hprime<0",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-361199/452250",
+        "1945489/226125",
+        "-47296031/1809000",
+        "16222829/452250",
+        "-23852207/904500",
+        "263912/25125",
+        "-3387851/1809000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 central t>=4:H(w)>0",
+      "lo": "6/25",
+      "hi": "1/4",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-37249/904500",
+        "-592091/376875",
+        "668005447/45225000",
+        "-195988789/4522500",
+        "879890911/14472000",
+        "-11206363/226125",
+        "29698531/1206000",
+        "-12888683/1809000",
+        "3387851/3618000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-1",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "7/100",
+        "41/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-2",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "47/200"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-3",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/20",
+        "139/400"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-4",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-2/25",
+        "39/100"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-5",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-9/100",
+        "31/80"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-6",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-2/25",
+        "11/40"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-7",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-1/20",
+        "3/20"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-9",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "7/100",
+        "-1/20"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant s1=ell:versus-10",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "4/25",
+        "-1/20"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant U0>U2",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "8719/5000",
+        "-2758663/600000",
+        "39837/10000",
+        "-1661/1500"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant U1>U2",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "518/625",
+        "-263411/75000",
+        "39837/10000",
+        "-1661/1500"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant t>=3:Hprime<0",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-361199/452250",
+        "6162697/904500",
+        "-31060637/1809000",
+        "34683941/1809000",
+        "-18431273/1809000",
+        "3927371/1809000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K10 distant t>=3:H(w)>0",
+      "lo": "21/25",
+      "hi": "43/50",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-37249/904500",
+        "-6911899/9045000",
+        "2188722511/361800000",
+        "-248271467/18090000",
+        "24554441/1809000",
+        "-5589661/904500",
+        "3927371/3618000"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-1",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "18/169",
+        "5/169"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-2",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "8/169",
+        "304/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-3",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "0",
+        "517/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-4",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-6/169",
+        "704/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-5",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-10/169",
+        "785/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-6",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-12/169",
+        "800/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-7",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-12/169",
+        "620/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-8",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-10/169",
+        "440/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-9",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": true,
+      "coefficients_ascending": [
+        "-6/169",
+        "240/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-11",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "8/169",
+        "-200/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-12",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "18/169",
+        "-200/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s1:versus-13",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": true,
+      "coefficients_ascending": [
+        "30/169",
+        "-200/2197"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-1",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "10/169",
+        "510/2197",
+        "-3345/28561"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-2",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "968/2197",
+        "-6352/28561"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-3",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-8/169",
+        "1374/2197",
+        "-9021/28561"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-4",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-14/169",
+        "1728/2197",
+        "-11352/28561"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-5",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-18/169",
+        "5530/6591",
+        "-36515/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-6",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-20/169",
+        "5440/6591",
+        "-36200/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-7",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-20/169",
+        "4687/6591",
+        "-28280/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-8",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-18/169",
+        "3856/6591",
+        "-20360/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-9",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-14/169",
+        "2807/6591",
+        "-11560/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-10",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "-8/169",
+        "1400/6591",
+        "-1000/85683"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-12",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "10/169"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch s2:versus-13",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": false,
+      "left_open": false,
+      "coefficients_ascending": [
+        "22/169"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch U0>U2",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "149840/85683",
+        "-5318360/1113879",
+        "55894040/14480427",
+        "-68516230/62748517"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch U1>U2",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "72140/85683",
+        "-4067750/1113879",
+        "55894040/14480427",
+        "-68516230/62748517"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    },
+    {
+      "label": "K13 right branch U3>U2",
+      "lo": "13/40",
+      "hi": "1/3",
+      "strict": true,
+      "left_open": false,
+      "coefficients_ascending": [
+        "0",
+        "-23100/28561",
+        "6959065/1113879",
+        "-68297960/4826809",
+        "64905710/4826809",
+        "-1137719900/188245551",
+        "68516230/62748517"
+      ],
+      "bernstein_leaves": 1,
+      "bernstein_depth": 0
+    }
+  ],
+  "elapsed_seconds": 0.19722419999925478,
+  "source_sha256": {
+    "experiments/alpha_phase_2026_10_27/verify_phase.py": "df76859ad37de6c0e059a0194ddec308168d63595846d645680fc706fb3aa53a",
+    "experiments/alpha_phase_2026_10_27/phase_probe.py": "608ff714d7bffd7a0d09ea3a83a2b8cb4a56d08b20c5728e7b2a5a974948b867",
+    "tools/audit_v04_interval_v3.py": "51cba3eb25626a2e0524d15cb57f6d19595ae94ab451e50f62445874806e3210",
+    "experiments/v04_w_interval/symkernel.py": "aa4515edd711093783a3349e18390285bee55440d66c844e17123e8df3b28807",
+    "docs/XO_ALPHA_EXTENSION_PROOF.md": "471e55f7281fb06a85324320babfcb28b5b75803acb18b29e13ac326b542c426"
+  },
+  "proof_scope": {
+    "stage": "verify_phase",
+    "scope": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0.",
+    "universal_inner_inclusion": false,
+    "shared_dependencies": [
+      "canonical model",
+      "exact polynomial libraries",
+      "Theorem A"
+    ]
+  }
+}

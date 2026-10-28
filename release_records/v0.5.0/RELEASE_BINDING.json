@@ -1,0 +1,19 @@
+{
+  "version": "v0.5.0",
+  "status": "PUBLICATION_AUTHORIZED_BY_OWNER",
+  "approved_candidate": "v0.5.0-rc.1",
+  "approved_manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "approved_zip_name": "sand-v0.5.0-rc.1-verification-source.zip",
+  "approved_zip_sha256": "3e49c412a5df4982ad14035b4d870e44a2eb489ec4349af2c3f0fa697de83057",
+  "approved_zip_bytes": 2612306,
+  "public_parent_commit": "2d8820db3fd65733c9137c955fb1acc0b5466cc6",
+  "candidate_git_path": "releases/v0.5.0",
+  "candidate_file_count": 114,
+  "candidate_path_mapping": "Each approved package path P is committed unchanged at releases/v0.5.0/P.",
+  "preexisting_public_tree_files": "All preserved byte-for-byte; no root v0.4.0 file is replaced.",
+  "scientific_claims_or_algorithms_changed": false,
+  "frozen_candidate_metadata_retained": "The approved bundle keeps its original RC identifier/status as historical provenance; this binding records authorization to publish those bytes as v0.5.0.",
+  "verification_entry": "python -B -S releases/v0.5.0/tools/reproduce_v050.py --out-dir <new external directory> --expected-manifest-sha256 5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "old_root_verifier": "python -B tools/verify_v040.py",
+  "qualification": "Reproduction of the audited computer-assisted theorem and documented analytic dependencies; not independent human peer review or proof-assistant formalization."
+}

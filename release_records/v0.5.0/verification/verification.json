@@ -1,0 +1,224 @@
+{
+  "candidate_id": "v0.5.0-rc.1",
+  "status": "REPRODUCED_AUDITED_CANDIDATE",
+  "manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "candidate_files_unchanged": true,
+  "all_mathematical_payloads_match_audited_reference": true,
+  "proof_scope_metadata_corrected_in_new_reports_only": true,
+  "universal_claim": "intersection_{K>=6} W_K = W_6 intersect W_10 = [a10,b6]",
+  "summary": {
+    "boundary_roots": {
+      "a10": {
+        "label": "a10",
+        "unique_in": [
+          "6/25",
+          "1/4"
+        ],
+        "bracket": [
+          "195023948636912595013838521623/792281625142643375935439503360",
+          "31203831781906015202214163459681/126765060022822940149670320537600"
+        ],
+        "approximation": 0.24615482985838558,
+        "primitive_polynomial_ascending": [
+          -37296000,
+          272381200,
+          -613816360,
+          555506236,
+          -240679790,
+          42889525
+        ],
+        "irreducible_mod_prime": 29,
+        "loss_polynomial_ascending": [
+          "0",
+          "-518/625",
+          "680953/112500",
+          "-15345409/1125000",
+          "138876559/11250000",
+          "-24067979/4500000",
+          "1715581/1800000"
+        ]
+      },
+      "b6": {
+        "label": "b6",
+        "unique_in": [
+          "19/100",
+          "1/3"
+        ],
+        "bracket": [
+          "110911353664480218911563014744643/380295180068468820449010961612800",
+          "55455676832240109455781507372343/190147590034234410224505480806400"
+        ],
+        "approximation": 0.29164543617016553,
+        "primitive_polynomial_ascending": [
+          -1136,
+          5068,
+          -4361,
+          1164
+        ],
+        "irreducible_mod_prime": 11,
+        "loss_polynomial_ascending": [
+          "0",
+          "71/81",
+          "-1267/324",
+          "4361/1296",
+          "-97/108"
+        ]
+      }
+    },
+    "finite_K_count": 196,
+    "finite_cells_including_K10": 1046,
+    "formal_identity_count": 60,
+    "box_count": 20554,
+    "terminal_box_count": 11813
+  },
+  "published_baseline": {
+    "archive_sha256": "20328551989ac1fe7ff7bd5d5b6c28a9eac52bf5d7b8dcbd11b3ac92866481f9",
+    "status": "PASS",
+    "checks": 6,
+    "frozen_files": 78,
+    "scope": "v0.4.0 original narrow interval only; not the new B inclusion"
+  },
+  "oct28_independent_audit_replay_matches": true,
+  "stages": [
+    {
+      "stage": "verify_phase",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\public_snapshot\\releases\\v0.5.0\\experiments\\alpha_phase_2026_10_27\\verify_phase.py",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\exact_results.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.28398770000057993,
+      "log_sha256": "fa50bc7dac6a23de3a97c6ec0710b6729fb6c87761511444889f54234d086251"
+    },
+    {
+      "stage": "audit_phase",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\public_snapshot\\releases\\v0.5.0\\experiments\\alpha_phase_2026_10_27\\audit_phase.py",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\algebra_audit.json"
+      ],
+      "exit_code": 0,
+      "seconds": 8.020691699999588,
+      "log_sha256": "787fda170371830bcc828e46d34e24d7e2b7dae009df36c09945da5eee99f21f"
+    },
+    {
+      "stage": "finite_cover",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\public_snapshot\\releases\\v0.5.0\\experiments\\alpha_phase_2026_10_27\\finite_cover.py",
+        "--max-k",
+        "203",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\finite_cover.json"
+      ],
+      "exit_code": 0,
+      "seconds": 55.94979710000007,
+      "log_sha256": "6c90ba8dc4040751b2c9639aa049ddef1b7b41af17734ebbc69ba598978f9578"
+    },
+    {
+      "stage": "audit_cover",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\public_snapshot\\releases\\v0.5.0\\experiments\\alpha_phase_2026_10_27\\audit_cover.py",
+        "--input",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\finite_cover.json",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\finite_audit.json"
+      ],
+      "exit_code": 0,
+      "seconds": 69.05066960000113,
+      "log_sha256": "308702c80f79acee36b95938ccdee53d5b33850fa8423bc5235a37f29859872c"
+    },
+    {
+      "stage": "uniform_probe",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\public_snapshot\\releases\\v0.5.0\\experiments\\alpha_phase_2026_10_27\\uniform_probe.py",
+        "--alpha-parts",
+        "32",
+        "--h-parts",
+        "4",
+        "--K-min",
+        "204",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\uniform_boxes.json"
+      ],
+      "exit_code": 0,
+      "seconds": 73.23689870000089,
+      "log_sha256": "72be49b43982534f5dba67d6ce1b5f65590c1b17f8aa6ba73d376eeee9ddcbe3"
+    },
+    {
+      "stage": "published_v040",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\baseline_extract\\v0.4.0-verification-source\\tools\\verify_v040.py",
+        "--report",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\raw\\baseline_verification.json"
+      ],
+      "exit_code": 0,
+      "seconds": 51.24411650000002,
+      "log_sha256": "299fb9335b8ae3c8001d83ab5e1b92cd5528388d9783787cf2e193623a2b534a"
+    },
+    {
+      "stage": "oct28_audit_replay",
+      "command": [
+        "D:\\Miniconda\\python.exe",
+        "-B",
+        "-S",
+        "D:\\Projects\\sand-redistribution-study\\release_records\\v0.5.0\\final_tree_run\\independent_checks.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06180339999991702,
+      "log_sha256": "e569fd51b626745d1a69a79e4e7594f125195eccba3271b0f07aa73d072a4b70"
+    }
+  ],
+  "output_sha256_before_aggregate": {
+    "independent_checks.json": "f60625f2efd4e77e19aa7bad371f649b9df7f5dec3984e55bf41246f824869ad",
+    "independent_checks.py": "539e879200141bb6a1e4392acbeabc27301cbbac0290d58e3ff7555a34a78c62",
+    "metadata_corrections.json": "0390162c6ca985fc2ce8fcf12958d6573ae0c3ed95cc148bce7bab23023501ec",
+    "preflight.json": "08af2339ae6eebdf8c11264f7ebcc5db9b46ba9582674d52b9a9ddf553c76209",
+    "logs/audit_cover.log": "308702c80f79acee36b95938ccdee53d5b33850fa8423bc5235a37f29859872c",
+    "logs/audit_phase.log": "787fda170371830bcc828e46d34e24d7e2b7dae009df36c09945da5eee99f21f",
+    "logs/finite_cover.log": "6c90ba8dc4040751b2c9639aa049ddef1b7b41af17734ebbc69ba598978f9578",
+    "logs/oct28_audit_replay.log": "e569fd51b626745d1a69a79e4e7594f125195eccba3271b0f07aa73d072a4b70",
+    "logs/published_v040.log": "299fb9335b8ae3c8001d83ab5e1b92cd5528388d9783787cf2e193623a2b534a",
+    "logs/uniform_probe.log": "72be49b43982534f5dba67d6ce1b5f65590c1b17f8aa6ba73d376eeee9ddcbe3",
+    "logs/verify_phase.log": "fa50bc7dac6a23de3a97c6ec0710b6729fb6c87761511444889f54234d086251",
+    "raw/algebra_audit.json": "6392ea46ed2f2e070fdf7046a654f80e12c35e6bd2a97ed83557ec74c98a5ceb",
+    "raw/baseline_verification.json": "dafe970097c52f594a861afecdafced10c34020eb4f3206fd2946f4e656294a8",
+    "raw/exact_results.json": "aee72c5a45067a38713513abf532b0601edaccc7f4180588c8759cd37c10b167",
+    "raw/finite_audit.json": "179c673e084cb26e2c0092fb015fe8c0922f73880c58299c422dc600fc04ea53",
+    "raw/finite_cover.json": "c13be644b9a72798a5fbef4f5ab87792452bddcdaf3f1956e681c3c35a3799f9",
+    "raw/uniform_boxes.json": "aaff3c8fa3cf849ee2112521c92af15f21db9768027ec5774c645fa1e9378ff5",
+    "reports/algebra_audit.json": "5feef32f556e562c2d0c3d27d5ad24ef0d74f98a5ebc5bf1111e082485d4358f",
+    "reports/exact_results.json": "4b743faf2f507722391fda7bb0b83e7960a200ebdf153a18c66e2205393b1ad8",
+    "reports/finite_audit.json": "cc47a6fca730f6c8a79996d4e92848c0e1b19ddce344b53eb859a1370ce404b4",
+    "reports/finite_cover.json": "383d8d2d2c8d6b81ffb0eeb2329376577a5a3801eb813dbe847c4465d79addb9",
+    "reports/uniform_boxes.json": "eef0d8319a29132a65aade55044f29d615cd888417d969782c555bd469b3b72a"
+  },
+  "seconds": 258.20928319999985,
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "child_PATH": "",
+    "site_packages_disabled": true,
+    "git_required": false,
+    "network_required": false
+  },
+  "qualification": "This reproduces the audited computation and its documented analytic assembly. Successful execution is not an independent proof, formalization, human peer review, or publication approval."
+}

@@ -1,0 +1,6 @@
+Sturm audit through K 40 cells 83
+Sturm audit through K 80 cells 237
+Sturm audit through K 120 cells 445
+Sturm audit through K 160 cells 708
+Sturm audit through K 200 cells 1020
+PASS 1046 cells; 4 rejection controls; 68.94514440000057 seconds

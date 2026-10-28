@@ -1,0 +1,60 @@
+{
+  "review_date": "2026-10-27",
+  "method": "Read-only GitHub connector API calls; no new asset download claimed",
+  "release": {
+    "url": "https://github.com/XuZhilin2007/sand-redistribution-study/releases/tag/v0.4.0",
+    "id": 423878801,
+    "tag": "v0.4.0",
+    "published_at": "2026-10-26T05:11:28Z",
+    "draft": false,
+    "prerelease": false
+  },
+  "tag": {
+    "object_sha": "14144ecaee268068bf14c740f4173f1fcfa56048",
+    "commit": "2d8820db3fd65733c9137c955fb1acc0b5466cc6"
+  },
+  "assets": [
+    {
+      "name": "v0.4.0-scientific-files.sha256",
+      "size": 8485,
+      "digest": "sha256:48c38caa75321915b945ed748e97c06f45a797ec96e01ba54ccbb3894e55502f",
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/releases/download/v0.4.0/v0.4.0-scientific-files.sha256"
+    },
+    {
+      "name": "v0.4.0-verification-source.zip",
+      "size": 1476436,
+      "digest": "sha256:20328551989ac1fe7ff7bd5d5b6c28a9eac52bf5d7b8dcbd11b3ac92866481f9",
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/releases/download/v0.4.0/v0.4.0-verification-source.zip"
+    },
+    {
+      "name": "V040_FROZEN_MANIFEST.json",
+      "size": 5440,
+      "digest": "sha256:40f2dec99ebe9b3da1f81289323bfbc4b4b7bc725edcfe5e6d01dc3904b94a1c",
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/releases/download/v0.4.0/V040_FROZEN_MANIFEST.json"
+    },
+    {
+      "name": "V040_MANIFEST.json",
+      "size": 14232,
+      "digest": "sha256:64e240053fdbbf0c0d371dee032deaced943085e0981b17c62df0846914ad1db",
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/releases/download/v0.4.0/V040_MANIFEST.json"
+    }
+  ],
+  "historical_claims_verified_at_public_tag": [
+    {
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/blob/v0.4.0/docs/M0_GENERAL_Q.md",
+      "git_blob_sha": "1b4019b1c6116239ce7ffd934aa642f705b386ec",
+      "lines_checked": [
+        119,
+        139
+      ]
+    },
+    {
+      "url": "https://github.com/XuZhilin2007/sand-redistribution-study/blob/v0.4.0/docs/M0_MECHANISM.md",
+      "git_blob_sha": "27188c0a1f622dd54bf869765b6a11f93f99f7ac",
+      "lines_checked": [
+        169,
+        176
+      ]
+    }
+  ]
+}

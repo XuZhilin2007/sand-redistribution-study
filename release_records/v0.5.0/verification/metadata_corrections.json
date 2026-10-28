@@ -1,0 +1,13 @@
+{
+  "corrections": [
+    {
+      "report": "exact_results.json",
+      "field": "/scope",
+      "old": "Only the exact theorems explicitly listed; universal inner interval inherited from v0.4.0",
+      "new": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0.",
+      "classification": "proof-scope metadata only; mathematical payload unchanged"
+    }
+  ],
+  "raw_reports_retained": true,
+  "scientific_fields_changed": []
+}

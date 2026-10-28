@@ -1,0 +1,17 @@
+{
+  "candidate_id": "v0.5.0-rc.1",
+  "status": "FROZEN_NOT_PUBLISHED",
+  "manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "archive_name": "sand-v0.5.0-rc.1-verification-source.zip",
+  "archive_sha256": "3e49c412a5df4982ad14035b4d870e44a2eb489ec4349af2c3f0fa697de83057",
+  "archive_bytes": 2612306,
+  "package_file_count_including_manifest": 114,
+  "deterministic_zip": {
+    "ordered_members": true,
+    "timestamp": "2026-10-28T00:00:00",
+    "compression": "DEFLATE level 9"
+  },
+  "scientific_sources_changed": false,
+  "original_reports_rewritten": false,
+  "approval_to_tag_or_publish": false
+}

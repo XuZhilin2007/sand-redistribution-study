@@ -1,0 +1,7 @@
+central results and global exclusion: PASS
+disconnected and nonclosed fixed-K sets: PASS
+exact signs 188 seconds 0.19722419999925478
+a6 0.19040773653717682 primitive ascending [-2080, 17183, -38636, 32735, -13378, 2328]
+a10 0.24615482985838558 primitive ascending [-37296000, 272381200, -613816360, 555506236, -240679790, 42889525]
+b6 0.29164543617016553 primitive ascending [-1136, 5068, -4361, 1164]
+wrote D:\Projects\sand-redistribution-study\release_records\v0.5.0\final_tree_run\raw\exact_results.json

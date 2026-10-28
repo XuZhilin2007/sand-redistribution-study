@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "new_engineering_and_prose_sources": {
+    "tools/v050_common.py": "3d0bc9712db7bbf695217432bb7dde77a5d1ac3cc41c9e484ab59718d2a9c9bc",
+    "tools/reproduce_v050.py": "0955f93fbe832dbd0bd1808a0c3b22a6e7f75652cbabef281b6d7815b82db30b",
+    "tools/prepare_v050_candidate.py": "daa433e0864760f02149f66a56eb287a854c39209f02fd77f443d77a56693611",
+    "tools/test_v050_reproduction.py": "e58715f77924764e837d38025aadde036d802c17ab252a9d0644992f1abe46b0",
+    "docs/v050_release/README.md": "7a751ba510c01b99a947b8ca18d9be8d90e8ff04530cca99ef555932567cdeb2",
+    "docs/v050_release/PROVENANCE.md": "f7dfc1c300bf056297cde33dc8a4ae9eec9386d1d068d95cbf0974979b32ff0a"
+  },
+  "workspace_copies_byte_identical": 108,
+  "scientific_algorithm_files_modified": [],
+  "original_proof_or_evidence_files_modified": [],
+  "intentional_new_metadata_changes": [
+    "new V050_CLAIMS scope ledger",
+    "new consolidated /scope value in exact_results only",
+    "new per-stage proof_scope records"
+  ],
+  "preexisting_user_modifications_preserved": [
+    "docs/MODEL_ASSUMPTIONS.md",
+    "docs/READING_NOTES.md"
+  ],
+  "diff_sha256": "ed773bb1bbb42a249b9fe1fed34f42922a2e756506719c76058247d3e997a641",
+  "review_limits": "Engineering diff and exact payload agreement; not a new independent mathematical proof."
+}

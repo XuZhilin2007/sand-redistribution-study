@@ -1,0 +1,11 @@
+{
+  "new_release_scaffolding_check": "PASS",
+  "whole_diff_check_exit": 2,
+  "preserved_frozen_whitespace_paths": [
+    "releases/v0.5.0/LICENSE-CC-BY-4.0.txt",
+    "releases/v0.5.0/docs/alpha_phase_2026-10-27/phase_diagram.svg",
+    "releases/v0.5.0/tools/v050_common.py"
+  ],
+  "disposition": "The approved original SVG/license/helper bytes have whitespace diagnostics; preserved exactly, not reformatted. Candidate Git-blob SHA-256 checks are required.",
+  "scientific_or_candidate_bytes_altered_for_style": false
+}

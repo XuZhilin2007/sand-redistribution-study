@@ -1,0 +1,1407 @@
+{
+  "status": "VERIFIED_ALGEBRA_AND_PREFIX",
+  "prefix_constants": {
+    "scanned_first_slope": "6057997/166464000",
+    "scanned_middle_slope": "551983/18496000",
+    "middle_peak_above_u0": "15033997/110976000",
+    "middle_peak_below_2thirds": "1/6528",
+    "upper_peak_above_2thirds": "409999/27744000",
+    "upper_peak_below_5sixths": "61/544",
+    "middle_dominates_scanned": "234199560164009/12315672576000000",
+    "upper_dominates_suffix": "11651/887808",
+    "M_dominates_when_alpha_at_most_quarter": "2537/10653696",
+    "U_dominates_when_alpha_at_least_13over50": "359507801743/1108410531840000",
+    "lambda_above_peak_gap_vertex": "5739331/64736000"
+  },
+  "formal_identities": [
+    {
+      "branch": "M",
+      "residue": 0,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "32b76f5d08c4b9d5293aea09bc4c191bbd6b198464301f2f1df244b64cd1451c"
+    },
+    {
+      "branch": "M",
+      "residue": 0,
+      "identity": "Z",
+      "monomials": 12,
+      "sha256": "a24c4ef552a077104a84255cbe8b0f322d1f6c3dc6b647a193923610a75d3892"
+    },
+    {
+      "branch": "M",
+      "residue": 0,
+      "identity": "E",
+      "monomials": 56,
+      "sha256": "2c729cf5fcb3b03c8e3e8db335e8a992c64ebcc354da45a176d4d169242db856"
+    },
+    {
+      "branch": "M",
+      "residue": 0,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 44,
+      "sha256": "40e6411f0b91fc8f30a11ef18c3bd04136d99dcea860a4799ae8b1e5551d879e"
+    },
+    {
+      "branch": "M",
+      "residue": 0,
+      "identity": "p1_square_norm",
+      "monomials": 6,
+      "sha256": "6f335f4dc4db4223b0a2098c4819fa3db0a7f88164f7baffd1400df4e8bf8a81"
+    },
+    {
+      "branch": "M",
+      "residue": 1,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "d1b3259c348c203283d2986a13cb803b52d77133f2c36184fd6fa57216d17919"
+    },
+    {
+      "branch": "M",
+      "residue": 1,
+      "identity": "Z",
+      "monomials": 20,
+      "sha256": "5da7052b73f33145da514cb52e03202bf995bcf37c714afc1c31c6fc3500b036"
+    },
+    {
+      "branch": "M",
+      "residue": 1,
+      "identity": "E",
+      "monomials": 107,
+      "sha256": "82e9f22ee675c30d3c243d41a82ef5b725bac54f53507a777b7fb1d6437e30a5"
+    },
+    {
+      "branch": "M",
+      "residue": 1,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 87,
+      "sha256": "655a3700a3a95831d9d5de3fe26f59689bd908f4d39abdb9567fb46c43916758"
+    },
+    {
+      "branch": "M",
+      "residue": 1,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "4c800a3848fed3d22d99c23a58f2c5829e88af493655d6b68f764cb70c5e8118"
+    },
+    {
+      "branch": "M",
+      "residue": 2,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "6d32f2a3b0a926abaf27f353ce6ec63ff5d9afcb9c14187c28dcc4370d7c2056"
+    },
+    {
+      "branch": "M",
+      "residue": 2,
+      "identity": "Z",
+      "monomials": 14,
+      "sha256": "392d1b6d8f99a0dd5dd3e34d316e34f3d9bf844c0314cf4855616150fb544783"
+    },
+    {
+      "branch": "M",
+      "residue": 2,
+      "identity": "E",
+      "monomials": 62,
+      "sha256": "61905f256b60a767c81820743a860c6b9b4974d8bbefca6c87bf526177b99775"
+    },
+    {
+      "branch": "M",
+      "residue": 2,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 48,
+      "sha256": "e808b0cabe9118833f6554f50356bb419c8ecb613769265a3d553ff8aa4da345"
+    },
+    {
+      "branch": "M",
+      "residue": 2,
+      "identity": "p1_square_norm",
+      "monomials": 7,
+      "sha256": "0dcc8175fdab7985c1f7e61c874697dc930f529f66ee7ba6a2a743195d611c9f"
+    },
+    {
+      "branch": "M",
+      "residue": 3,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "c49ec26b41cda22a486afd897db732160fccfbfc68aeb28b2ded39a32d0b7a20"
+    },
+    {
+      "branch": "M",
+      "residue": 3,
+      "identity": "Z",
+      "monomials": 20,
+      "sha256": "c67189225b872448a6d41bc989c634fbcb9f80525c2bd97a126f440a2e22d3f9"
+    },
+    {
+      "branch": "M",
+      "residue": 3,
+      "identity": "E",
+      "monomials": 104,
+      "sha256": "c56e30fd053c2c5542faa276544507770fb7a179382408e1e11e0d12b63530f5"
+    },
+    {
+      "branch": "M",
+      "residue": 3,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 84,
+      "sha256": "41962c9bf15ae29a5aa9e48f2d07799ec9ed5d4dbdc4ff6779cc0da655e9ca32"
+    },
+    {
+      "branch": "M",
+      "residue": 3,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "7fac9b4e24166935831a375d026153bd7d4f7727c746693044758cd1ce6a82ca"
+    },
+    {
+      "branch": "M",
+      "residue": 4,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "8460af4fcede2015eaf132f59cc2e24c2e6d628d7c178355c72604f0700c131a"
+    },
+    {
+      "branch": "M",
+      "residue": 4,
+      "identity": "Z",
+      "monomials": 14,
+      "sha256": "13b82ce6edd88077f5e7ad063aebea8724b339bd9cb85de64875acb606e281a4"
+    },
+    {
+      "branch": "M",
+      "residue": 4,
+      "identity": "E",
+      "monomials": 62,
+      "sha256": "7473f8fa615f4c88f8e48a4d368a470be05268b161c8ef1f5e7152f84982dbfb"
+    },
+    {
+      "branch": "M",
+      "residue": 4,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 48,
+      "sha256": "a69fd71051adb9d17d3cb0a2d18608f46f935f0b1b84ab406c8ee2efc450a85d"
+    },
+    {
+      "branch": "M",
+      "residue": 4,
+      "identity": "p1_square_norm",
+      "monomials": 7,
+      "sha256": "0dcc8175fdab7985c1f7e61c874697dc930f529f66ee7ba6a2a743195d611c9f"
+    },
+    {
+      "branch": "M",
+      "residue": 5,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "efbc08c1069cc4824b9e07d1546d235f00e7314b2b9872e054243e3ba9872ca8"
+    },
+    {
+      "branch": "M",
+      "residue": 5,
+      "identity": "Z",
+      "monomials": 20,
+      "sha256": "4fbd51c9530494ccb328e78512546bbf9a2df686e2259a79a11b58bcd01d2cd8"
+    },
+    {
+      "branch": "M",
+      "residue": 5,
+      "identity": "E",
+      "monomials": 107,
+      "sha256": "8ad048cb59aea75700a4af0ff14bdda18a30ac1069a8b0d9d4bb2a0183f16ce3"
+    },
+    {
+      "branch": "M",
+      "residue": 5,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 87,
+      "sha256": "9106f2eab6c0f45b985330d309ee8d3905a3c9369b56f89749439b4ba033aa49"
+    },
+    {
+      "branch": "M",
+      "residue": 5,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "4c800a3848fed3d22d99c23a58f2c5829e88af493655d6b68f764cb70c5e8118"
+    },
+    {
+      "branch": "U",
+      "residue": 0,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "32b76f5d08c4b9d5293aea09bc4c191bbd6b198464301f2f1df244b64cd1451c"
+    },
+    {
+      "branch": "U",
+      "residue": 0,
+      "identity": "Z",
+      "monomials": 15,
+      "sha256": "8d935e1f33766a9da1b7ed55cca142be1010ac24ffd28cea5dddc946a2b22285"
+    },
+    {
+      "branch": "U",
+      "residue": 0,
+      "identity": "E",
+      "monomials": 59,
+      "sha256": "c69ddb151e3fad0ffca7f45f4e826bbb6d7978dee3e6e210193c1044108380dc"
+    },
+    {
+      "branch": "U",
+      "residue": 0,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 44,
+      "sha256": "8d0f4e3f9b9a22df414dacb0ac5231adeb70a03c0e3a49dc9d86d8afe2bfb397"
+    },
+    {
+      "branch": "U",
+      "residue": 0,
+      "identity": "p1_square_norm",
+      "monomials": 6,
+      "sha256": "6f335f4dc4db4223b0a2098c4819fa3db0a7f88164f7baffd1400df4e8bf8a81"
+    },
+    {
+      "branch": "U",
+      "residue": 1,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "d1b3259c348c203283d2986a13cb803b52d77133f2c36184fd6fa57216d17919"
+    },
+    {
+      "branch": "U",
+      "residue": 1,
+      "identity": "Z",
+      "monomials": 23,
+      "sha256": "adadc94ab2779598d485e79573a0b5e878c7e6789d66ed7f0355d656fd555e51"
+    },
+    {
+      "branch": "U",
+      "residue": 1,
+      "identity": "E",
+      "monomials": 110,
+      "sha256": "6d7b897c8827d1091a9997c21270bc0c59608714c8bbb52b34a6b4f9d5bd7b60"
+    },
+    {
+      "branch": "U",
+      "residue": 1,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 87,
+      "sha256": "ce7c76dc7b2d5dfd1007efb998efd607a04453cd3fa8be30be9a79c259877c1f"
+    },
+    {
+      "branch": "U",
+      "residue": 1,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "4c800a3848fed3d22d99c23a58f2c5829e88af493655d6b68f764cb70c5e8118"
+    },
+    {
+      "branch": "U",
+      "residue": 2,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "6d32f2a3b0a926abaf27f353ce6ec63ff5d9afcb9c14187c28dcc4370d7c2056"
+    },
+    {
+      "branch": "U",
+      "residue": 2,
+      "identity": "Z",
+      "monomials": 17,
+      "sha256": "b5f344e1d4b495970ee2704ec384d16044e097991e2857a12ecd21628de3ccd3"
+    },
+    {
+      "branch": "U",
+      "residue": 2,
+      "identity": "E",
+      "monomials": 65,
+      "sha256": "8b7d5715a481df150f9901b49b20a9a2bb3659631ee5e2fd999ba41fde365b7b"
+    },
+    {
+      "branch": "U",
+      "residue": 2,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 48,
+      "sha256": "d07385a6eb09f6b77444bdb8601023d744d2b36f5b5fe2225f591e24754745b2"
+    },
+    {
+      "branch": "U",
+      "residue": 2,
+      "identity": "p1_square_norm",
+      "monomials": 7,
+      "sha256": "0dcc8175fdab7985c1f7e61c874697dc930f529f66ee7ba6a2a743195d611c9f"
+    },
+    {
+      "branch": "U",
+      "residue": 3,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "c49ec26b41cda22a486afd897db732160fccfbfc68aeb28b2ded39a32d0b7a20"
+    },
+    {
+      "branch": "U",
+      "residue": 3,
+      "identity": "Z",
+      "monomials": 23,
+      "sha256": "59e6eac658efe48f8ca1a10b67ca6af147c723db813301565b8dab64325a7655"
+    },
+    {
+      "branch": "U",
+      "residue": 3,
+      "identity": "E",
+      "monomials": 109,
+      "sha256": "735a872d69856d2d04a57a0247bb05fc5dd2c4d3f9eb2b40a2e82b19f0268c40"
+    },
+    {
+      "branch": "U",
+      "residue": 3,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 86,
+      "sha256": "0045c2a09a14739667f7eeb7ed8b0f1ad78133412eaa6e6f3152e8bd8b7168f0"
+    },
+    {
+      "branch": "U",
+      "residue": 3,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "7fac9b4e24166935831a375d026153bd7d4f7727c746693044758cd1ce6a82ca"
+    },
+    {
+      "branch": "U",
+      "residue": 4,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "8460af4fcede2015eaf132f59cc2e24c2e6d628d7c178355c72604f0700c131a"
+    },
+    {
+      "branch": "U",
+      "residue": 4,
+      "identity": "Z",
+      "monomials": 17,
+      "sha256": "b740e1d12bfdd5b6466696497a5d07a0c3021597ead85cc198379dba1c772d21"
+    },
+    {
+      "branch": "U",
+      "residue": 4,
+      "identity": "E",
+      "monomials": 65,
+      "sha256": "7481ae04dd5f302967e13bdefa5fdd16bff04d3e3e7d58245937e13e25a986ae"
+    },
+    {
+      "branch": "U",
+      "residue": 4,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 48,
+      "sha256": "2f45a833c6ac99c27c553366bbbe88cb6a56328e0de7e5d5ec0aa19daa25da8c"
+    },
+    {
+      "branch": "U",
+      "residue": 4,
+      "identity": "p1_square_norm",
+      "monomials": 7,
+      "sha256": "0dcc8175fdab7985c1f7e61c874697dc930f529f66ee7ba6a2a743195d611c9f"
+    },
+    {
+      "branch": "U",
+      "residue": 5,
+      "identity": "Cg",
+      "monomials": 2,
+      "sha256": "efbc08c1069cc4824b9e07d1546d235f00e7314b2b9872e054243e3ba9872ca8"
+    },
+    {
+      "branch": "U",
+      "residue": 5,
+      "identity": "Z",
+      "monomials": 23,
+      "sha256": "7524bf5595009a6c8d0790fb67353c3efa832e557fdf64570bb77b4268bc3a6d"
+    },
+    {
+      "branch": "U",
+      "residue": 5,
+      "identity": "E",
+      "monomials": 110,
+      "sha256": "daa1d4c9cb0ad86eef4f8c4957c6bc0d1d3963772c406da95a3f924d167bc541"
+    },
+    {
+      "branch": "U",
+      "residue": 5,
+      "identity": "prefix_p2_square_norm",
+      "monomials": 87,
+      "sha256": "41fb060116ea1cf6af223ff189cd5bfef0f36e109f27560995d489a2f0c80fec"
+    },
+    {
+      "branch": "U",
+      "residue": 5,
+      "identity": "p1_square_norm",
+      "monomials": 13,
+      "sha256": "4c800a3848fed3d22d99c23a58f2c5829e88af493655d6b68f764cb70c5e8118"
+    }
+  ],
+  "formal_identity_count": 60,
+  "exact_vector_cases": [
+    {
+      "K": 204,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-457/2000",
+      "word": [
+        102,
+        130
+      ]
+    },
+    {
+      "K": 204,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "5/16",
+      "word": [
+        102,
+        131
+      ]
+    },
+    {
+      "K": 204,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-1/7",
+      "word": [
+        102,
+        131
+      ]
+    },
+    {
+      "K": 204,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "11/50",
+      "word": [
+        102,
+        142
+      ]
+    },
+    {
+      "K": 204,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "3/8",
+      "word": [
+        102,
+        147
+      ]
+    },
+    {
+      "K": 205,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "141/625",
+      "word": [
+        102,
+        131
+      ]
+    },
+    {
+      "K": 205,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-48/205",
+      "word": [
+        102,
+        131
+      ]
+    },
+    {
+      "K": 205,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "127/410",
+      "word": [
+        102,
+        132
+      ]
+    },
+    {
+      "K": 205,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-3533/10250",
+      "word": [
+        102,
+        142
+      ]
+    },
+    {
+      "K": 205,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-81/410",
+      "word": [
+        102,
+        147
+      ]
+    },
+    {
+      "K": 206,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "1979/4000",
+      "word": [
+        103,
+        132
+      ]
+    },
+    {
+      "K": 206,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "1/32",
+      "word": [
+        103,
+        132
+      ]
+    },
+    {
+      "K": 206,
+      "alpha": "16/63",
+      "branch": "U",
+      "eta": "-5/21",
+      "word": [
+        103,
+        142
+      ]
+    },
+    {
+      "K": 206,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-17/100",
+      "word": [
+        103,
+        143
+      ]
+    },
+    {
+      "K": 206,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-1/16",
+      "word": [
+        103,
+        148
+      ]
+    },
+    {
+      "K": 207,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-2353/46000",
+      "word": [
+        103,
+        132
+      ]
+    },
+    {
+      "K": 207,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "535/1104",
+      "word": [
+        103,
+        133
+      ]
+    },
+    {
+      "K": 207,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "209/8694",
+      "word": [
+        103,
+        133
+      ]
+    },
+    {
+      "K": 207,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "1373/5175",
+      "word": [
+        103,
+        144
+      ]
+    },
+    {
+      "K": 207,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "1813/4968",
+      "word": [
+        103,
+        149
+      ]
+    },
+    {
+      "K": 208,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "109/500",
+      "word": [
+        104,
+        133
+      ]
+    },
+    {
+      "K": 208,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-1/4",
+      "word": [
+        104,
+        133
+      ]
+    },
+    {
+      "K": 208,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "2/7",
+      "word": [
+        104,
+        134
+      ]
+    },
+    {
+      "K": 208,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "11/25",
+      "word": [
+        104,
+        145
+      ]
+    },
+    {
+      "K": 208,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-1/2",
+      "word": [
+        104,
+        149
+      ]
+    },
+    {
+      "K": 209,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-17133/52250",
+      "word": [
+        104,
+        133
+      ]
+    },
+    {
+      "K": 209,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "85/418",
+      "word": [
+        104,
+        134
+      ]
+    },
+    {
+      "K": 209,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-2297/8778",
+      "word": [
+        104,
+        134
+      ]
+    },
+    {
+      "K": 209,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-1303/10450",
+      "word": [
+        104,
+        145
+      ]
+    },
+    {
+      "K": 209,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-91/1254",
+      "word": [
+        104,
+        150
+      ]
+    },
+    {
+      "K": 210,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-47/800",
+      "word": [
+        105,
+        134
+      ]
+    },
+    {
+      "K": 210,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "15/32",
+      "word": [
+        105,
+        135
+      ]
+    },
+    {
+      "K": 210,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "0",
+      "word": [
+        105,
+        135
+      ]
+    },
+    {
+      "K": 210,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "1/20",
+      "word": [
+        105,
+        146
+      ]
+    },
+    {
+      "K": 210,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "1/16",
+      "word": [
+        105,
+        151
+      ]
+    },
+    {
+      "K": 211,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "33367/84400",
+      "word": [
+        105,
+        135
+      ]
+    },
+    {
+      "K": 211,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-263/3376",
+      "word": [
+        105,
+        135
+      ]
+    },
+    {
+      "K": 211,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "191/422",
+      "word": [
+        105,
+        136
+      ]
+    },
+    {
+      "K": 211,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "512/1055",
+      "word": [
+        105,
+        147
+      ]
+    },
+    {
+      "K": 211,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "827/1688",
+      "word": [
+        105,
+        152
+      ]
+    },
+    {
+      "K": 212,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-671/2000",
+      "word": [
+        106,
+        135
+      ]
+    },
+    {
+      "K": 212,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "3/16",
+      "word": [
+        106,
+        136
+      ]
+    },
+    {
+      "K": 212,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-2/7",
+      "word": [
+        106,
+        136
+      ]
+    },
+    {
+      "K": 212,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-17/50",
+      "word": [
+        106,
+        147
+      ]
+    },
+    {
+      "K": 212,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-3/8",
+      "word": [
+        106,
+        152
+      ]
+    },
+    {
+      "K": 213,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "421/3550",
+      "word": [
+        106,
+        136
+      ]
+    },
+    {
+      "K": 213,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-51/142",
+      "word": [
+        106,
+        136
+      ]
+    },
+    {
+      "K": 213,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "1493/8946",
+      "word": [
+        106,
+        137
+      ]
+    },
+    {
+      "K": 213,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "203/2130",
+      "word": [
+        106,
+        148
+      ]
+    },
+    {
+      "K": 213,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "67/1278",
+      "word": [
+        106,
+        153
+      ]
+    },
+    {
+      "K": 214,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "1551/4000",
+      "word": [
+        107,
+        137
+      ]
+    },
+    {
+      "K": 214,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-3/32",
+      "word": [
+        107,
+        137
+      ]
+    },
+    {
+      "K": 214,
+      "alpha": "16/63",
+      "branch": "U",
+      "eta": "5/21",
+      "word": [
+        107,
+        148
+      ]
+    },
+    {
+      "K": 214,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "27/100",
+      "word": [
+        107,
+        149
+      ]
+    },
+    {
+      "K": 214,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "3/16",
+      "word": [
+        107,
+        154
+      ]
+    },
+    {
+      "K": 215,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-68009/430000",
+      "word": [
+        107,
+        137
+      ]
+    },
+    {
+      "K": 215,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "1237/3440",
+      "word": [
+        107,
+        138
+      ]
+    },
+    {
+      "K": 215,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-1073/9030",
+      "word": [
+        107,
+        138
+      ]
+    },
+    {
+      "K": 215,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-1584/5375",
+      "word": [
+        107,
+        149
+      ]
+    },
+    {
+      "K": 215,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-1987/5160",
+      "word": [
+        107,
+        154
+      ]
+    },
+    {
+      "K": 224,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "1/250",
+      "word": [
+        112,
+        143
+      ]
+    },
+    {
+      "K": 224,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-1/2",
+      "word": [
+        112,
+        143
+      ]
+    },
+    {
+      "K": 224,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "0",
+      "word": [
+        112,
+        144
+      ]
+    },
+    {
+      "K": 224,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "8/25",
+      "word": [
+        112,
+        156
+      ]
+    },
+    {
+      "K": 224,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "0",
+      "word": [
+        112,
+        161
+      ]
+    },
+    {
+      "K": 288,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "37/250",
+      "word": [
+        144,
+        184
+      ]
+    },
+    {
+      "K": 288,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-1/2",
+      "word": [
+        144,
+        184
+      ]
+    },
+    {
+      "K": 288,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-1/7",
+      "word": [
+        144,
+        185
+      ]
+    },
+    {
+      "K": 288,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-4/25",
+      "word": [
+        144,
+        200
+      ]
+    },
+    {
+      "K": 288,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "0",
+      "word": [
+        144,
+        207
+      ]
+    },
+    {
+      "K": 300,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "39/80",
+      "word": [
+        150,
+        192
+      ]
+    },
+    {
+      "K": 300,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-3/16",
+      "word": [
+        150,
+        192
+      ]
+    },
+    {
+      "K": 300,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "1/7",
+      "word": [
+        150,
+        193
+      ]
+    },
+    {
+      "K": 300,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-1/2",
+      "word": [
+        150,
+        208
+      ]
+    },
+    {
+      "K": 300,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "3/8",
+      "word": [
+        150,
+        216
+      ]
+    },
+    {
+      "K": 999,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "78959/222000",
+      "word": [
+        499,
+        638
+      ]
+    },
+    {
+      "K": 999,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "583/5328",
+      "word": [
+        499,
+        640
+      ]
+    },
+    {
+      "K": 999,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-4993/41958",
+      "word": [
+        499,
+        642
+      ]
+    },
+    {
+      "K": 999,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-4369/24975",
+      "word": [
+        499,
+        694
+      ]
+    },
+    {
+      "K": 999,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "2749/23976",
+      "word": [
+        499,
+        718
+      ]
+    },
+    {
+      "K": 1000,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-3/8",
+      "word": [
+        500,
+        638
+      ]
+    },
+    {
+      "K": 1000,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "3/8",
+      "word": [
+        500,
+        641
+      ]
+    },
+    {
+      "K": 1000,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "1/7",
+      "word": [
+        500,
+        643
+      ]
+    },
+    {
+      "K": 1000,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "0",
+      "word": [
+        500,
+        695
+      ]
+    },
+    {
+      "K": 1000,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "1/4",
+      "word": [
+        500,
+        719
+      ]
+    },
+    {
+      "K": 1001,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "79/1001",
+      "word": [
+        500,
+        639
+      ]
+    },
+    {
+      "K": 1001,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "-172/1001",
+      "word": [
+        500,
+        641
+      ]
+    },
+    {
+      "K": 1001,
+      "alpha": "16/63",
+      "branch": "M",
+      "eta": "-17015/42042",
+      "word": [
+        500,
+        643
+      ]
+    },
+    {
+      "K": 1001,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "67/154",
+      "word": [
+        500,
+        696
+      ]
+    },
+    {
+      "K": 1001,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "-277/858",
+      "word": [
+        500,
+        719
+      ]
+    },
+    {
+      "K": 2048,
+      "alpha": "123/500",
+      "branch": "M",
+      "eta": "-49/125",
+      "word": [
+        1024,
+        1307
+      ]
+    },
+    {
+      "K": 2048,
+      "alpha": "1/4",
+      "branch": "M",
+      "eta": "0",
+      "word": [
+        1024,
+        1312
+      ]
+    },
+    {
+      "K": 2048,
+      "alpha": "16/63",
+      "branch": "U",
+      "eta": "-2/21",
+      "word": [
+        1024,
+        1414
+      ]
+    },
+    {
+      "K": 2048,
+      "alpha": "13/50",
+      "branch": "U",
+      "eta": "-9/25",
+      "word": [
+        1024,
+        1423
+      ]
+    },
+    {
+      "K": 2048,
+      "alpha": "7/24",
+      "branch": "U",
+      "eta": "0",
+      "word": [
+        1024,
+        1472
+      ]
+    }
+  ],
+  "integer_vector_cases": 40,
+  "elapsed_seconds": 7.905740199999855,
+  "source_sha256": {
+    "experiments/alpha_phase_2026_10_27/audit_phase.py": "bcde6cc66239d171331a9c800ef644f8bcb4dbc67a6750903dcce826f7d8f3e0",
+    "experiments/alpha_phase_2026_10_27/uniform_probe.py": "b422abfe38ddc28356821c9584a695d06bad6f37ff171e25139dfade0817283d",
+    "experiments/alpha_phase_2026_10_27/phase_probe.py": "608ff714d7bffd7a0d09ea3a83a2b8cb4a56d08b20c5728e7b2a5a974948b867",
+    "tools/audit_v040_review.py": "4cd19588624ecfa8cf59a48f8f019d1095ede0cb689bb89537efbaec34667881"
+  },
+  "proof_scope": {
+    "stage": "audit_phase",
+    "scope": "Formal moment identities, uniform prefix constants, and finite cross-checks; not sample-based universal positivity.",
+    "shared_dependencies": [
+      "some moment formulas",
+      "exact vector/polynomial primitives"
+    ]
+  }
+}

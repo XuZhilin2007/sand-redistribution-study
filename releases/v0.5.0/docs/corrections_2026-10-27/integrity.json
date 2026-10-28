@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-27",
+  "status": "PASS",
+  "review_baseline_file_count": 9,
+  "review_baseline": [
+    {
+      "file": "docs/review_2026-10-27/ASSESSMENT.md",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/ERRATA.md",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/LITERATURE.md",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/evidence/baseline-verification.json",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/evidence/final-integrity.json",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/evidence/public-baseline-verification.json",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/evidence/remote-anchors.json",
+      "unchanged": true
+    },
+    {
+      "file": "docs/review_2026-10-27/evidence/review-evidence.json",
+      "unchanged": true
+    },
+    {
+      "file": "tools/audit_v040_review.py",
+      "unchanged": true
+    }
+  ],
+  "original_review_dependencies_unchanged": true,
+  "historical_B_proof_unchanged": true,
+  "frozen_trees": [
+    {
+      "tree": "D:\\Projects\\sand-redistribution-study",
+      "file_count": 37,
+      "hash_failures": []
+    },
+    {
+      "tree": "D:\\Projects\\sand-redistribution-study\\public_snapshot",
+      "file_count": 78,
+      "hash_failures": []
+    },
+    {
+      "tree": "D:\\Projects\\sand-redistribution-study\\scratch\\v040-online-download-20261026\\v0.4.0-verification-source",
+      "file_count": 78,
+      "hash_failures": []
+    }
+  ],
+  "refs": {
+    "research_HEAD": "2c337bb4a52a7e79430c6430413893dd79c6e9e4",
+    "private_v040_commit": "e05f4c17802324ca0508a017157d981af351eb27",
+    "public_v040_commit": "2d8820db3fd65733c9137c955fb1acc0b5466cc6"
+  },
+  "public_snapshot_git_status": "",
+  "tracked_diff": [
+    "docs/MODEL_ASSUMPTIONS.md",
+    "docs/READING_NOTES.md"
+  ],
+  "checks": {
+    "targeted-verification.json": "PASS",
+    "review-replay.json": "PASS",
+    "m0-regressions.json": "PASS",
+    "v040-verification.json": "PASS"
+  },
+  "diff_check_exit": 0,
+  "problems": []
+}

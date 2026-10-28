@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-27",
+  "status": "PASS",
+  "document_checks": [
+    "relative local link targets exist",
+    "display and inline math delimiters balance"
+  ],
+  "frozen_trees": [
+    {
+      "tree": "D:\\Projects\\sand-redistribution-study",
+      "frozen_file_count": 37,
+      "hash_failures": []
+    },
+    {
+      "tree": "D:\\Projects\\sand-redistribution-study\\scratch\\v040-online-download-20261026\\v0.4.0-verification-source",
+      "frozen_file_count": 78,
+      "hash_failures": []
+    }
+  ],
+  "tracked_files_changed": [],
+  "problems": []
+}

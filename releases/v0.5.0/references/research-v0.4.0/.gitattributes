@@ -1,0 +1,58 @@
+# Preserve historical checkpoint and imported raw-run bytes without line-ending normalization.
+/archive/checkpoint_2026-09-13/** -text
+/experiments/raw_chat_runs/*/** -text
+
+# Preserve the byte-for-byte private provenance archive.
+/archive/extension_lab_2026-10-07/** -text
+/release_review_2026-10-07/** -text
+/release_records/v0.2.0/pre_format_validation/** -text
+
+# v0.3 certificates hash exact generator bytes. Preserve their validated
+# line endings across Windows, macOS, Linux, and independent public history.
+/experiments/v03_*/*.py -text
+/experiments/v03_*/config.json -text
+/experiments/v03_*/results/** -text
+/src/sand_m0/word_cyclicity.py -text
+/tests/test_v03_frontier.py -text
+/docs/V03*.md -text
+/tools/*v030*.py -text
+
+# v0.4.0 scientific snapshot: preserve validated bytes across checkouts.
+/.gitattributes -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/README.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/S3_XO_BOUNDARY_THEOREM_PROOF.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/V040_MANIFEST.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/V040_REGISTRATION.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/V040_VALIDATION.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/XO_ALPHA_EXTENSION_PROOF.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/ALL_K_INTERVAL.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/D2_ENTRY_REVIEW.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/LARGE_K_PREFIX_LEMMA_REVIEW.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/RESULTS.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/STATUS.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/UNIFORM_TAIL_CLOSURE_REVIEW.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/v04_research/W0_UNIFORM_BOUND_REVIEW.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/continuum_U_polys.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/continuum_limit.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/d2_entry.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/d2_entry_certificate.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-23/finite_common_audit.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/d2.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/finite_common.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/prefix.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/reverification.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/tail.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/review_2026-10-24/w0.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/w0_sweep.jsonl -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_all_k/w0_sweep.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_w_interval/interval_certs.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_w_interval/interval_certs_v3.jsonl -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_w_interval/negative_tests_w.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_w_interval/symkernel.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/experiments/v04_w_interval/validate_interval.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/audit_v04_d2_entry.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/audit_v04_interval_v3.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/audit_v04_prefix_lemma.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/audit_v04_uniform_tail.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/audit_v04_w0_uniform.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/tools/verify_v040.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

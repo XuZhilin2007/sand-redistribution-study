@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "approved_manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "approved_zip_sha256": "3e49c412a5df4982ad14035b4d870e44a2eb489ec4349af2c3f0fa697de83057",
+  "candidate_files_match": 114,
+  "all_scientific_payloads_match_audited_reference": true,
+  "final_tree_run_sha256": "0427f90af14ab603b444911edfd4c2738f0292f41e44a886db694b55cb095c6c",
+  "final_tree_runtime_seconds": 258.20928319999985,
+  "mathematical_stage_exits": {
+    "verify_phase": 0,
+    "audit_phase": 0,
+    "finite_cover": 0,
+    "audit_cover": 0,
+    "uniform_probe": 0,
+    "published_v040": 0,
+    "oct28_audit_replay": 0
+  },
+  "release_integrity_controls": 29,
+  "preserved_v040_root": {
+    "checks": 6,
+    "frozen_files": 78,
+    "status": "PASS"
+  },
+  "no_preexisting_public_file_changed": true,
+  "parent_commit": "2d8820db3fd65733c9137c955fb1acc0b5466cc6",
+  "qualification": "Reproduction/integrity of audited content; not a new independent mathematical proof."
+}

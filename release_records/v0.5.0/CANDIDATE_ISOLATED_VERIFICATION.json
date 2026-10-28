@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "candidate_id": "v0.5.0-rc.1",
+  "archive_sha256": "3e49c412a5df4982ad14035b4d870e44a2eb489ec4349af2c3f0fa697de83057",
+  "manifest_sha256": "5dcbc85e889f3c54cc1577dbe68c1e5f0c63cdb586fc8739499890c046ad76b0",
+  "exact_zip_extracted_before_run": true,
+  "isolated_verification_sha256": "215d482f780ecf2f13864338434297460c27b302c092f322089de7ab026a09b2",
+  "mathematical_payloads_agree_with_audited_originals": true,
+  "metadata_correction_only": true,
+  "stage_exit_codes": {
+    "verify_phase": 0,
+    "audit_phase": 0,
+    "finite_cover": 0,
+    "audit_cover": 0,
+    "uniform_probe": 0,
+    "published_v040": 0,
+    "oct28_audit_replay": 0
+  },
+  "seconds": 258.48726780000015,
+  "guard_tests": 29,
+  "deterministic_repack_matches": true,
+  "package_file_count": 114,
+  "package_bytes": 5337935,
+  "files_unchanged_before_after": true,
+  "baseline_public_frozen_files": 78,
+  "private_v040_frozen_reference_files": 37,
+  "workspace_preservation_report_sha256": "98e648f999b2445f8062ff07eda7de86dacf79340c7bf252fae662bd3a6244d0",
+  "git_tag_or_release_created": false
+}

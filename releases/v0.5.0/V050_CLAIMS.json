@@ -1,0 +1,77 @@
+{
+  "candidate_id": "v0.5.0-rc.1",
+  "release_status": "UNPUBLISHED_RELEASE_CANDIDATE",
+  "date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "model_frozen": true,
+  "universal_claim": "intersection_{K>=6} W_K = W_6 intersect W_10 = [a10,b6]",
+  "lower_binding_size": 10,
+  "upper_binding_size": 6,
+  "inner_inclusion_providers": [
+    "finite_cover",
+    "uniform_probe"
+  ],
+  "baseline_alpha": [
+    "1999/8000",
+    "2001/8000"
+  ],
+  "exact_results_scope": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0.",
+  "historical_scope_correction": {
+    "json_pointer": "/scope",
+    "old": "Only the exact theorems explicitly listed; universal inner interval inherited from v0.4.0",
+    "new": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0."
+  },
+  "stages": {
+    "exact_results.json": {
+      "stage": "verify_phase",
+      "scope": "This stage proves the listed low-dimensional fixed-K results and universal exclusions only. The new universal inner inclusion is supplied by finite_cover and uniform_probe, with the documented analytic dependencies; it is not inherited from v0.4.0.",
+      "universal_inner_inclusion": false,
+      "shared_dependencies": [
+        "canonical model",
+        "exact polynomial libraries",
+        "Theorem A"
+      ]
+    },
+    "algebra_audit.json": {
+      "stage": "audit_phase",
+      "scope": "Formal moment identities, uniform prefix constants, and finite cross-checks; not sample-based universal positivity.",
+      "shared_dependencies": [
+        "some moment formulas",
+        "exact vector/polynomial primitives"
+      ]
+    },
+    "finite_cover.json": {
+      "stage": "finite_cover",
+      "scope": "All real alpha in B=[123/500,7/24], all integer t>=0, K=7..203 except 10; plus K=10 on [1/4,7/24].",
+      "infinite_time_basis": "Analytic residence and quadratic tail certificate, with finite binary-word over-approximation."
+    },
+    "finite_audit.json": {
+      "stage": "audit_cover",
+      "scope": "Reconstruct all 1046 finite cells using Sturm signs and four rejection controls.",
+      "independence_limit": "Second sign algorithm; shares model/trajectory algebra and analytic residence with the producer."
+    },
+    "uniform_boxes.json": {
+      "stage": "uniform_probe",
+      "scope": "All K>=204, all real alpha in B=[123/500,7/24], all integer t>=0.",
+      "infinite_domains": [
+        "h=1/K in [0,1/204]",
+        "closed alpha/rounding boxes",
+        "analytic entire infinite tail"
+      ],
+      "shared_dependencies": [
+        "Theorem A",
+        "exact moment identities",
+        "rational interval arithmetic"
+      ]
+    }
+  },
+  "not_claimed": [
+    "complete fixed-K phase diagram",
+    "general finite membership horizon",
+    "new mathematical research",
+    "human peer review",
+    "proof-assistant formalization",
+    "novelty"
+  ],
+  "qualification": "Reproduction and consolidation of the already-audited computer-assisted theorem; execution is not independent proof."
+}

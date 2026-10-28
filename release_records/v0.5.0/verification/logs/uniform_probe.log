@@ -1,0 +1,13 @@
+M 0 boxes 256 failures 0
+M 1 boxes 512 failures 0
+M 2 boxes 768 failures 0
+M 3 boxes 1024 failures 0
+M 4 boxes 1280 failures 0
+M 5 boxes 1536 failures 0
+U 0 boxes 3672 failures 0
+U 1 boxes 7984 failures 0
+U 2 boxes 9860 failures 0
+U 3 boxes 14094 failures 0
+U 4 boxes 16024 failures 0
+U 5 boxes 20554 failures 0
+ALL_BOXES_POSITIVE 20554 {'U0-U2': 0.16374639009141592, 'U1-U2': 0.0010000154124663568, '-Hprime': 0.10132074747676788, 'Hrho': 0.005326826306564147, 'entry_margin': 0.035748519374050686, 'upper_slope': 0.09097836936754215, 'middle_slope': 0.23490044369232327, 'transition_slope': 0.16355202449858325}
